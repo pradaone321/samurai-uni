@@ -15,3 +15,8 @@ const sayGoodEvening = () => {
 sayGoodMorning();
 sayGoodEvening();
 
+const addTwoArguments = (price,shippingFee) => {
+	console.log(price + shippingFee + '円');
+}
+addTwoArguments(1200,500);
+
