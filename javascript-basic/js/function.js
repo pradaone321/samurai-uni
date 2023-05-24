@@ -6,17 +6,17 @@ const sayGoodMorning = () =>{
 }
 //夜の挨拶関数定義
 const sayGoodEvening = () => {
-	console.log('テスト０4');
-	console.log('テスト０5');
-	console.log('テスト０6');
+	console.log('テスト04');
+	console.log('テスト05');
+	console.log('テスト06');
 }
 
 //関数呼び出し
 sayGoodMorning();
 sayGoodEvening();
 
-const addTwoArguments = (price,shippingFee) => {
-	console.log(price + shippingFee + '円');
+const addTwoArguments = (prices,shippingFee) => {
+	console.log(prices + shippingFee + '円');
 }
 addTwoArguments(1200,600);
 
