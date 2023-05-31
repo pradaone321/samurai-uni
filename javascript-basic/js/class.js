@@ -19,9 +19,14 @@ class product2{
 		this.name = name;
 		this.price = price;
 		this.category = category;
+		this.greet : () => {
+			console.log(''宜しくお願いします。);
+		}
 	}
 }
 const shampoo2 = new product2('メリット', 500,'生活雑貨');
 const coffee = new product2('ジャマイカコーヒー',800,'飲料');
 console.log(shampoo2);
 console.log(coffee);
+shampoo.describe();
+user.greet();
