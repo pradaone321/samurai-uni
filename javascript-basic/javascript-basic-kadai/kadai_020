@@ -10,6 +10,16 @@
 	<h2 id="text">ボタンをクリックしてください</h2>
 		<button id="btn">ボタン</button>
 
-	<script src="js/event2.js"></script>
+
+<script>
+var btn = document.getElementById('btn');
+btn.addEventListener('click', function(){
+	setTimeout(()=>{
+		//console.log('ボタンをクリックしました');
+		document.getElementById('text').innerText = 'ボタンをクリックしました';
+	}, 2000);
+});
+</script>
+
 </body>
 </html>
