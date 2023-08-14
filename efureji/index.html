@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>サービスサイトテスト</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/break.css">
+        <link rel="stylesheet" href="css/common.css">
+
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script nomodule>window.MSInputMethodContext && document.documentMode && document.write('<script src="https://cdn.jsdelivr.net/combine/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js,npm/ie11-custom-properties@4,npm/element-qsa-scope@1"><\/script>');</script>
+
+    <!--Slick-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+</head>
+<body>
+
+<!--#include virtual="/share/header.html" -->
+<div class="d-block d-lg-none"><!--#include virtual="/koukin/share/navi.html" --></div>
+
+<header class="globalHeader">
+        <div class="globalHeader_bg"></div>
+        <!--▽▽ハンバーガーボタン▽▽-->
+        <div class="hamburger">
+                <div class="hamburger_bars">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                </div>
+        </div>
+        <!--△△ハンバーガーボタン△△-->
+</header>
+<div id="globalHeader_container">
+<div class="globalHeader_content">
+        <!--headerの固定要素Gnav-->
+    <div class="globalHeader_main">
+        <h1 class="globalHeader_title">
+                <a href="/"><img src="images/share/header_logo.png" alt="クレジットカード決済代行サービス エフレジ"></a>
+                </a>
+        </h1>
+        <div class="nav">
+            <div class="navTop">
+            <ul class="navTop_list hpsp_flexWrapBet">
+                <li class="navTop_listItemLink">
+                    <a target="_blank" href="/koukin/">
+                        <span>利用者向けサイト</span><br>
+                        <span>F-REGI 公金支払い</span>
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" href="/service/ftax.html">
+                        <span>自治体向けサイト</span><br>
+                        <span>F-REGI 公金支払い</span>
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" href="/service/ftax.html">
+                        <span>学校・団体向けサイト</span><br>
+                        <span>F-REGI 寄付支払い</span>
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" href="/pay/">
+                        <span>学校・事業者向けサイト</span><br>
+                        <span>F-REGI 払込支払い</span>
+                    </a>
+                </li>
+            </ul>
+            </div>
+        </div>
+        </div>
+</div>
+</div>
+
+
+<div id="globalMenu">
+        <ul class="nav hp_flexWrapBet">
+        <li><a href="#">ホーム</a></li>
+        <li class="has-child"><a href="#">決済サービス</a>
+                <ul>
+                        <li>
+                                <a href="/service/#method">決済手段</a>
+                        </li>
+                        <li>
+                                <a href="/service/card.html">クレジットカード決済</a>
+                        </li>
+                        <li>
+                                <a href="/service/convenience.html" target="_blank">コンビニ決済</a>
+                        </li>
+                        <li>
+                                <a href="/service/carrier.html" target="_blank">キャリア決済</a>
+                        </li>
+                        <li>
+                                <a href="/service/pay-easy.html" target="_blank">Pay-easy</a>
+                        </li>
+                        <li>
+                                <a href="/service/applepay.html" target="_blank">Apple Pay</a>
+                        </li>
+                        <li>
+                                <a href="/service/paypay.html" target="_blank">PayPay</a>
+                        </li>
+                        <li>
+                                <a href="/service/rakutenpay.html" target="_blank">楽天ペイ</a>
+                        </li>
+                        <li>
+                                <a href="/service/r_bank.html" target="_blank">楽天銀行リアルタイム自動引落</a>
+                        </li>
+                        <li>
+                                <a href="/service/edy.html" target="_blank">楽天Edy</a>
+                        </li>
+                        <li>
+                                <a href="/service/paypal.html" target="_blank">PayPal</a>
+                        </li>
+                        <li>
+                                <a href="/service/alipay.html" target="_blank">Alipay</a>
+                        </li>
+                </ul>
+        </li>
+        <li class="has-child"><a href="#">接続方式</a>
+                <ul>
+                        <li>
+                                <a href="/service/token.html">
+                                        API接続方式（トークン決済）
+                                </a>
+                        </li>
+                        <li>
+                                <a href="/service/redirect_flow.html">
+                                        リダイレクト接続方式
+                                </a>
+                        </li>
+                </ul>
+        </li>
+        <li class="has-child"><a href="#">決済ツール</a>
+                <ul>
+                        <li>
+                                <a href="/service/token.html">
+                                        API接続方式（トークン決済）
+                                </a>
+                        </li>
+                        <li>
+                                <a href="/service/redirect_flow.html">
+                                        リダイレクト接続方式
+                                </a>
+                        </li>
+                        <li>
+                                <a href="/service/mail.html">
+                                        メール送信型
+                                </a>
+                        </li>
+                        <li>
+                                <a href="/service/kantan.html">
+                                        簡単支払い
+                                </a>
+                        </li>
+                        <li>
+                                <a href="/service/moto.html">
+                                        承認画面
+                                </a>
+                        </li>
+                </ul>
+        </li>
+<li><a href="#">Contact</a></li>
+        </ul>
+</div>
+
+<div id="globalMenu">
+    <div class="globalMenu_container">
+            <div class="globalMenu_content">
+
+                    <nav id="globalMenu_nav">
+                            <div class="g-lobalMenu_navList">
+                                    <div class="globalMenu_navListItem">
+                                            <div class="globalMenu_navListItemName">
+                                                    <a href="/" class="globalMenu_navListItemNameText">ホーム</a>
+                                            </div>
+                                            <div class="globalMenu_navListItem globalMenu_item"></div>
+                                    </div>
+                                    <!--▽▽決済手段▽▽-->
+                                    <div class="globalMenu_navListItem globalMenu_item">
+                                            <div class="globalMenu_navListItemName globalMenu_itemName">
+                                                    <p class="globalMenu_navListItemNameText">
+                                                            <a href="/service/">決済サービス</a>
+                                                    </p>
+                                                    <div class="globalMenu_navListItemNameButton globalMenu_itemNameButton">
+                                                    </div>
+                                            </div>
+                                            <div class="globalMenu_navListItemInfo">
+                                                    <ul>
+                                                            <li>
+                                                                    <a href="/service/#method">決済手段</a>
+                                                            </li>
+                                                            <li>
+                                                                    <a href="/service/card.html">クレジットカード決済</a>
+                                                            </li>
+                                                            <li>
+                                                                    <a href="/service/convenience.html" target="_blank">コンビニ決済</a>
+                                                            </li>
+                                                            <li>
+                                                                    <a href="/service/carrier.html" target="_blank">キャリア決済</a>
+                                                            </li>
+                                                            <li>
+                                                                    <a href="/service/pay-easy.html" target="_blank">Pay-easy</a>
+                                                            </li>
+                                                            <li>
+                                                                    <a href="/service/applepay.html" target="_blank">Apple Pay</a>
+                                                            </li>
+                                                            <li>
+                                                                    <a href="/service/paypay.html" target="_blank">PayPay</a>
+                                                            </li>
+                                                            <li>
+                                                                    <a href="/service/rakutenpay.html" target="_blank">楽天ペイ</a>
+                                                            </li>
+                                                            <li>
+                                                                    <a href="/service/r_bank.html" target="_blank">楽天銀行リアルタイム自動引落</a>
+                                                            </li>
+                                                            <li>
+                                                                    <a href="/service/edy.html" target="_blank">楽天Edy</a>
+                                                            </li>
+                                                            <li>
+                                                                    <a href="/service/paypal.html" target="_blank">PayPal</a>
+                                                            </li>
+                                                            <li>
+                                                                    <a href="/service/alipay.html" target="_blank">Alipay</a>
+                                                            </li>
+                                                    </ul>
+                                            </div>
+                                    </div>
+                                    <!--△△決済手段△△-->
+
+                            </div>
+
+                    </nav>
+
+            </div>
+    </div>
+</div>
+
+<!--Bootstrapでの検証-->
+    <section class="container-fluid">
+            <!--hako eria-->
+            <div class="hp_flexJusCen contGuidePc contGuideTab contGuideSp">
+                    <h1>テスト</h1>
+                    <ul class="hpsp_flexCol">
+                            <li>●●●●●●●</li>
+                            <li>●●●●●●●</li>
+                    </ul>
+                    <ul class="hpsp_flexCol">
+                            <li>●●●1212●●</li>
+                            <li>●●●●●●●</li>
+                    </ul>
+                    <ul class="hpsp_flexCol">
+                            <li>●●3333●●</li>
+                            <li>●●●●●●●</li>
+                    </ul>
+
+
+
+
+            </div>
+            <!--hako eria-->
+
+            <div class="container-fluid">
+              <div class="row">
+                    <div class="col-md-4">4列カラム</div>
+                    <div class="col-md-4">4列カラム</div>
+                    <div class="col-md-4">4列カラム</div>
+              </div>
+              <div class="row">
+                    <div class="col-md-6">6列カラム</div>
+                    <div class="col-md-6">6列カラム</div>
+              </div>
+            </div>
+    </section>
+
+
+<!--#include virtual="/koukin/share/footer.html" -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="js/jquery-3.7.0.min.js"></script>
+<script src="js/common.js"></script>
+</body>
+</html>
+

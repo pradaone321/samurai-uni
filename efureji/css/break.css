@@ -1,0 +1,460 @@
+@charset "UTF-8";
+
+.container-fluid{
+        width: 100%;
+        margin: 0 auto;
+}
+
+/*1280px以下PC*/
+@media (min-width: 769px) {
+        .contGuidePc {
+                width: 1280px;
+                background-color: #3D4A4F;
+                height: 100vh;
+                margin: 0 auto;
+        }
+}
+/*768px以下タブレットとSP*/
+@media (max-width: 768px) {
+
+/*SPデフォルト*/
+	div#hpsp_all{
+		padding-right: 3% !important;
+		padding-left: 3% !important;
+		margin: 0 auto !important;
+    }
+        /*SPflex定義*/
+	.hp_flex {display: flex;}
+	.hpsp_flexWrap {
+		display: flex;
+		flex-wrap: wrap;
+    }
+    .hpsp_flexWrapBet {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+    }
+        .hpsp_flexBet {
+			display: flex;
+			justify-content: space-between;
+        }
+        .hpsp_flexCol {
+			display: flex;
+			flex-direction: column;
+        }
+        .hpsp_flexJusCen {
+			display: flex;
+			justify-content: center;
+        }
+        .hpsp_flexJusAro {
+			display: flex;
+			justify-content: space-around;
+        }
+        .hpsp_flexEnd {justify-content: flex-end;}
+        .hpsp_flexCen {justify-content: center;}
+        .elsp_flexStr {align-items: stretch;}
+        .elsp_flexCen {align-items: center;}
+        .elsp_flexSta {align-items: start;}
+        .elsp_flexEnd {align-items: end;}
+        .hpsp_flexSta {align-items: flex-start;}
+        .hpsp_flexEnd {align-items: end;}
+
+        .contGuideTab {
+                padding-right: 3%;
+                padding-left: 3%;
+                margin: 0 auto;
+                background-color: #51908F;
+                height: 100vh;
+        }
+        ul.navTop_list li {
+                border: 1px solid #FFF;
+                border-radius: 4px;
+                padding: 8px;
+				margin-bottom: 3%;
+				width: calc((100%/2) - 10px);
+        }
+
+                section {
+                margin-top: 30px;
+                }
+
+                .accordion {
+                width: 200px;
+                margin: 0 auto;
+                }
+
+                .menu {
+                background-color: purple;
+                color: white;
+                font-size: 18px;
+                padding: 10px;
+                text-align: center;
+                cursor: pointer;
+                user-select: none;
+                }
+                .menu:hover,
+                .menu:active,
+                .menu.is-active {
+                background-color: black;
+                }
+                .contents {
+                text-align: center;
+                line-height: 0;
+                height: 0;
+                overflow: hidden;
+                opacity: 0;
+                transition-duration: 0.4s;
+                }
+                .contents.is-open {
+                border: 1px solid black;
+                padding: 10px;
+                line-height: normal;
+                height: auto;
+                opacity: 1;
+                }
+
+          .arrowU:before { /* くの字の表示設定 */
+                content: "";
+                margin: auto;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 5%;
+                width: 13px;  /* くの字を山なりに見た時、左側の長さ */
+                height: 13px; /* くの字を山なりに見た時、右側の長さ */
+                border-top: 3px solid #FFF;     /* くの字を山なりに見た時、左側の太さと色 */
+                border-right: 3px solid #FFF;   /* くの字を山なりに見た時、右側の太さと色 */
+                transform: rotate(135deg);
+                transition: 0.2s;
+                   /* くの字の向き */
+                }
+                .arrowU.is-active:after {
+                content: "";
+                margin: auto;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 5%;
+                width: 13px;  /* くの字を山なりに見た時、左側の長さ */
+                height: 13px; /* くの字を山なりに見た時、右側の長さ */
+                border-top: 3px solid #FFF;     /* くの字を山なりに見た時、左側の太さと色 */
+                border-right: 3px solid #FFF;   /* くの字を山なりに見た時、右側の太さと色 */
+                transform: translateY(-50%) rotate(315deg);
+                transition: 0.2s;
+        }
+
+		.navTop{marigin: auto;}
+
+        /* ▼▼▼▼詳細折りたたみ要素▼▼▼▼ */
+                /*Chrome, Safari用  既存の矢印削除 */
+                summary::-webkit-details-marker {
+                display: none;
+                }
+                summary {
+                list-style: none;/* Firefox用 既存の矢印削除*/
+                cursor: pointer;/*カーソルポインタ*/
+                display: flex;
+                justify-content:space-around;
+                align-items: center;
+                background: #59b2e1;
+                height: 40px;
+                color: #fff;
+                border-radius: 3px;
+                min-width: 15.6vw;
+                width: 80%;
+                margin: 0 auto;
+                }
+                details {
+                height: 40px;
+                padding: 0px;
+                transition: .6s;
+                border-radius: 3px;
+                min-width: 15.6vw;
+                margin: 0 0 20px 0;
+                }
+                details[open] {
+                height: 60px;
+                text-align: center;
+                }
+                summary::after {
+                transform: translateY(-25%) rotate(45deg);
+                width: 10px;
+                height: 10px;
+                margin-left: 10px;
+                border-bottom: 2px solid #fff;
+                border-right: 2px solid #fff;
+                content: '';
+                transition: transform .3s;
+                display: inline-block;
+                }
+                details[open] summary::after {
+                transform: rotate(225deg);
+                }
+
+                details[open] p {
+                animation: fadeIn .8s ease;
+                margin-top:2px;
+                }
+		/*▲▲▲詳細折りたたみ要素▲▲▲*/
+
+				h1.globalHeader_title {
+					width: 70%;
+					padding-bottom: 15px;
+				}
+				.navTop_list li:nth-child(3),
+				.navTop_list li:nth-child(4)	{
+					margin-bottom: 0!important;
+				}
+				/* @keyframes fadeIn {
+                0% {
+                        opacity: 0;
+                        transform: translateY(-5px);
+                }
+                100% {
+                        opacity: 1;
+                        transform: none;
+                } */
+
+/*========= ハンバーガーボタンのためのCSS ===============*/
+        .hamburger_bars{
+                position:fixed;
+                z-index: 9999;/*ボタンを最前面に*/
+                top:10px;
+                right: 10px;
+                cursor: pointer;
+                width: 50px;
+                height:50px;
+        }
+        /*×に変化*/
+        .hamburger_bars span{
+                display: inline-block;
+                transition: all .4s;
+                position: absolute;
+                left: 14px;
+                height: 3px;
+                border-radius: 2px;
+                background-color: #666;
+                width: 45%;
+        }
+        .hamburger_bars span:nth-of-type(1) {
+                top:15px;
+        }
+        .hamburger_bars span:nth-of-type(2) {
+                top:23px;
+        }
+        .hamburger_bars span:nth-of-type(3) {
+                top:31px;
+        }
+        .hamburger_bars.active span:nth-of-type(1) {
+                top: 18px;
+                left: 18px;
+                transform: translateY(6px) rotate(-45deg);
+                width: 30%;
+        }
+        .hamburger_bars.active span:nth-of-type(2) {
+                opacity: 0;
+        }
+        .hamburger_bars.active span:nth-of-type(3){
+                top: 30px;
+                left: 18px;
+                transform: translateY(-6px) rotate(45deg);
+                width: 30%;
+        }
+
+/*========= globalMenuのためのCSS ===============*/
+
+
+
+#globalMenu{
+    /*position:fixed;にし、z-indexの数値を小さくして最背面へ*/
+    position:fixed;
+        z-index: -1;
+        opacity: 0;/*はじめは透過0*/
+    /*ナビの位置と形状*/
+        top:150px;
+        width:100%;
+    height: 100vh;/*ナビの高さ*/
+        background:#999;
+    /*動き*/
+        transition: all 0.3s;
+}
+
+/*アクティブクラスがついたら透過なしにして最前面へ*/
+#globalMenu.panelactive{
+        opacity: 1;
+        z-index:999;
+}
+#globalHeader_container{
+        position: fixed;
+        z-index: 999;/*最前面へ*/
+        top:0;/*位置指定*/
+        left:0;/*位置指定*/
+}
+
+/* ナビゲーションのスタイル */
+#globalMenu ul{
+        list-style: none;
+        text-align: cener;
+        display:flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0 50px;
+}
+
+/*下の階層のulや矢印の基点にするためliにrelativeを指定*/
+#globalMenu ul li{
+        position: relative;
+}
+
+/*ナビゲーションのリンク設定*/
+#globalMenu ul li a{
+        display: block;
+        text-decoration: none;
+        padding: 10px;
+        transition: all .3s;
+}
+
+#globalMenu ul li a:hover{
+        color: #80CBD3;
+}
+
+/*==矢印の設定*/
+/* 2階層目のliの設定 */
+.nav li.has-child::after{
+        content:'';
+        position: absolute;
+        right: 15px;
+        top: 25px;
+        width: 6px;
+        height: 6px;
+        border-top: 3px solid #000000;
+        border-right: 3px solid #000000;
+        transform: rotate(135deg);
+}
+/*下の階層を持っているulの指定*/
+nav li.has-child ul{
+        position:absolute;
+        left: 0;
+        top: 62px;
+        z-index: 4;
+        background:#80CBD3;
+        opacity: 0;
+        transition: all .3s;
+}
+/*hoverしたら表示*/
+nav li.has-child:hover > ul,
+nav li.has-child ul li:hover > ul,
+nav li.has-child:active > ul,
+nav li.has-child ul li:active > ul{
+  visibility: visible;
+  opacity: 1;
+}
+
+/*ナビゲーションaタグの形状*/
+nav li.has-child ul li a{
+        color: #fff;
+        border-bottom:solid 1px rgba(255,255,255,0.6);
+}
+
+nav li.has-child ul li:last-child a{
+        border-bottom:none;
+}
+
+nav li.has-child ul li a:hover,
+nav li.has-child ul li a:active{
+        background:#3577CA;
+}
+
+
+
+/*ナビゲーションの縦スクロール*/
+/*ナビの数が増えた場合縦スクロール*/
+
+/* #globalMenu.panelactive #globalMenu_nav{
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+} */
+
+/*ナビゲーション*/？？？？？？
+#globalMenu_nav {
+    display: none;
+    /*ナビゲーション天地中央揃え*/
+    position: absolute;
+    z-index: 999;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+#globalMenu_nav.panelactive #g-lobalMenu_navList {
+    display: block;
+}
+/* headerエリア */
+#globalHeader_container{
+        width:100%;
+        background:#333;
+        color:#fff;
+        text-align: center;
+        padding: 20px;
+		z-index: 999;
+		top: 0;
+		left: 0;
+}
+/*リストのレイアウト設定*/
+#g-lobalMenu_navList li{
+        list-style: none;
+    	text-align: center;
+}
+#g-lobalMenu_navList li a{
+        color: #333;
+        text-decoration: none;
+        padding:10px;
+        display: block;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        font-weight: bold;
+}
+
+nav li.has-child ul{
+    position: relative;
+	left:0;
+	top:0;
+	width:100%;
+	visibility:visible;/*JSで制御するため一旦表示*/
+	opacity:1;/*JSで制御するため一旦表示*/
+	display: none;/*JSのslidetoggleで表示させるため非表示に*/
+	transition:none;/*JSで制御するためCSSのアニメーションを切る*/
+}
+
+}
+
+
+/*577px以上768px以下タブレット*/
+@media screen and (min-width:577px) and ( max-width:768px) {
+
+        .navTop_list li {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                margin: 0 0 10px 0;
+                width: calc((100% / 2) - 10px);
+                list-style: none;
+          }
+}
+
+
+
+/*576px以下スマホ*/
+@media (max-width: 576px) {
+  .contGuideSp {
+          padding-right: 3%;
+          padding-left: 3%;
+          margin: 0 auto;
+          background-color: #80CBD3;
+          height: 100vh;
+        }
+}

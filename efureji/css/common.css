@@ -1,0 +1,134 @@
+@charset "UTF-8";
+/*----------------------------------------------------------------------------
+        BASE
+----------------------------------------------------------------------------*/
+* {
+        box-sizing: border-box;
+        outline: none;
+}
+html {
+        font-size:62.5%;
+}
+.posiSet {
+    position: relative;
+}
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, address, img, strong, sub, sup, i, dl, dt, dd, ol, ul, li, form, label, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+        margin:0;
+        padding:0;
+        border:0;
+        outline:0;
+        vertical-align:baseline;
+        font-style: normal;
+}
+ul { list-style: none; }
+a {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+        cursor: pointer;
+}
+a, a img, a i:before, .menu .menuCmn a:before, .menu__mega .menu__second-level, #mvCarousel .slick-arrow, #mvCarousel .slick-arrow:before, #subNav li a:before, .thumb li img, .more-btn p span, .more-btn p span:after, input {
+        transition: all 0.2s ease;
+}
+header #mainNav > ul > li > a, .contactBox:before, .estimateBox:before, .menu .menuCmn li a:before, .pageBack a:before {
+        transition: none !important;
+}
+.txtLink {
+        color: #388FC2 !important;
+}
+a:hover img, #menuBox a:hover i:before, footer .snsBox a:hover i:before {
+        opacity: .6;
+}
+table {
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+}
+th, td {
+        padding: 8px 15px;
+}
+th {
+        white-space: nowrap;
+        vertical-align: top;
+        font-weight:normal;
+}
+.txtnormal {font-weight: normal;}
+.letter_spce0 {letter-spacing: initial;}
+
+
+.hp_flex {
+    display: flex;
+}
+.hp_flexWrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+.hp_flexWrapBet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.hp_flexBet {
+    display: flex;
+    justify-content: space-between;
+}
+.hp_flexCol {
+    display: flex;
+    flex-direction: column;
+}
+.hp_flexJusCen {
+    display: flex;
+    justify-content: center;
+}
+.hp_flexJusAro {
+    display: flex;
+    justify-content: space-around;
+}
+.hp_flexEnd {
+    justify-content: flex-end;
+}
+.hp_flexCen {
+    justify-content: center;
+}
+.el_flexStr {
+    align-items: stretch;
+}
+.el_flexCen {
+    align-items: center;
+}
+.el_flexSta {
+    align-items: start;
+}
+.el_flexEnd {
+    align-items: end;
+}
+.hp_flexSta {
+    align-items: flex-start;
+}
+.hp_flexEnd {
+    align-items: end;
+}
+
+/* 基本的な位置による配置 */
+/* align-content は left および right の値を取りません */
+/* align-content: center;     アイテムを中央に寄せる */
+/* align-content: start;      /* アイテムを先頭に寄せる */
+/* align-content: end;        /* アイテムを末尾に寄せる */
+/* align-content: flex-start; /* フレックスアイテムを先頭に寄せる */
+/* align-content: flex-end;   /* フレックスアイテムを末尾に寄せる */
+
+input[type="submit"],
+input[type="button"],
+a[type="button"] {
+  appearance: none;
+  -webkit-appearance: none;
+}
+/*404*/
+.notfound {
+    width: 80%;
+    max-width: 500px;
+    margin: 0 auto 20px auto;
+  }
+  .notfound img {
+    width: 100%;
+  }
