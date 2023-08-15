@@ -6,17 +6,17 @@
 </head>
 <body>
  <script>
-	let num = Math.floor(Math.random()*51)+10;
-	if ( num *3 ){
+	let num = Math.floor(Math.random()*1000);
+	if ( num %3 ===0 ){
 		console.log('3の倍数です');
 	}
-	else if( num * 5 ){
+	else if( num % 5 === 0 ){
 		console.log('5の倍数です');
 	}
-	else if(num * 5 == num * 3 ){
+	else if ( num % 3 === 0 && num % 5 === 0 ){
 		console.log('3と５の倍数です');
 	}else{
-		console.log('それ以外です');
+		console.log(num);
 	}
  </script>
 </body>
