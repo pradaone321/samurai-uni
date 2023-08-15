@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+ <meta charset="UTF-8">
+ <title>JavaScriptの基礎を学ぼう_7章課題</title>
+</head>
+<body>
+ <script>
+	let num = Math.floor(Math.random()*51)+10;
+	if ( num *3 ){
+		console.log('3の倍数です');
+	}
+	else if( num * 5 ){
+		console.log('5の倍数です');
+	}
+	else if(num * 5 == num * 3 ){
+		console.log('3と５の倍数です');
+	}else{
+		console.log('それ以外です');
+	}
+ </script>
+</body>
+</html>
