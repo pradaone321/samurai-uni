@@ -1,5 +1,6 @@
 //イベント課題
-var btn = document.getElementById('btn');
+const text = document.getElementById('text');
+const btn = document.getElementById('btn');
 btn.addEventListener('click', function(){
 	setTimeout(()=>{
 		//console.log('ボタンをクリックしました');
