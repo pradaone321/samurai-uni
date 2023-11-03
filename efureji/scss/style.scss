@@ -1,0 +1,109 @@
+//パーシャルを使ってまとめる！！
+@use 'base/variables' as v; //base/_variables.scss
+@use 'pages/header'; //pages/_header.scss
+
+//パーシャルから変数を使うとき注意！！
+body{
+	// as 何かでファイル名を短縮できる
+	background: v.$bg-color;
+	//background: variables.$bg-color;
+}
+
+//mixinを使ってみる
+//引数も使える任意の数字はプロパティー側で入力もできる
+//引数を使って一部変更できる($size:80px) sizeの後ろに:数字を入れて初期値をつくるのも可能
+//引数内は複数入れることができる
+@mixin circleB($size) {
+	width: $size;
+	height: $size;
+	border-radius: 50%;
+	border-color: v.$border-color;
+}
+divB{
+	@include circleB(50px);
+}
+.photoB{
+	//プロパティーないに任意の変数を持っておき、mixinで呼び出すときに値を記述する
+	@include circleB(100px);
+}
+@mixin circle($size:80px, $bg:#0bd, $height:50px) {
+	width: $size;
+	height: $size;
+	border-radius: 50%;
+	background-color: $bg;
+	border-color: v.$border-color;
+	height: $height
+}
+//引数の順に数値を入れて変更ができる
+div{
+	@include circle(50px, red, 30px);
+}
+//一部だけ引数を変更することもできる
+div only{
+	@include circle($height:30px );
+}
+.photo{
+	//プロパティーないに任意の変数を持っておき、mixinで呼び出すときに値を記述する
+	@include circle(100px);
+}
+
+//グラデーション
+//初期値を入れることも可能
+@mixin gradient-color($color1:#4db1ec, $color2:#b473bf){
+	background: linear-gradient($color1,$color2);
+}
+.box{
+	@include gradient-color(#ff9f67,#ffd673)
+}
+.title{
+	@include gradient-color;
+}
+//プロパティーも含めたぶろっくごと引き渡す
+@mixin tablet{
+	@media(min-width: 480px) and (max-width: 780px){
+		@content
+	}
+}
+h1{
+	font-size: 5rem;
+	@include tablet{
+		font-size: 2rem;
+	}
+}
+
+//mixin END
+
+
+//変数を使う！！
+$main-color: #0bd;
+.nav{
+	padding: 10px;
+	a{
+		color: $main-color;
+	}
+}//.nav END
+
+.button{
+	a{
+		color: red;
+	}
+	// &: を使って親セレクターを参照！
+	//親の名前とクラス名を追加して作れる
+	&:hover{
+		background-color: #FFF;
+	}
+	&:mb{
+		margin-bottom: 20px;
+	}
+}//.button END
+
+//クラス名をネストにする！！
+.post{
+	margin-bottom: 20px;
+	&-title{
+		font-size: 2rem;
+	}
+	&_date{
+		color: #CCC;
+	}
+}
