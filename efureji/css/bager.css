@@ -42,11 +42,6 @@ nav{
 nav.on {
     top: 0;
   }
-
-
-#btn.on span {
-    /* background-color: #fff; */
-  }
   #btn.on span:nth-of-type(1) {
     transform: translateY(11px) rotate(45deg);
   }
