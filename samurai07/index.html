@@ -4514,17 +4514,6 @@ faq.html よくあるご質問 END  --------*/
 
 			});
 
-
-		/*　eLTAX STARAT　*/
-		// $('#eltax_faq_01').on('click',function(){ //titleをクリックしたら
-		//   $('body,html').animate({scrollTOP:100},400);
-		//   //$('.accordion-item').slideUp();
-		//   $('.acc-item-el01').slideToggle(500); // boxが0.5秒かけてスライドを表示・非表示
-		// });
-
-
-
-
 		// $('#eltax_faq_01').on('click', function(event) { 
 		//     // デフォルトのアンカーリンク動作を無効化
 		//     event.preventDefault();
@@ -4538,6 +4527,39 @@ faq.html よくあるご質問 END  --------*/
 		//     $('.acc-item-el01').slideToggle(500); 
 		// });
 
+
+
+
+
+		$('#eltax_faq_01').on('click',function(){ //titleをクリックしたら
+		  $('body,html').animate({scrollTOP:100},400);
+		  //$('.accordion-item').slideUp();
+		  $('.acc-item-el01').slideToggle(500); // boxが0.5秒かけてスライドを表示・非表示
+		});
+		$('#eltax_faq_02').on('click',function(){ //titleをクリックしたら
+		$('body,html').animate({scrollTOP:100},400);
+		$('.acc-item-el02').slideToggle(500);
+		});
+		$('#eltax_faq_03').on('click',function(){
+		$('body,html').animate({scrollTOP:100},400);
+		$('.acc-item-el03').slideToggle(500);
+		});
+		$('#eltax_faq_04').on('click',function(){
+		$('body,html').animate({scrollTOP:100},400);
+		$('.acc-item-el04').slideToggle(500);
+		});
+		$('#eltax_faq_05').on('click',function(){
+		$('body,html').animate({scrollTOP:100},400);
+		$('.acc-item-el05').slideToggle(500);
+		});
+		$('#eltax_faq_06').on('click',function(){
+		$('body,html').animate({scrollTOP:100},400);
+		$('.acc-item-el06').slideToggle(500);
+		});
+		$('#eltax_faq_07').on('click',function(){
+		$('body,html').animate({scrollTOP:100},400);
+		$('.acc-item-el07').slideToggle(500);
+		});
 
 
 		$(document).ready(function() {
@@ -4559,49 +4581,6 @@ faq.html よくあるご質問 END  --------*/
 				$(targetId).slideToggle(500); 
 			});
 		});
-
-
-
-		$('#eltax_faq_02').on('click',function(){ //titleをクリックしたら
-		$('body,html').animate({scrollTOP:100},400);
-		$('.acc-item-el02').slideToggle(500);
-		});
-		$('#eltax_faq_03').on('click',function(){
-		$('body,html').animate({scrollTOP:100},400);
-		$('.acc-item-el03').slideToggle(500);
-		});
-		$('#eltax_faq_04').on('click',function(){
-		$('body,html').animate({scrollTOP:100},400);
-		$('.acc-item-el04').slideToggle(500);
-		});
-
-		// $('#eltax_faq_04').on('click', function(event) { 
-		//   // デフォルトのアンカーリンク動作を無効化
-		//   event.preventDefault();
-
-		//   // スクロールアニメーション
-		//   var targetPosition = $('#eltax_faq_04').offset().top - 600; // 600pxを引く
-		//   $('body,html').animate({ scrollTop: targetPosition }, 400);
-
-		//   // 開閉のトグル機能
-		//   $('.acc-item-el04').slideToggle(500); 
-		// });
-
-		$('#eltax_faq_05').on('click',function(){
-		$('body,html').animate({scrollTOP:100},400);
-		$('.acc-item-el05').slideToggle(500);
-		});
-		$('#eltax_faq_06').on('click',function(){
-		$('body,html').animate({scrollTOP:100},400);
-		$('.acc-item-el06').slideToggle(500);
-		});
-		$('#eltax_faq_07').on('click',function(){
-		$('body,html').animate({scrollTOP:100},400);
-		$('.acc-item-el07').slideToggle(500);
-		});
-
-
-
 
 
 		//SP：セレクトボックス
@@ -4660,32 +4639,7 @@ faq.html よくあるご質問 END  --------*/
 		});
 		});
 
-		/* アンカーリンクに応じて開閉 */
-		// $(function(){
-		// var urlHash = location.hash;
-		// if(urlHash.length){
-		// 	var urlHashnum = urlHash.replace(/[^0-9^\.]/g,"");
-		// 	var i = parseInt(urlHashnum, 10);
-		// 	var x = urlHashnum - 1;
-		// 	$(".faq-tax .accordion-collapse").eq(x).slideDown();
-		// }
-		// if(urlHash.match("-s")) {
-		// 	$(".tab-suido").addClass('active');
-		// 	$(".tab-tax").removeClass('active');
-		// 	$(".faq-tax").hide();
-		// 	$(".faq-suido").show();
-		// 	var urlHashnum = urlHash.replace(/[^0-9^\.]/g,"");
-		// 	var i = parseInt(urlHashnum, 10);
-		// 	var x = urlHashnum - 1;
-		// 	$(".faq-suido .accordion-collapse").eq(x).slideDown();
-		// }
-		// if(urlHash.match("suido")) {
-		// 	$(".tab-suido").addClass('active');
-		// 	$(".tab-tax").removeClass('active');
-		// 	$(".faq-suido").show();
-		// 	$(".faq-tax").hide();
-		// }
-		// });
+
 
 		/* よくあるご質問 */
 
@@ -4726,7 +4680,7 @@ faq.html よくあるご質問 END  --------*/
 		});
 
 
-		/* eLTAX START */
+		/* アイコン */
 		$('.navB01').on('mouseenter', function () {
 		$('img.el_icon1_off').css('display', 'none');
 		$('img.el_icon1_on').css('display', 'block');
@@ -4952,6 +4906,7 @@ faq.html よくあるご質問 END  --------*/
 		$(this).css({'background-color':'#FFF', color: '#000' , 'border':'solid 1px #9BD3F3'});
 		});
 
+    /* スクロールするとheaderが隠れる */
 $(function(){
 	const header = $('#headerH');//ヘッダーを変数「header」に格納
 	$(window).on('scroll' , function(){//画面をスクロールした時に〜。スクロールイベントを取得
