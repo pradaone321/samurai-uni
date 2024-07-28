@@ -1,0 +1,4996 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+  <title>よくあるご質問 </title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/d6114fd05f.js" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+  <style>
+    @media (min-width: 992px) {
+      header.sticky-top.bg-white.shadow-sm.sticky {
+        position: fixed;
+        width: 100%;
+        z-index: 1020;
+        top: 0;
+      }
+      footer.bg-light {
+          position: fixed;
+          bottom: 0;
+          width: 100%;
+          z-index: 30;
+        }
+    }
+
+/*------------------------------
+ ▼共通デザイン
+ -------------------------------*/
+
+html {
+  position: relative;
+  min-height: 100%;
+  box-sizing: border-box;
+}
+body {
+  font-size: .9rem;
+  font-family: Noto Sans JP,Helvetica Neue,Arial,Hiragino Kaku Gothic ProN,Hiragino Sans,Meiryo,sans-serif;
+  color: #333;
+  line-height: 1.4;
+  overflow-y: scroll;
+}
+a {
+  color: #388FC2;
+}
+.asterisk {
+  margin: 0;
+  padding-left: 1rem;
+  text-indent: -0.8rem;
+  display: block;
+  line-height: 1.3rem;
+}
+.asterisk.number {
+  padding-left: 1.5rem;
+  text-indent: -1.5rem;
+}
+section {
+  margin-bottom: 80px;
+}
+section.content {
+  padding: 30px 0 0 0;
+  min-height: calc(100vh - 287px);
+}
+.text-list li {
+  margin: 0 0 10px 0;
+}
+#page_top {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  right: 20px;
+  bottom: 80px;
+  background: #afafaf;
+  opacity: 0.6;
+  border-radius: 50%;
+  z-index: 100;
+}
+
+.no-border {
+  border: none !important;
+}
+input[type="submit"],
+input[type="button"],
+a[type="button"] {
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+/*404*/
+.notfound {
+  width: 80%;
+  max-width: 500px;
+  margin: 0 auto 20px auto;
+}
+.notfound img {
+  width: 100%;
+}
+
+/* for IE */
+_:-ms-input-placeholder, :root #page_top a::before {
+  bottom: 10px;
+}
+_:-ms-input-placeholder, :root .ie-none {
+  display: none;
+}
+.ie-disp {
+  width: auto;
+  display: none;
+}
+_:-ms-input-placeholder, :root .ie-disp {
+  display: inline-block;
+}
+
+/*書式*/
+h1 {
+  font-size: 1.6rem;
+}
+h2 {
+  margin: 10px auto 30px auto;
+  display: block;
+  font-weight: 600;
+}
+h2:after,
+.modal-header h4:after {
+  margin: 5px auto 0 auto;
+  width: 12rem;
+  height: 10px;
+  content: "";
+  display: block;
+  border-bottom: 6px solid #E5E5E5;
+}
+h3 {
+  margin: 0 0 20px 0;
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+}
+h3 .small {
+  margin: 6px 0 0 0;
+  font-size: .8rem;
+}
+h3:before,
+h3:after {
+  min-width: 1rem;
+  margin: 0 .5em;
+  content: "";
+  flex-grow: 1;
+  height: 2px;
+  background: #388FC2;
+}
+h3:before {
+  margin: 0 .5em 0 0;
+}
+h3:after {
+  margin: 0 0 0 .5em;
+}
+ol, ul {
+  padding-left: 1rem;
+}
+
+/*カラー*/
+.bg-ccolor {
+  background-color: #388FC2 !important;
+}
+.bg-enter {
+  background-color: #8a3b62 !important;
+}
+.navbar-light .navbar-toggler {
+  border-color: rgb(0 86 72);
+}
+.caution {
+  color: #c2185b;
+}
+.blue {
+  color: #01579b;
+}
+.btn-outline-primary {
+  color: #333;
+  border: 2px solid #388FC2;
+}
+
+/*ヘッダー*/
+header .navbar-brand img {
+  width: 100px;
+}
+header .navbar-brand img:hover {
+  opacity: 0.6;
+  transition-duration: 0.3s;
+}
+header .catch {
+  font-size: 0.7rem;
+}
+header a.dropdown-item {
+  font-size: 0.8rem;
+}
+
+header .header-lta {
+  background-color: #ffe8df;
+}
+header .row {
+  flex-wrap: nowrap;
+}
+.header-logo {
+  flex-basis: 100px;
+}
+.header-eltax {
+  flex-basis: 100px;
+  padding: 0;
+}
+.header-pcmenu {
+  display: none;
+}
+.header-spmenu {
+  flex-basis: 30px;
+}
+header a.lta-btn {
+  width: auto;
+  margin: 0;
+  padding: .4rem .6rem;
+  font-size: .8rem;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #113fc1;
+  background-color: #113fc1;
+  border-radius: 6px;
+  min-height: auto;
+}
+
+
+
+
+/*グローバルナビ*/
+.drawer-nav {
+	width: 100%;
+	position: sticky;
+	top: 100px;
+	overflow: visible;
+}
+.drawer-hamburger {
+	display: none;
+}
+.nav-item a:hover,
+#gnav a.active {
+  background-color: #388FC2;
+  color: #fff !important;
+}
+.mb_nav li {
+  width: 100%;
+  display: block;
+}
+.mb_nav .dropdown-toggle::after {
+  position: absolute;
+  top: calc(50% - 4px);
+  right: 10px;
+}
+.offcanvas-end.mb_nav_wrapper {
+  width: 80%;
+  max-width: 300px;
+}
+.mb_nav_wrapper .header-faq {
+  font-size: .8rem;
+}
+.navbar-light .navbar-toggler {
+  border-color: #fff;
+}
+.navbar-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(56,143,194,1)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+header #gnav {
+  margin: 0;
+}
+header #gnav .nav-item {
+  width: 11rem;
+  border-left: 1px solid #aaa;
+}
+header #gnav .nav-item:last-child {
+  border-right: 1px solid #aaa;
+}
+.sidenavi {
+  z-index: 3000;
+}
+
+/*サイトナビ*/
+.bottom-navi {
+  box-shadow: 0 -2px 6px 0px rgb(0 0 0 / 10%);
+  z-index: 1000;
+}
+.bottom-navi a {
+  padding: 40px 0 5px 0;
+  font-size: .8rem;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 30px;
+}
+
+.text-search {
+  color: #004c9e;
+  font-weight: 500;
+}
+
+/*フッター*/
+body.top footer {
+  padding: 0;
+}
+footer {
+  padding: 0 0 64px 0;
+}
+footer .nav li {
+  width: 100%;
+  display: block;
+  text-align: center;
+  border-bottom: 1px dotted #ccc;
+}
+footer .nav li:last-child {
+  border-bottom: none;
+}
+footer .nav li a {
+  padding: .5rem 0;
+}
+footer .copyright {
+  font-size: .6rem;
+}
+footer .nav-item a:hover {
+  color: #388FC2 !important;
+  background-color: #fff;
+  text-decoration: underline;
+}
+
+/*------------------------------
+ ▼TOPページ
+ -------------------------------*/
+
+/*メインビジュアル*/
+.top_main {
+  margin-bottom: 40px;
+}
+.top_main .firstview {
+  display: block;
+}
+.top_main .firstview {
+  margin: 0 0 30px 0;
+  padding: 40px 0 0 0;
+  background-image: url("/koukin/img/top/mainvisual_bg.png");
+  background-size: 100% 100%;
+  background-position: center top 0;
+  background-repeat: repeat-x;
+}
+.top_main .firstview-loop {
+  background-image: url("/koukin/img/top/mainvisual_icon.png");
+  background-size: 640px;
+  background-position: left 0 bottom 20px;
+  background-repeat: repeat-x;
+  height: 330px;
+  animation: scroll-anim-mb 100s linear infinite;
+}
+@keyframes scroll-anim-mb {
+  from { background-position: left 0 bottom 20px, center top; }
+    to { background-position: left -640px bottom 20px, center top; }
+}
+@keyframes scroll-anim-pc {
+  from { background-position: left 0 bottom 10px, center top; }
+    to { background-position: left -810px bottom 10px, center top; }
+}
+
+/* IE10 & IE11 */
+_:-ms-input-placeholder, :root .top_main .firstview-loop {
+  animation: none;
+}
+
+.top_main .firstview h1 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.1rem;
+  text-align: center;
+}
+.top_main .firstview h1 span {
+  font-size: 2rem;
+  display: block;
+}
+.top_main .container p {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+  letter-spacing: .04em;
+}
+.top_main .firstview button {
+  display: block;
+}
+.top_main a.btn {
+  width: 100%;
+  font-size: 1.2rem;
+}
+.top_main .mainvisual img {
+  width: 115px;
+  position: absolute;
+  top: 80px;
+  right: 20px;
+}
+.top_main a.btn {
+  background-color: #004c9e;
+  transition-duration: 0.3s;
+}
+.top_main a.btn:hover {
+  background-color: #0767ce;
+}
+
+
+/*フィッシング詐欺ご注意*/
+.pc_view{
+  display: none;
+}
+.sp_view{
+  display: block;
+}
+
+
+
+/*自治体を探す*/
+#top_area .area-block h3 {
+  margin: 0 0 10px 0;
+}
+#top_area {
+  padding-top: 100px;
+  margin-top: -100px;
+}
+.top_area .area-block {
+  margin: 0 0 20px 0;
+}
+.area-list {
+  margin: 0;
+  padding: 5px 0 10px 0;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #F0F3F5;
+  list-style: none;
+}
+.area-list li {
+  width: calc((100% / 3) - 10px);
+  margin: 5px 5px 5px 5px;
+  text-align: center;
+}
+.area-list li a {
+  width: 100%;
+  padding: 0.4rem;
+  display: block;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  background-color: #fff;
+  font-size: .8rem;
+  font-weight: 500;
+  color: #333;
+  text-decoration: none;
+}
+.area-list li a:hover {
+  border-color: #388FC2;
+  background-color: #388FC2;
+  color: #fff;
+}
+
+/*都道府県税*/
+.preftax_block .area-list {
+  flex-wrap: nowrap;
+}
+.preftax_block .area-list li:last-child {
+  text-align: left;
+}
+.preftax_block .area-list li p {
+  margin: 0;
+  padding: 0;
+}
+.preftax_block .area-list li a.caution-tax {
+    width: auto;
+    padding: 5px 0 0 0.5rem;
+    border: none;
+    display: inline-block;
+    background: none;
+    text-decoration: underline;
+    color: #388FC2;
+    font-size: 1rem;
+}
+
+/*サービスの特長*/
+section.top_point {
+  background-color: #f5fbfc;
+}
+.top_point .point-slider h2 {
+  margin: 0 auto;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 1.6rem;
+}
+.top_point .point-slider h2:after {
+  display: none;
+}
+.top_point .point-slider {
+  padding: 0 0 20px 0;
+}
+.top_point .point-slider p {
+  height: 4rem;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.top_point .point-slider img {
+  width: 100%;
+  max-height: 236px;
+}
+.top_point h2 {
+  margin-bottom: 10px;
+}
+.top_point h2:after {
+  border-bottom: none;
+}
+.slick-prev,
+.slick-next {
+  z-index: 100;
+}
+.slick-prev:before,
+.slick-next:before,
+.slick-dots li.slick-active button:before {
+  color: #388FC2;
+}
+.slick-prev:before,
+.slick-next:before {
+  font-size: 30px;
+}
+.slick-prev {
+  left: 0;
+}
+.slick-next {
+  right: 10px;
+}
+/* IE10 & IE11 */
+_:-ms-input-placeholder, :root .top_point .point-slider img {
+  height: 250px;
+}
+.slick-prev, .slick-next {
+  width: 40px;
+  height: 40px;
+}
+
+/*税金・各種公共料金に対応*/
+.top_tax .container {
+  padding: 40px 10px 0 10px;
+  border: #D1DFE0 2px solid;
+  position: relative;
+}
+.top_tax h2 {
+  width: 19rem;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #fff;
+}
+.top_tax h2:after {
+  display: none;
+}
+.top_tax .tax-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.top_tax .tax-list li {
+  width: calc(100% / 3);
+  margin: 0 0 10px 0;
+  text-align: center;
+}
+.top_tax .tax-list li img {
+  max-width: 100%;
+  height: 45px;
+  margin: 0 0 10px 0;
+}
+.top_tax .tax-list li p {
+  font-size: .9rem;
+}
+
+/*ご利用可能なお支払い方法*/
+.top_payment {
+  padding: 30px 0;
+  background-color: #F0FAFC;
+  background-image: radial-gradient(#8fd7e221 30%, transparent 30%);
+  background-size: 20px 20px;
+}
+.top_payment .brand-list {
+  margin: 0 0 5px 0;
+  padding: 10px;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.top_payment .brand-list li {
+  width: calc(100% / 6);
+  margin: 0 0 15px 0;
+  text-align: center;
+}
+.top_payment .brand-list li img,
+.guide.payment .brand-list li img {
+  height: 28px;
+}
+.top_payment h2 {
+  margin-bottom: 10px;
+}
+.top_payment h2:after {
+  border-bottom: none;
+}
+.top_payment .payment_list {
+  font-size: 1.1rem;
+}
+.top_payment .payment_list + p a {
+  font-size: 1.1rem;
+}
+
+/*ご準備いただくもの*/
+.top_preparations {
+  padding-top: 180px;
+  margin-top:-180px;
+}
+.top_preparations .container {
+  padding: 30px 20px 10px 20px;
+  position: relative;
+  border: #333 3px solid;
+  border-radius: 10px;
+}
+.top_preparations h2 {
+  width: 16rem;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #fff;
+}
+.top_preparations h2:after {
+  display: none;
+}
+.preparations-list h4 {
+  margin: 0 0 10px 0;
+}
+.preparations-list h4 span {
+  width: 100%;
+  display: inline-block;
+  font-size: .9rem;
+  border-bottom: 1px dotted #aaa;
+}
+.preparations-list h4 span:last-child {
+  margin: 10px 0 0 0;
+}
+.top_preparations .preparations-item {
+  margin: 0;
+  padding: 0;
+}
+.top_preparations .preparations-list {
+  margin: 0;
+  padding: 0;
+	counter-reset: li;
+}
+.top_preparations .preparations-list li {
+  margin: 0 0 15px 0;
+  padding: 0 0 0 25px;
+	position: relative;
+	list-style: none;
+  border-bottom: 1px solid #ccc;
+}
+.top_preparations .preparations-list li:last-child {
+  margin: 0;
+  border-bottom: none;
+}
+.top_preparations .preparations-list li a {
+  font-size: 1.1rem;
+}
+.top_preparations .preparations-list li .asterisk a {
+  font-size: .9rem;
+}
+.top_preparations .preparations-list li:before {
+  width: 1.3rem;
+  height: 1.3rem;
+  background-color: #C2387D;
+  position: absolute;
+  top: 3px;
+  left: 0;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  counter-increment: li;
+  content: counter(li);
+  border-radius: 10px;
+  line-height: 1.1rem;
+}
+.top_preparations .preparations-list h4 {
+  margin: 0 0 10px 0;
+  font-size: 1.1rem;
+  line-height: 1.6rem;
+}
+
+/*ニュース*/
+.top_news nav button {
+  width: 50%;
+  padding: 10px;
+  font-size: 1.1rem;
+}
+.top_news .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active,
+.top_news .nav-tabs {
+  border-color: #aaa;
+}
+.top_news .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+  border-bottom: 1px solid #fff;
+}
+.top_news .nav-tabs .nav-link {
+  color: #666;
+  background-color: #EEE;
+  border-bottom: 1px solid #ccc;
+}
+.top_news .nav-tabs .nav-link.active {
+  background-color: #388fc2;
+  color: #fff;
+  border-bottom: 1px solid #388fc2;
+}
+dl.news-list {
+  margin: 0;
+  padding: 0 10px 0 10px;
+}
+dl.news-list dt {
+  margin: 0 0 5px 0;
+  color: #999;
+  font-size: 1.2rem;
+  font-weight: normal;
+}
+dl.news-list dd {
+  margin: 0 0 20px 0;
+  padding: 0 0 20px 0;
+  border-bottom: 1px solid #ccc;
+}
+dl.news-list dd:last-child {
+  margin: 0;
+  padding: 0;
+  border-bottom: none;
+}
+dl.news-list dd ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+dl.news-list dd ul li {
+  width: 50%;
+  margin: 0 0 15px 0;
+  font-size: 1rem;
+}
+dl.news-list dd h3 {
+  margin: 0 0 5px 0;
+  display: block;
+  align-items: start;
+  font-size: 1.1rem;
+  color: #388FC2;
+}
+dl.news-list dd h3:before,
+dl.news-list dd h3:after {
+  display: none;
+}
+dl.news-list dd p{
+  margin: 0 0 5px 0;
+}
+dl.news-list dd li a {
+  color: #333;
+  display: table;
+}
+dl.news-list dd li a:hover {
+  color: #388FC2;
+}
+dl.news-list dd li:before,
+dl.news-list dd li span,
+dl.news-list dd li span:after {
+  margin: 0;
+  padding: 0;
+  font-size: 0.8rem;
+  display: inline-block;
+}
+dl.news-list dd li.tax:before,
+dl.news-list dd li span.tax:after {
+  content: "各種税料金";
+  color: #009688;
+}
+dl.news-list dd li.fee:before,
+dl.news-list dd li span.fee:after {
+  content: "各種料金";
+  color: #085940;
+}
+dl.news-list dd li.suido:before,
+dl.news-list dd li span.suido:after {
+  content: "水道料金";
+  color: #2980B9;
+}
+dl.news-list dd li.app:before,
+dl.news-list dd li span.app:after {
+  content: "電子申請費用";
+  color: #96004B;
+}
+
+
+/*------------------------------
+▼サブページ
+-------------------------------*/
+
+/*自治体を探す（サブページ）*/
+.area .multi-collapse {
+  padding-top: 300px;
+  margin-top: -300px;
+}
+.area .accordion-body {
+  padding: 10px;
+  border-radius: 0;
+  background-color: #f0f3f5;
+}
+.accordion-button {
+  font-size: 1.1rem;
+}
+.accordion-button:not(.collapsed) {
+  color: #fff;
+  background-color: #388FC2;
+}
+.area-list li a {
+  font-size: .8rem;
+}
+h3.accordion-header {
+  border-bottom: 1px dotted #ccc;
+}
+h3.accordion-header.disabled .accordion-button,
+.top_area .area-list li a.disabled {
+  background-color: #eee;
+  color: #999;
+  pointer-events: none;
+}
+h3.accordion-header.disabled .accordion-button:after {
+  display: none;
+}
+.accordion-item h3:before,
+.accordion-item h3:after {
+  display: none;
+}
+.accordion-item h3.accordion-header:last-of-type {
+  border-bottom: none;
+}
+.accordion-button::after {
+  width: 1rem;
+  height: 1rem;
+  background-size: 1rem;
+}
+.accordion-item {
+  margin: 0 0 20px 0;
+}
+.accordion-item:not(:first-of-type) {
+  border-top: 1px solid rgba(0,0,0,.125);
+}
+.accordion-item:first-of-type .accordion-button {
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+}
+.count_block {
+  position: absolute;
+  top: 40px;
+  right: 5px;
+}
+
+.count span {
+  width: 3rem;
+  position: absolute;
+  top: 22px;
+  left: calc(50% - 1.5rem);
+  font-size: 1.4rem;
+  text-align: center;
+  font-weight: bold;
+  color: #C2387D;
+}
+
+h4.taxtype {
+  margin: 0;
+  padding: 10px 20px 5px 0;
+  background-color: #f0f3f5;
+  font-size: .9rem;
+  border-bottom: 1px dotted #607d8b;
+}
+h4 i {
+  font-size: 0.8rem;
+  vertical-align: middle;
+}
+.preftax_block .area-list li:last-child {
+  width: calc(100% - ((100% / 3) + 10px));
+}
+.preftax_block .area-list li p {
+  font-size: .8rem;
+}
+
+/*自動車税についての注意事項*/
+.jidosha-modal-open span {
+  text-decoration: underline;
+}
+.jidosha-modal-open span:hover {
+  cursor: pointer;
+  color: #0a58ca;
+}
+.jidosha-modal-container {
+	width: 100%;
+	height: 100%;
+	padding: 40px 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	text-align: center;
+	background: rgba(26,86,121,50%);
+	overflow: auto;
+	opacity: 0;
+	visibility: hidden;
+  transition: opacity .15s linear;
+  box-sizing: border-box;
+  z-index: 1060;
+}
+.jidosha-modal-body {
+	width: 90%;
+	max-width: 760px;
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+}
+.jidosha-modal-content {
+	padding: 20px;
+	background: #fff;
+	text-align: left;
+  box-shadow: 0px 3px 8px #5e8297;
+  border-radius: 1rem;
+}
+.jidosha-modal-container:before {
+	content: "";
+	display: inline-block;
+	vertical-align: middle;
+	height: 100%;
+}
+.jidosha-modal-container.active {
+	opacity: 1;
+	visibility: visible;
+}
+.jidosha-modal-content h4 {
+  padding: 0;
+  font-size: 1.4rem;
+  text-align: center;
+}
+.jidosha-modal-content p {
+  padding: 0;
+}
+.jidosha-modal-content h4 {
+  font-size: 1.2rem;
+}
+.jidosha-modal-content .image-block {
+  max-width: 300px;
+  margin: 20px auto;
+}
+.jidosha-modal-content .image-block img {
+  width: 90%;
+}
+.jidosha-modal-close {
+  text-align: right;
+}
+.jidosha-modal-close i {
+  font-size: 1.5rem;
+  color: #ccc;
+}
+.jidosha-modal-close i:hover {
+  cursor: pointer;
+  color: #333;
+}
+.jidosha-modal-container .red {
+  color: #96004B;
+}
+.jidosha-modal-container .blue {
+  color: #2980B9;
+}
+
+/*自治体詳細*/
+.modal-dialog {
+  margin: 2rem 1rem 1rem 1rem;
+  box-shadow: 0px 3px 8px #5e8297;
+  border-radius: 1rem;
+}
+.modal-dialog-scrollable {
+  height: calc(100% - 4rem);
+}
+.modal-header {
+  position: relative;
+  border-bottom: none;
+}
+.modal-header .btn-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.modal-header h4 {
+  padding: 1rem 0 0 0;
+  position: relative;
+  font-size: calc(1.325rem + .9vw);
+}
+.modal-dialog-scrollable .modal-content {
+  height: 100%;
+}
+.modal-dialog-scrollable .modal-body {
+flex: 1;
+}
+.modal-content {
+  border-radius: 1rem;
+}
+.modal-content h5 {
+  text-align: center;
+  font-size: 1rem;
+}
+.modal-body {
+  padding: 0 1rem;
+  flex: none;
+}
+.modal-scrollarea {
+  height: 100%;
+  padding: .8rem;
+  border: 2px solid #CCC;
+  background-color: #FAFAFA;
+  overflow-y: auto;
+}
+.modal-scrollarea dl dt {
+  margin: 0 0 0.1rem 0;
+  font-size: 1rem;
+}
+.modal-scrollarea dl dt.tax {
+  color: #009688;
+}
+.modal-scrollarea dl dt.fee {
+  color: #085940;
+}
+.modal-scrollarea dl dt.suido {
+  color: #2980B9;
+}
+.modal-scrollarea dl dt.app {
+  color: #96004B;
+}
+.modal-scrollarea dl dt.lta {
+  color: #3f51b5;
+}
+.modal-scrollarea dl dd {
+  margin: 0 0 0.2rem 0;
+  padding: 0 0 0 1rem;
+  font-size: .8rem;
+}
+.modal-scrollarea dl dd.subtitle {
+  padding: 1rem 0 0 0 ;
+  font-weight: bold;
+}
+.modal-scrollarea dl dd.subtitle:before {
+  display: none;
+}
+.modal-scrollarea dl dd:before {
+  width: 1rem;
+  margin-left: -1rem;
+  content: "・";
+  display: block;
+  float: left;
+}
+.modal-scrollarea dl dd + dt {
+  margin: 0.5rem 0 0.1rem 0;
+}
+.modal-footer {
+  margin: 0;
+  padding-bottom: 20px;
+  border-top: none;
+}
+.modal-footer p {
+  width: 100%;
+  margin: 0 0 10px 0;
+  font-size: 0.8rem;
+  text-align: center;
+}
+.modal-footer ul {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.modal-footer ul li {
+  width: 100%;
+  margin: 0 0 10px 0;
+}
+.modal-footer ul li.col2 {
+  width: calc(50% - 5px);
+}
+.modal-footer ul li .btn-outline {
+  border: 2px solid #000;
+}
+.modal-footer ul li .btn-outline.tax {
+  border-color: #009688;
+}
+.modal-footer ul li .btn-outline.fee {
+  border-color: #085940;
+}
+.modal-footer ul li .btn-outline.suido {
+  border-color: #2980B9;
+}
+.modal-footer ul li .btn-outline.app {
+  border-color: #96004B;
+}
+.modal-footer ul li .btn-outline.lta {
+  border-color: #3f51b5;
+}
+.modal-footer ul li a {
+  width: 100%;
+  margin: 0 auto;
+  padding: 6px 20px 6px 12px;
+  display: block;
+  font-size: 1rem;
+  font-weight: bold;
+  position: relative;
+}
+.modal-footer ul li.col2 a {
+  line-height: 1.3rem;
+}
+.modal-footer ul li a:hover {
+  color: #fff;
+}
+.modal-footer ul li a.tax:hover:before,
+.modal-footer ul li a.fee:hover:before,
+.modal-footer ul li a.suido:hover:before,
+.modal-footer ul li a.app:hover:before,
+.modal-footer ul li a.lta:hover:before {
+  border-left: 0.4em solid #fff;
+}
+.modal-footer ul li a.tax:hover {
+  background-color:#009688;
+}
+.modal-footer ul li a.fee:hover {
+  background-color:#085940;
+}
+.modal-footer ul li a.suido:hover {
+  background-color:#2980B9;
+}
+.modal-footer ul li a.app:hover {
+  background-color:#96004B;
+}
+.modal-footer ul li a.lta:hover {
+  background-color:#3f51b5;
+}
+.modal-footer ul li a:before {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+  width: 0px;
+  height: 0px;
+  border: 0.3em solid transparent;
+  border-left: 0.4em solid #000;
+  content: "";
+}
+.modal-footer ul li a.tax:before {
+  border-left: 0.4em solid #009688;
+}
+.modal-footer ul li a.fee:before {
+  border-left: 0.4em solid #085940;
+}
+.modal-footer ul li a.suido:before {
+  border-left: 0.4em solid #3388dd;
+}
+.modal-footer ul li a.app:before {
+  border-left: 0.4em solid #96004B;
+}
+.modal-footer ul li a.lta:before {
+  border-left: 0.4em solid #3f51b5;
+}
+.modal-backdrop.show {
+  opacity: .5;
+  background-color: #1a5679;
+}
+
+/*ご利用ガイド*/
+h3.guide-title {
+  margin: 0 0 20px 0;
+  padding-left: 0.5rem;
+  border-left: 4px solid #388fc2;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+.guide h3.step {
+  display: flex;
+  align-content: center;
+}
+.guide h3.step:before,
+.guide h3.step:after {
+  display: none;
+}
+.guide .step span:first-child {
+  margin: 0 10px 0 0;
+  padding: 0 6px;
+  color: #fff;
+  font-size: 1.2rem;
+  background-color: #388fc2;
+}
+.guide .guide_topnavi {
+  margin: 0 0 20px 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+}
+.guide .guide_topnavi li {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  min-height: 4rem;
+  font-weight: bold;
+}
+.guide .guide_topnavi li + li a {
+  border-top: none;
+}
+.guide .guide_topnavi li a {
+  width: 100%;
+  height: 100%;
+  min-height: 100px;
+  padding: 30px 1.5rem 30px 0;
+  font-weight: normal;
+  text-decoration: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  color: #333;
+  position: relative;
+  transition-duration: .2s;
+  border-top: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
+}
+.guide .guide_topnavi li a:after {
+  margin: auto;
+  font-family: "Font Awesome 6 Pro";
+  content: '\f105';
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #388FC2;
+  position: absolute;
+  right: 0;
+  top: calc(50% - 1rem);
+  bottom: 0;
+}
+.guide .guide_topnavi li a .image {
+  width: 50px;
+}
+.guide .guide_topnavi li a .image img {
+  width: 100%;
+}
+.guide .guide_topnavi li a .text,
+.guide .guide_topnavi li a .note {
+  text-align: left;
+}
+.guide .guide_topnavi li a .text {
+  width: calc(100% - 50px);
+  padding: 0 0 0 1rem;
+}
+.guide .guide_topnavi li a .text h4,
+.guide .guide_topnavi li a .note h5 {
+  margin: 0 0 .3rem 0;
+}
+.guide .guide_topnavi li a .text h4 {
+  font-size: 1rem;
+  text-decoration: underline;
+}
+.guide .guide_topnavi li a .text p,
+.guide .guide_topnavi li a .note p {
+  margin: 0;
+}
+.guide .guide_topnavi li a .note {
+  width: 100%;
+  margin: 10px 0 0 0;
+  padding: .5rem;
+  background-color: #F0F3F5;
+}
+.guide .guide_topnavi li a .note h5 {
+  font-size: .9rem;
+  color: #114a6b;
+}
+.guide .guide_topnavi li a .note p {
+  font-size: .8rem;
+}
+.guide .guide_topnavi + p {
+  text-align: left;
+}
+.guide.flow .subnavi {
+  margin: 10px 0 20px 0;
+  padding: 0;
+  border-color: #666;
+  list-style: none;
+}
+.guide.flow .subnavi li {
+  margin: 0 1rem;
+  display: inline-block;
+}
+.guide .subnavi::after {
+  position: absolute;
+  top: calc(50% - 2.5px);
+  right: 10px;
+}
+.guide .image_block {
+  box-sizing: border-box;
+}
+.guide .image_block img {
+  width: 100%;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  padding: 5px;
+}
+.guide_navi ul {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.guide_navi ul li {
+  width: calc(50% - 5px);
+  margin: 5px 0;
+  background-repeat: no-repeat;
+  background-size: 32px;
+  background-position: left 10px center;
+}
+.guide_navi ul li a {
+  min-height: 3rem;
+  font-size: .8rem;
+  color: #333;
+  text-decoration: underline;
+  line-height: 1rem;
+  border: 1px solid #999;
+  border-radius: 6px;
+  white-space: normal;
+  display: flex;
+  align-items: center;
+  padding-left: 50px;
+  padding-right: 10px;
+}
+
+
+/*手続きの流れ*/
+.guide.flow .flow_block:nth-child(odd) {
+  background-color: #f6f6f6;
+}
+.guide.flow .flow_block .asterisk {
+  margin: 0 0 5px 0;
+}
+.guide h3 {
+  margin: 0 0 1rem 0;
+  display: block;
+}
+.guide h3#sp,
+.guide h3#pc {
+  padding: 1rem;
+  background-color: #ebf2f5;
+}
+.guide h3:before {
+  margin: 0;
+}
+.guide.flow h4.flow_title {
+  margin: .5rem 0 0 0;
+  font-size: 1.2rem;
+}
+.guide.flow ul,
+.guide.flow ol {
+  margin: 0;
+}
+.guide.flow ul li,
+.guide.flow ol li {
+  margin: 0 0 1rem 0;
+}
+.guide.flow .flow_category,
+.guide.flow .domain {
+  margin: 0 0 5px 0;
+  font-size: 1rem;
+  color: #01579b;
+}
+.guide.flow .flow_image p {
+  margin: 0 0 3px 0;
+}
+.guide.flow .flow_image {
+  text-align: center;
+}
+.guide.flow .flow_image img {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 0 10px 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+.guide.flow .flow_noteimage {
+  width: 70%;
+  max-width: 250px;
+  display: block;
+}
+
+/*よくあるご質問(PC)*/
+.faq_list {
+  margin: 0;
+}
+.faq_list span.question,
+.faq_list span.answer {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.faq_list .accordion-button.collapsed span.question {
+  color: #468abe;
+}
+.faq_list span.answer {
+  color: #be466b;
+}
+.faq_list .accordion-button span.question {
+  color: #fff;
+}
+.accordion-body {
+  display: flex;
+  /* align-items: flex-start; */
+}
+.faq_list p {
+  margin: 0;
+  padding: 0 .5rem;
+  font-size: 0.9rem;
+}
+.faq_list .accordion-button {
+  padding: 1rem .8rem;
+  position: relative;
+  align-items: center;
+}
+.faq_list h2.accordion-header:after {
+  display: none;
+}
+/*answer内にfrequentがない基本非表示*/
+.faq_list .accordion-item {
+  margin: 0;
+  display: none;
+}
+/*answer内にfrequentがあれば表示*/
+.faq_list.frequent .accordion-item {
+  display: block;
+}
+.faq_list .accordion-item {
+  border-right: none;
+  border-left: none;
+}
+.faq_list .accordion-item:first-child {
+  border-bottom: 0;
+}
+.faq_list .accordion-body {
+  padding: 1rem;
+}
+/* .faq_list .accordion-body p {
+  margin: 0.1875rem 0 0.1875rem 0;
+  padding: 0 0 0 0.5rem;
+} */
+.faq_list h3:before {
+  margin: 0;
+}
+.faq_list h3 {
+  margin: 0;
+  padding: 20px 10px;
+  display: block;
+  border-bottom: 1px solid #ccc;
+}
+.faq_list h3:hover,
+.faq_list .accordion-button.collapsed:hover {
+  background-color: #fdfce8;
+  cursor: pointer;
+}
+.guide .faq-eltax .step span:first-child {
+  background-color: #113FC1;
+}
+.faq-eltax .faq_list h3.active {
+  color: #113FC1;
+}
+.guide .faq-tax .step span:first-child {
+  background-color: #009688;
+}
+.faq-tax .faq_list h3.active {
+  color: #009688;
+}
+.guide .faq-suido .step span:first-child {
+  background-color: #2980b9;
+}
+.faq-suido .faq_list h3.active {
+  color: #2980b9;
+}
+.guide .subtitle {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+.guide .subtitle li {
+  width: calc((100% / 2) - 5px);
+  margin: 0;
+}
+.guide .subtitle button {
+  width: 100%;
+  height: 4.4rem;
+  min-height: 3rem;
+  padding: 0.4rem 1rem;
+  font-size: 1rem;
+  text-align: center;
+  background-color: #B5B6B7;
+  border: 1px solid #aaa;
+  color: #FFF;
+  border-radius: 10px 10px 0 0;
+}
+
+.col.navbut.lta {
+  border: 1px solid #6A90F9;
+}
+.col.navbut.fre {
+  border: 1px solid #9FCFCB;
+}
+.col.navbut.sui {
+  border: 1px solid #9BD3F3;
+}
+
+
+/*以下eLTAX*/
+button.accordion-button.acc-butA1.collapsed span.question,
+button.accordion-button.acc-butB1.collapsed span.question,
+button.accordion-button.acc-butC1.collapsed span.question,
+button.accordion-button.acc-butD1.collapsed span.question,
+button.accordion-button.acc-butE1.collapsed span.question,
+button.accordion-button.acc-butF1.collapsed span.question,
+button.accordion-button.acc-butG1.collapsed span.question,
+button.accordion-button.acc-butH1.collapsed span.question {
+  color: #113FC1;
+}
+
+button.accordion-button.acc-butA1,
+button.accordion-button.acc-butB1,
+button.accordion-button.acc-butC1,
+button.accordion-button.acc-butD1,
+button.accordion-button.acc-butE1,
+button.accordion-button.acc-butF1,
+button.accordion-button.acc-butG1,
+button.accordion-button.acc-butH1 {
+  background-color: #98AAE6;
+  margin-top: 0;
+}
+
+button.accordion-button.acc-butA1.collapsed,
+button.accordion-button.acc-butB1.collapsed,
+button.accordion-button.acc-butC1.collapsed,
+button.accordion-button.acc-butD1.collapsed,
+button.accordion-button.acc-butE1.collapsed,
+button.accordion-button.acc-butF1.collapsed,
+button.accordion-button.acc-butG1.collapsed,
+button.accordion-button.acc-butH1.collapsed {
+  background-color: #FFF;
+}
+
+/*以下税金*/
+button.accordion-button.acc-butA.collapsed span.question,
+button.accordion-button.acc-butB.collapsed span.question,
+button.accordion-button.acc-butC.collapsed span.question,
+button.accordion-button.acc-butD.collapsed span.question,
+button.accordion-button.acc-butE.collapsed span.question,
+button.accordion-button.acc-butF.collapsed span.question,
+button.accordion-button.acc-butG.collapsed span.question,
+button.accordion-button.acc-butH.collapsed span.question {
+  color: #009688
+}
+
+button.accordion-button.acc-butA,
+button.accordion-button.acc-butB,
+button.accordion-button.acc-butC,
+button.accordion-button.acc-butD,
+button.accordion-button.acc-butE,
+button.accordion-button.acc-butF,
+button.accordion-button.acc-butG,
+button.accordion-button.acc-butH {
+  background-color: #65bcb3;
+  margin-top: 0;
+}
+
+button.accordion-button.acc-butA.collapsed,
+button.accordion-button.acc-butB.collapsed,
+button.accordion-button.acc-butC.collapsed,
+button.accordion-button.acc-butD.collapsed,
+button.accordion-button.acc-butE.collapsed,
+button.accordion-button.acc-butF.collapsed,
+button.accordion-button.acc-butG.collapsed,
+button.accordion-button.acc-butH.collapsed {
+  background-color: #FFF;
+}
+
+
+
+/*以下水道*/
+button.accordion-button.acc-but1.collapsed span.question,
+button.accordion-button.acc-but2.collapsed span.question,
+button.accordion-button.acc-but3.collapsed span.question,
+button.accordion-button.acc-but4.collapsed span.question,
+button.accordion-button.acc-but5.collapsed span.question,
+button.accordion-button.acc-but6.collapsed span.question {
+  color: #2980b9;
+}
+
+button.accordion-button.acc-but1,
+button.accordion-button.acc-but2,
+button.accordion-button.acc-but3,
+button.accordion-button.acc-but4,
+button.accordion-button.acc-but5,
+button.accordion-button.acc-but6 {
+  background-color: #68B5E2;
+  margin-top: 0;
+}
+
+button.accordion-button.acc-but1.collapsed,
+button.accordion-button.acc-but2.collapsed,
+button.accordion-button.acc-but3.collapsed,
+button.accordion-button.acc-but4.collapsed,
+button.accordion-button.acc-but5.collapsed,
+button.accordion-button.acc-but6.collapsed{
+  background-color: #FFF;
+}
+
+
+/*  navWrapQA 追加  */
+.navWrapQA div.row{
+  padding: 1.0625rem 0rem;
+  max-width: 74rem;
+  margin: 0 auto;
+}
+
+.guide .container-fluid .navWrapQA div.navbut{
+  padding: 0.3125rem 0.625rem;
+  font-size: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  vertical-align: middle;
+  align-items: center;
+  background-color: #fff;
+  /* border: 1px solid #aaa; */
+  border-radius: 5px;
+  max-width: 8.99rem;
+}
+
+.guide .container-fluid .navWrapQA .navbut.lta:hover{
+  background-color: #6A90F9;
+  border: 1px solid #6A90F9;
+}
+.guide .container-fluid .navWrapQA .navbut.lta:active{
+  background-color: #6A90F9;
+  border: 1px solid #6A90F9;
+}
+.guide .container-fluid .navWrapQA .navbut.fre:hover,
+.guide .container-fluid .navWrapQA .navbut.fre:active{
+  background-color: #009688;
+  border: 1px solid #009688;
+}
+.guide .container-fluid .navWrapQA .navbut.sui:hover,
+.guide .container-fluid .navWrapQA .navbut.sui:active{
+  background-color: #51ABDF;
+  border: 1px solid #51ABDF;
+}
+
+.navbut a:hover {
+  color: #FFF !important;
+}
+
+.navbut a {
+  width: 100%;
+  display: block;
+  min-width: 135px;
+  margin-right: 0;
+  margin-left: 0;
+  position: relative;
+  text-align: center;
+  line-height: 1;
+  /* padding: 0.625rem 0; */
+  z-index: 0;
+  text-decoration: none !important;
+  color: #333333 !important;
+}
+
+/*▼1400エリアにも同様のあり*/
+.guide .accordion-body {
+  background-color: #f6f6f6;
+}
+
+/*初期表示*/
+.noImg {
+  display: none;
+}
+
+
+
+
+
+
+/*  tabエリア 追加  */
+.guide .subtitle button.tab-eltax.active,
+.guide .subtitle button.tab-tax.active,
+.guide .subtitle button.tab-suido.active {
+  color: #fff;
+}
+.guide .subtitle button.tab-eltax.active {
+  color: #fff;
+  border-color: #113FC1;
+  background-color: #113FC1;
+}
+.guide .subtitle button.tab-tax.active {
+  color: #fff;
+  border-color: #009688;
+  background-color: #009688;
+}
+.guide .subtitle button.tab-suido.active {
+  color: #fff;
+  border-color: #2980b9;
+  background-color: #2980b9;
+}
+.faq-eltax h3,
+.faq-tax h3,
+.faq-suido h3 {
+  display: block;
+}
+.guide .frequently_icon {
+  width: 28px;
+  margin: 0 8px 0 0;
+  vertical-align: text-top;
+}
+.guide .faq_list ul,
+.guide .faq_list ol {
+  margin: 0 0 0 1rem;
+}
+.guide .faq_list ul span.indent-l,
+.guide .faq_list ol span.indent-l,
+.guide .faq_list ul span.indent-s,
+.guide .faq_list ol span.indent-s {
+  width: 100%;
+  display: block;
+  font-weight: bold;
+}
+.guide .faq-eltax,
+.guide .faq-tax,
+.guide .faq-suido {
+  overflow: hidden;
+}
+/* .guide .faq-eltax,
+.guide .faq-suido {
+  display: none;
+} */
+.guide .faq-tax,
+.guide .faq-suido {
+  display: none;
+}
+.guide.faq a.btn {
+  width: 100%;
+  font-size: 1rem;
+}
+.guide.faq .tag {
+  width: 6rem;
+  margin: 5px 0 0 0;
+  display: block;
+  border: 1px solid #01579b!important;
+  color: #01579b;
+  font-size: 0.7rem;
+}
+.guide.faq .tag2 {
+  width: 6rem;
+  margin: 5px 0 0 0;
+  display: block;
+  border: 1px solid #df1082!important;
+  color: #df1082;
+  font-size: 0.7rem;
+}
+.guide.faq .note {
+  display: inline-block;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #CCC;
+  background-color: #fff;
+  border: 1px solid #CCC;
+}
+.guide.faq .note .tag {
+  margin: 0 0 5px 0;
+}
+.guide.faq .note p {
+  margin: 0;
+  padding: 0;
+  font-size: .8rem;
+}
+.guide.faq .accordion-body > div {
+  width: 100%;
+}
+.guide.faq h2 button a {
+  padding-top: 100px;
+  margin-top: -100px;
+}
+.guide.faq a.btn-info {
+  width: 100%;
+  min-height: 3rem;
+  padding: 0.4rem 1rem;
+  font-size: 1.2rem;
+  text-align: center;
+  color: #fff;
+  border-color: #009688;
+  background-color: #009688;
+  border-radius: 8px;
+}
+.lta-modal h3 {
+  font-size: 1.3rem;
+}
+
+
+
+/*お支払いについて*/
+.guide.payment h3 {
+  padding: 0 0 0 0.5rem;
+  display: block;
+  border-left: 4px solid #388fc2;
+}
+.guide.payment h3:before,
+.guide.payment h3:after {
+  display: none;
+}
+.guide.payment .brand-list {
+  width: 340px;
+  margin: 0 0 10px 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+.guide.payment .brand-list + p {
+  margin: 0 0 10px 0;
+  padding: 0;
+}
+
+.guide.payment .brand-list li {
+  margin: 0 10px 0 0;
+}
+.guide a.btn {
+  width: 100%;
+  font-size: 1rem;
+}
+.guide .payment_flow {
+  margin: 0 0 10px 0;
+  padding: 0;
+  list-style: none;
+  display: none;
+}
+.guide .payment_flow li {
+  width: 90%;
+  margin: 0 auto;
+  background-color: #fff;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.guide .payment_flow li p {
+  font-size: .8rem;
+}
+.guide .payment_flow li img {
+  width: 100%;
+  margin: 0 0 10px 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+.guide.payment button {
+  width: 100%;
+  margin: 0 0 15px 0;
+  padding: 0.2rem 0.8rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  position: relative;
+  text-align: left;
+  background-color: #eeeeee;
+  border: none;
+  transition-duration: .2s;
+}
+.guide.payment button:hover,
+.guide.payment button.on {
+  border-bottom: none;
+}
+.guide.payment button:before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 10px;
+  bottom: 0;
+  margin: auto;
+  width: 15px;
+  height: 2px;
+  background-color: #666;
+  transition: .2s;
+  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+}
+.guide.payment button:after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 10px;
+  bottom: 0;
+  margin: auto;
+  width: 15px;
+  height: 2px;
+  background-color: #666;
+  transition: .3s;
+}
+.guide.payment button.on:before {
+  transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+}
+.guide .payment_flow li h5 {
+  font-size: 1rem;
+}
+.guide .payment_flow li h5 span {
+  margin: 10px 5px 0 0;
+  padding: 0 6px;
+  background-color: #388fc2;
+  color: #fff;
+}
+
+
+
+/*LTA*/
+.lta h2 {
+  font-size: 1.2rem;
+}
+.lta h3 {
+  font-size: 1.1rem;
+}
+.lta h4,
+.lta h5 {
+  font-size: 1.0rem;
+}
+a.lta-btn,
+.guide.faq a.lta-btn {
+  width: 100%;
+  max-width: 300px;
+  min-height: 3rem;
+  padding: 0.4rem 3rem;
+  font-size: 1.3rem;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #113fc1;
+  background-color: #113fc1;
+  border-radius: 8px;
+}
+.lta-btn:hover,
+.guide.faq a.lta-btn:hover {
+  cursor: pointer;
+  color: #fff;
+  background-color: #0B2B86;
+}
+.lta-fee {
+  font-size: .9rem;
+}
+.lta-block {
+  margin-bottom: 50px;
+}
+.lta-block h4 {
+  padding: 0 0 0 .5rem;
+  border-left: 3px solid #388FC2;
+}
+.lta-block .brand-list {
+  display: flex;
+}
+.lta-block .brand-list li {
+  margin: 0 10px 0 0;
+  list-style: none;
+}
+.lta-block .brand-list li img {
+  height: 35px;
+}
+.lta-modal h3:before,
+.lta-modal h3:after {
+  display: none;
+}
+
+/*------------------------- 共通デザイン END ----------------------------*/
+
+
+
+
+
+
+/* ///  ▼▼▼ ここからSP(タブレット含む)  ▼▼▼ ///  */
+
+/*-------------------------------------
+▼ ブレイクポイント
+--------------------------------------*/
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+
+  /*------------------------------
+  ▼共通デザイン
+  -------------------------------*/
+
+  section.content {
+    padding: 70px 0 0 0;
+    min-height: calc(100vh - 328px);
+  }
+  .header-lta{
+    line-height: 2.4;
+  }
+
+  /*フッター*/
+  footer .nav {
+    display: flex;
+  }
+  footer .nav li {
+    width: auto;
+    display: block;
+    border-bottom: none;
+  }
+  footer .nav li a {
+    padding: 0 1rem;
+    border-right: 1px solid #ccc;
+  }
+  footer .nav li:last-child a {
+    border-right: none;
+  }
+
+
+  /*------------------------------
+  ▼TOPページ
+  -------------------------------*/
+
+  /*ご利用可能なお支払い方法*/
+  .top_payment .brand-list li img,
+  .guide.payment .brand-list li img {
+    height: 34px;
+  }
+
+  /*税金・各種公共料金に対応*/
+  .top_tax h2 {
+    width: 26rem;
+  }
+
+  /*ご準備いただくもの*/
+  .top_preparations h2 {
+    width: 20rem;
+  }
+
+  /*------------------------------
+  ▼サブページ
+  -------------------------------*/
+
+  /*自治体詳細*/
+  .modal-dialog {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  .modal-dialog-scrollable {
+    max-height: 600px;
+  }
+  .modal-footer ul {
+    width: 400px;
+    margin: 0 auto;
+  }
+  .modal-footer ul li {
+    width: 400px;
+  }
+  .modal-footer ul li.col2 {
+    width: calc(200px - 5px);
+  }
+
+  /* IE10 & IE11 */
+  _:-ms-input-placeholder, :root .modal.show .modal-body {
+    height: 250px;
+  }
+  _:-ms-input-placeholder, :root .modal-dialog {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: calc(50% - 250px);
+  }
+
+  /*よくあるご質問*/
+
+  .guide.faq .note .tag {
+    margin: 0;
+  }
+  .guide.faq .note p {
+    font-size: .9rem;
+  }
+    /*lta*/
+  .br-sp {
+    display: none;
+  }
+  .txtLeftSP{
+    text-align: left;
+  }
+  .eLtax_icon {
+    width: 8rem;
+    text-align: left;
+  }
+  .note.top p {
+    font-size: 0.75rem !important;
+  }
+  .guide.faq .note.top {
+    display: inline-block;
+    padding: 0.5rem;
+    background-color: #fff;
+    border: none;
+    margin-top: 0.5rem;
+}
+  .guide.faq .note.top .tag {
+    width: 5rem;
+    margin: 0;
+    border: 1px solid #01579b !important;
+    color: #01579b;
+    font-size: 0.6rem;
+    vertical-align: text-bottom;
+    display: inline-block;
+  }
+
+
+
+
+
+}
+/* @media (min-width: 576px) END */
+
+
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+  /*------------------------------
+  ▼共通デザイン
+  -------------------------------*/
+  section.content {
+      min-height: calc(100vh - 329px);
+  }
+  .top #page_top {
+    bottom: 80px;
+  }
+  .spNo{display: none !important;}
+
+
+  /*------------------------------
+  ▼TOPページ
+  -------------------------------*/
+
+  /*メインビジュアル*/
+  .top_main {
+    height: auto;
+  }
+  .top_main a.btn {
+    width: 360px;
+    font-size: 1.3rem;
+  }
+
+  /*自治体を探す*/
+  .area-list li {
+    width: calc((100% / 6) - 10px);
+  }
+  .area-list li a {
+    padding: 0.6rem;
+    font-size: 1.2rem;
+  }
+  .top_area .count_block,
+  .area .count_block {
+    top: 10px;
+    right: 200px;
+  }
+  .top_area .count,
+  .area .count {
+    width: 100px;
+    height: 100px;
+  }
+  .top_area .count span,
+  .area .count span {
+    top: 40px;
+    font-size: 1.8rem;
+  }
+  .top_area .count_block, .area .count_block {
+    top: 10px;
+    right: 0;
+  }
+
+  /*税金・各種公共料金に対応*/
+  .top_tax .tax-list li {
+    width: calc(100% / 4);
+  }
+
+  /*お支払い方法*/
+  .top_payment .brand-list li {
+    width: calc(100% / 6);
+  }
+  .top_payment .brand-list li img,
+  .guide.payment .brand-list li img {
+    width: 100%;
+    height: 40px;
+  }
+
+  /* IE10 & IE11 */
+  _:-ms-input-placeholder, :root .top_payment .brand-list li img,
+  _:-ms-input-placeholder, :root .guide.payment .brand-list li img {
+    width: 50px;
+  }
+
+  .top_payment .brand-list,
+  .top_payment .payment_list,
+  .top_payment p {
+    width: 500px;
+    margin: 0 auto;
+  }
+  .top_payment .payment_list,
+  .top_payment p {
+    margin: 0 auto 10px auto;
+  }
+  .top_payment p {
+    width: 620px;
+  }
+
+  /*ご準備いただくもの*/
+  .top_preparations h2 {
+    width: 20rem;
+  }
+  .preparations-list h4 span:after {
+    content:"：";
+    display: inline-block;
+  }
+  .preparations-list h4 span:last-child {
+      margin: 0;
+  }
+  .preparations-list h4 span {
+    width: auto;
+    font-size: 1.1rem;
+    border-bottom: none;
+  }
+
+  /*ニュース*/
+  .top_news dl.news-list dd ul li {
+    width: calc(33% - 10px);
+  }
+
+
+  /*------------------------------
+  ▼サブページ
+  -------------------------------*/
+
+  /*自治体を探す（サブページ）*/
+  h4.taxtype {
+    margin: 0 0 10px 0;
+    font-size: 1.1rem;
+  }
+  .preftax_block .area-list li:last-child {
+    width: calc(100% - ((100% / 6) + 10px));
+  }
+  .preftax_block .area-list li p {
+    font-size: 1rem;
+  }
+
+  /*自動車税についての注意事項*/
+  .jidosha-modal-container {
+    padding: 40px 0;
+  }
+  .jidosha-modal-content h4 {
+    font-size: 1.4rem;
+  }
+  .jidosha-modal-content p {
+    padding: 0 20px;
+  }
+  .jidosha-modal-content .image-block {
+    margin: 30px auto;
+  }
+  .jidosha-modal-content .image-block img {
+    width: 100%;
+  }
+
+
+  /*お支払いについて*/
+  .guide.payment .brand-list li {
+    margin: 0 5px 0 0;
+    width: 70px;
+  }
+  .guide .payment_flow {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+  }
+  .guide .payment_flow li {
+    width: calc((100% / 4) - 20px);
+  }
+  .guide .payment_flow::after {
+    display: block;
+    content:"";
+    width: calc((100% / 4) - 20px);
+  }
+  .guide.payment button {
+    margin: 15px 0;
+    font-size: 1.2rem;
+    pointer-events: none;
+  }
+  .guide.payment button:before,
+  .guide.payment button:after {
+    display: none;
+  }
+
+  /*よくあるご質問*/
+
+  .guide .subtitle li button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .guide .subtitle li {
+    width: calc((100% / 3) - 2px);
+  }
+
+  .guide .subtitle {
+    justify-content: center;
+  }
+  .guide .subtitle li {
+    width: 18rem;
+    margin: 0 10px 0 0;
+  }
+  .guide .subtitle li:last-child {
+    margin: 0;
+  }
+  .guide.faq a.btn {
+    width: 360px;
+  }
+  .guide.faq .tag,
+  .guide.faq .tag2 {
+    display: inline-block;
+    vertical-align: baseline;
+  }
+  .txtLeftSP{
+    text-align: left;
+  }
+
+
+/*LTA*/
+  .lta h2 {
+    font-size: 2rem;
+  }
+  .lta h3 {
+    font-size: 1.6rem;
+  }
+  .lta h4,
+  .lta h5 {
+    font-size: 1.2rem;
+  }
+  .lta-fee {
+    font-size: 1.1rem;
+  }
+
+}
+/* @media (min-width: 768px)  END*/
+
+
+
+/*------------------------------
+▼lta.html 改修 SP対応
+-------------------------------*/
+@media screen and (max-width:991px) {
+    img.eltax01 {
+        height: 34vw;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+    }
+    img.eltax02 {width: 15px;margin: 0 0 3px 7px;}
+    span.subtitle{font-size: 3.2vw !important;}
+}
+/* @media screen and (max-width:991px) END */
+
+
+
+
+/*------------------------------
+▼faq.html よくあるご質問の改修 （SP最大）
+-------------------------------*/
+@media screen and (max-width:992px) {
+
+    .spNo{display: none !important;}
+
+  /*よくあるご質問0702*/
+    .faq_list .accordion-body p {
+      margin: 0.25rem 0 0.6rem 0;
+      padding: 0 0 0 0.5rem;
+    }
+    .accordion-item h2 {
+      margin-top: 0;
+    }
+    .guide .subtitle li {
+      width: calc((100% / 3) - 2px);
+    }
+    .guide .subtitle li button{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    span.el_qr,span.el_number{position: relative;}
+    .bp576{display: none;}
+    .el_choice{text-align: left;}
+    .guide .subtitle li {
+      width: 18.9rem;
+      margin: 0 1% 0 0;
+    }
+    .guide .subtitle li:last-child {
+      margin-right: 0;
+    }
+    span.el_number{
+      margin-left: 10px;
+    }
+    .guide .subtitle button {
+      width: 100%;
+      /* height: 3.5rem; */
+      padding : 0.3rem;
+      font-size : 0.78rem;
+      border-radius: 10px 10px 0 0;
+    }
+
+    .form-select-sm {
+      padding-top: .5rem;
+      padding-bottom: .5rem;
+      padding-left: 1rem;
+      font-size: 1rem;
+    }
+    .container-fluid_SPnav {
+      width: 100%;
+      margin-right: 0;
+      padding-right: 0;
+      margin-left: 0;
+      padding-left: 0;
+      margin: 0 auto;
+    }
+    .container_SPnav div.navSP{
+      margin-right: 0.1rem;
+      margin-left: 0.1rem;
+    }
+
+
+  /*よくあるご質問*/
+  /* ▼▼▼----- TABナビ icon -----▼▼▼ */
+
+  .guide .subtitle li button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .text-center.faq-eltax select,
+  .text-center.faq-tax select,
+  .text-center.faq-suido select {
+    width: 70%;
+    margin: 0 auto;
+  }
+  .text-center.faq-eltax {
+    background-color: #CED7F5;
+  }
+  .text-center.faq-tax {
+      background-color: #B6E1DD;
+  }
+  .text-center.faq-suido {
+    background-color: #DCF2FF;
+  }
+
+  
+
+  /* ▼▼▼----- TABナビ 詳細のicon -----▼▼▼ */
+  span.el_qr,span.el_number{position: relative;}
+ 
+  span.el_number{
+    margin-left: 20px;
+  }
+  .guide .subtitle li {
+    width: calc(100% / 3);
+  }
+
+
+  .guide .subtitle li button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+}
+/* @media screen and (max-width:991px)よくあるご質問 END */
+
+
+
+/*-----  SP iPhoneSE(375)～576まで
+faq.html よくあるご質問  --------*/
+@media screen and (max-width: 575px) {
+  .faq_list .accordion-body p {
+    margin: 0.15rem 0 0.8rem 0;
+    padding: 0 0 0 0.5rem;
+  }
+  .none575{display: none!important;}
+  .guide .subtitle li button {
+    display: flex;
+    flex-direction: column !important;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.75rem;
+  }
+  br.pcNo.bp576 {
+    display: none;
+  }
+  br.d-inline-block.bp576 {
+    display: none!important;
+  }
+  ul.subtitle {
+    line-height: 0.89rem;
+  }
+  
+  .guide .subtitle li button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  span.el_qr::after {
+    display: none;
+  }
+  span.el_number::after{
+    display: none;
+  }
+  span.el_number {
+    margin-left: 5px;
+  }
+  .note.top p {
+    font-size: 0.75rem !important;
+  }
+  .guide.faq .note.top {
+    display: inline-block;
+    padding: 0.5rem;
+    background-color: #fff;
+    border: none;
+    margin-top: 0.5rem;
+}
+  .guide.faq .note.top .tag {
+    width: 5rem;
+    margin: 0;
+    border: 1px solid #01579b !important;
+    color: #01579b;
+    font-size: 0.6rem;
+    vertical-align: text-bottom;
+    display: inline-block;
+  }
+  select.form-select-sm {
+    font-size: .78rem;
+  }
+  .txtLeft.txtLeftSP.d-flex.align-items-center {
+    justify-content: center;
+  }
+}
+/*-----  SP iPhoneSE(375)～575まで
+faq.html よくあるご質問 END  --------*/
+
+
+/* ///  ▲▲▲ ここまでSP ▲▲▲ ///  */
+
+
+
+
+
+
+/* ///  ▼▼▼ ここからPC  ▼▼▼ ///  */
+
+/* @media (min-width: 992px)  START*/
+@media (min-width: 992px) {
+
+/*------------------------------
+▼共通デザイン
+-------------------------------*/
+  section {
+    margin-bottom: 100px;
+  }
+  section.content {
+    min-height: calc(100vh - 287px);
+  }
+  .top #page_top {
+    bottom: 20px;
+  }
+  .header-lta{
+  line-height: 2.4;
+  }
+
+    /*ヘッダー*/
+  header a.lta-btn {
+    margin: 0 1rem 0 0 !important;
+    font-size: 0.9rem !important;
+    width: 8.75rem;
+  }
+
+  .header-logo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  header .catch {
+    width: 17rem;
+    margin: 0;
+  }
+
+  .header-eltax {
+    flex-basis: 1;
+  }
+  .header-pcmenu {
+    display: block;
+  }
+  .header-spmenu {
+    display: none;
+  }
+  header a.lta-btn {
+    margin: 0 1rem 0 0;
+    font-size: 1rem;
+  }
+  /*フッター*/
+  footer {
+    padding: 0;
+  }
+
+/*------------------------------
+▼TOPページ
+-------------------------------*/
+
+  /*メインビジュアル*/
+  .top_main .mainvisual img {
+    width: 135px;
+    top: 50px;
+  }
+
+  /*税金・各種公共料金に対応*/
+  .top_tax .tax-list li {
+    width: calc(100% / 7);
+  }
+  /* Edge(EdgeHTML) & IE11 & IE10 */
+  _:-ms-input-placeholder, :root .top_tax .tax-list li {
+    width: 130px;
+  }
+
+  .top_tax .container {
+    padding: 50px 10px 0 10px;
+  }
+
+/*------------------------------
+▼サブページ
+-------------------------------*/
+
+  /*ご利用ガイド*/
+  .guide .guide_topnavi {
+    margin: 0;
+    justify-content: space-between;
+  }
+  .guide .guide_topnavi li {
+    width: calc((100% /2) - 10px);
+    margin: 0 0 20px 0;
+    padding: 0;
+  }
+  .guide .guide_topnavi.pc-1col li {
+    width: 100%;
+  }
+  .guide .guide_topnavi li a {
+    min-height: 140px;
+    padding: 20px 35px 20px 20px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+  }
+  .guide .guide_topnavi li a:hover {
+    border-color: #388FC2;
+    background-color: #fafafa;
+  }
+  .guide .guide_topnavi li a:hover h4 {
+    color: #388FC2;
+  }
+  .guide .guide_topnavi li + li a {
+    border-top: 2px solid #ddd;
+  }
+  .guide .guide_topnavi li a:after {
+    right: 10px;
+  }
+  .guide .guide_topnavi li a .text {
+    padding: 0 0 0 1.5rem;
+  }
+  .guide .guide_topnavi li a .text h4 {
+    font-size: 1.2rem;
+  }
+  .guide .guide_topnavi li a .image {
+    width: 80px;
+  }
+  .guide .guide_topnavi li a .text {
+    width: calc(100% - 80px);
+  }
+  .guide .guide_topnavi li a .note {
+    min-height: 5rem;
+  }
+  .guide .guide_topnavi li a .note p {
+    font-size: .9rem;
+  }
+  .guide .guide_topnavi li a .note h5 {
+    font-size: 1rem;
+  }
+
+/*------------------------------
+▼lta.html 改修
+-------------------------------*/
+  .spmb20{margin-bottom: 5.3vw;}
+  .lta-btn{background-color: #113fc1;border-radius: 6px;}
+  img.eltax02 {width: 15px;margin: 0 0 3px 7px;}
+
+  .pcNo{display: none;} /*SP時の表示*/
+  .spNo{display: block !important; /*PC時の表示*/ }
+
+  /*よくあるご質問*/
+  .faq_list .accordion-body p {
+    margin: 0.23rem 0 0.6rem 0;
+    padding: 0 0 0 0.5rem;
+  }
+  .note.top p {
+    font-size: 0.75rem !important;
+  }
+  .guide.faq .note.top {
+    display: inline-block;
+    padding: 0.5rem;
+    background-color: #fff;
+    border: none;
+}
+  .guide.faq .note.top .tag {
+    width: 5rem;
+    margin: 0;
+    border: 1px solid #01579b !important;
+    color: #01579b;
+    font-size: 0.6rem;
+    vertical-align: text-bottom;
+  }
+
+
+  /* ▼▼▼----- TABナビ icon -----▼▼▼ */
+  .guide .subtitle li button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .tab-eltax div.zei_img,
+  .tab-tax div.zei_img {
+    background-image: url(../img/faq/zei_off_icon.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 4.5625rem;
+    height: 2.3125rem;
+    margin-right: 0.5rem;
+  }
+  .tab-eltax.active div.zei_img,
+  .tab-tax.active div.zei_img {
+    background-image: url(../img/faq/zei_on_icon.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 4.5625rem;
+    height: 2.3125rem;
+    margin-right: 0.5rem;
+  }
+  .tab-suido div.sui_img {
+    background-image: url(../img/faq/sui_off_icon.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 3.3125rem;
+    height: 2.9375rem;
+    margin-right: 0.5rem;
+  }
+  .tab-suido.active div.sui_img {
+    background-image: url(../img/faq/sui_on_icon.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 3.3125rem;
+    height: 2.9375rem;
+    margin-right: 0.5rem;
+  }
+
+/* ▼▼▼----- TABナビ 詳細のicon -----▼▼▼ */
+  span.el_qr,span.el_number{position: relative;}
+  span.el_qr::after {
+    content: "";
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    background-image: url("../../koukin/img/faq/qr.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 20%;
+    left: 103%;
+    margin-right: 1.5px
+  }
+  span.el_number::after{
+    content: "";
+    display: block;
+    width: 2.5625rem;
+    height: 1rem;
+    background-image: url("../../koukin/img/faq/number.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 21%;
+    left: 103%;
+  }
+  .eLtax_icon {
+    width: 10rem!important;
+    text-align: left;
+  }
+  span.el_number{
+    margin-left: 20px;
+  }
+  .txtLeft{text-align: left;}
+  .guide .subtitle li {
+    width: 20.9125rem;/*w333px*/
+    margin: 0 1.6rem 0 0;
+  }
+
+/* ▼▼▼----- PC時header固定 -----▼▼▼ */
+  .headerH_Wrap {
+    width: 100%;
+    height: auto;
+    background-color: #FFF;
+  }
+  div#headerH {
+    z-index: 1019;
+    position: fixed;
+    width: 100%;
+    background-color: #FFF;
+    padding-top: 70px;
+    top: 163px;
+  }
+  .guide .container-fluid .navWrapQA div.navbut{
+    padding: 0.3125rem 0.625rem;
+    font-size: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    vertical-align: middle;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 5px;
+    max-width: 9rem;
+    margin-right: 1rem;
+  }
+  .guide .container-fluid .navWrapQA div.navbut:last-child{
+    margin-right: 0;
+  }
+  .guide .container-fluid .navWrapQA div.navbut.lta{
+    padding: 0.3125rem 0.625rem;
+    font-size: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    vertical-align: middle;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 5px;
+    /* max-width: 7.59rem; */
+    max-width: 8.0rem;
+    margin-right: 0.5rem;
+  }
+  .guide .container-fluid .navWrapQA div.navbut.lta:last-child{
+    margin-right: 0;
+  }
+  .guide .container-fluid .navWrapQA div.navbut.fre{
+    padding: 0.3125rem 0.625rem;
+    font-size: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    vertical-align: middle;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 5px;
+    /* max-width: 7.59rem; */
+    max-width: 8.0rem;
+    margin-right: 0.5rem;
+  }
+  .guide .container-fluid .navWrapQA div.navbut.fre:last-child{
+    margin-right: 0;
+  }
+
+  /* ▼▼▼----- 選択ナビゲーション 詳細のicon -----▼▼▼ */
+  .navbut a{
+    width: 100%;
+    height: 100%;
+    font-size: 0.8rem;
+  }
+
+  .container-fluid.nav {
+    background-color: #CED7F5;/*デフォルトの設定*/
+    padding: 0;
+  }
+
+  img.el_icon1_off.yesImg ,
+  img.el_icon9_off.yesImg ,
+  img.el_icon16_off.yesImg ,
+  img.el_icon1_on.noImg ,
+  img.el_icon9_on.noImg ,
+  img.el_icon16_on.noImg{
+    width: 2.3125rem;
+    height: 1.5175rem;
+  }
+  img.el_icon2_off.yesImg ,
+  img.el_icon11_off.yesImg ,
+  img.el_icon2_on.noImg ,
+  img.el_icon11_on.noImg {
+    padding-top: 5px;
+    width: 1.56rem;
+    height: 2.06625rem;
+  }
+  img.el_icon3_off.yesImg , img.el_icon3_on.noImg  {
+    padding-top: 6px;
+    width: 5.6rem;
+    height: 2.128125rem;
+  }
+  img.el_icon4_off.yesImg , img.el_icon4_on.noImg  {
+    width: 6.89rem;
+    height: 1.36rem;
+  }
+  img.el_icon5_off.yesImg ,
+  img.el_icon12_off.yesImg ,
+  img.el_icon18_off.yesImg ,
+  img.el_icon5_on.noImg ,
+  img.el_icon12_on.noImg ,
+  img.el_icon18_on.noImg  {
+    padding-top: 9px;
+    width: 2.6rem;
+    height: 2.86375rem;
+  }
+  img.el_icon6_off.yesImg ,
+  img.el_icon13_off.yesImg ,
+  img.el_icon19_off.yesImg ,
+  img.el_icon6_on.noImg ,
+  img.el_icon13_on.noImg ,
+  img.el_icon19_on.noImg{
+    width: 2.0625rem;
+    height: 1.82875rem;
+  }
+  img.el_icon7_off.yesImg ,
+  img.el_icon14_off.yesImg ,
+  img.el_icon7_on.noImg ,
+  img.el_icon14_on.noImg  {
+    width: 1.935rem;
+    height: 1.670625rem;
+  }
+  img.el_icon10_off.yesImg ,
+  img.el_icon10_on.noImg  {
+    width: 1.62125rem;
+    height: 1.778125rem;
+  }
+  img.el_icon17_off.yesImg , img.el_icon17_on.noImg  {
+    width: 8rem;
+    height: 1.46625rem;
+  }
+
+  .iconArea {
+    height: 2.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .txtArea {
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+  }
+  .md-only{display: block;}
+
+  #contentQA_ALL{
+    position: absolute;
+    top: 32.99rem;
+  }
+  .accordion-item h2{
+    margin-top: 0;
+  }
+}
+/* @media (min-width: 992px)  END */
+
+
+
+
+
+
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+  /* Edge(EdgeHTML) & IE11 & IE10 */
+  _:-ms-lang(x), .top_tax .tax-list li {
+    width: 150px;
+  }
+
+  /*ヘッダー*/
+  header a.lta-btn {
+    margin: 0 1rem 0 0;
+    font-size: 1rem;
+    width: 9.25rem;
+}
+  .header-logo {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+  header .catch {
+    width: 18rem;
+    margin: 0 0 0 1rem;
+  }
+
+  /* ▼▼▼よくあるご質問 */
+  #contentQA_ALL{
+    position: absolute;
+    top: 31.5rem;
+  }
+  div#headerH {
+    z-index: 1019;
+    position: fixed;
+    width: 100%;
+    background-color: #FFF;
+    padding-top: 70px;
+    top: 133px;
+	transition: translateY 600ms, opacity 200ms;
+  }
+
+  div#headerH.hide{
+	translateY: -100%;
+	opacity: 0;
+  }
+
+  .guide .container-fluid .navWrapQA div.navbut{
+    padding: 0.3125rem 0.625rem;
+    font-size: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    vertical-align: middle;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 5px;
+    max-width: 8.99rem;
+    margin-right: 1rem;
+  }
+  .guide .container-fluid .navWrapQA div.navbut.lta{
+    padding: 0.3125rem 0.625rem;
+    font-size: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    vertical-align: middle;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 5px;
+    max-width: 8.99rem;
+    margin-right: 1rem;
+  }
+  .guide .container-fluid .navWrapQA div.navbut.fre{
+    padding: 0.3125rem 0.625rem;
+    font-size: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    vertical-align: middle;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 5px;
+    max-width: 8.99rem;
+    margin-right: 1rem;
+  }
+  .md-only {display: none;}
+
+  .eLtax_icon {
+    width: 10rem!important;
+    text-align: left;
+  }
+
+  .faq_list .accordion-body p {
+    margin: 0.1rem 0 0.6rem 0;
+    padding: 0 0 0 0.5rem;
+  }
+
+
+}/* min-width: 1200px END */
+
+
+
+
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+
+  /*------------------------------
+  ▼共通デザイン
+  -------------------------------*/
+
+  section.content {
+    min-height: calc(100vh - 308px);
+  }
+
+  /*書式*/
+  p,ul,ol {
+    font-size: 1.1rem;
+  }
+  h2 {
+    margin: 0 auto 50px auto;
+    font-size: 2.2rem;
+  }
+  h2:after,
+  .modal-header h4:after {
+    margin: 8px auto 0 auto;
+    width: 16rem;
+  }
+  h3 {
+    font-size: 1.6rem;
+    font-weight: 500;
+  }
+  .asterisk {
+    margin: 0;
+    padding-left: 1rem;
+    text-indent: -1.1rem;
+    display: block;
+    line-height: 1.5rem;
+  }
+
+  /*ヘッダー*/
+  .dropdown:hover>.dropdown-menu {
+    display: block;
+  }
+  header #gnav .nav-item {
+    width: 11rem;
+  }
+  header #gnav .nav-item a {
+    font-size: 1rem;
+  }
+  header .navbar-brand img {
+    width: 140px;
+  }
+  header .catch {
+    font-size: 1rem;
+  }
+
+  /*------------------------------
+  ▼TOPページ
+  -------------------------------*/
+
+  /*メインビジュアル*/
+  .top_main {
+    margin-bottom: 100px;
+  }
+  .top_main .firstview h1 {
+    margin: 0;
+    font-size: 2.4rem;
+    line-height: 2rem;
+  }
+  .top_main .firstview h1 span {
+    font-size: 3rem;
+    letter-spacing: 0.3rem;
+  }
+  .top_main .firstview {
+    height: auto;
+    margin: 0 0 20px 0;
+    padding: 70px 0 0 0;
+  }
+  .top_main .firstview-loop {
+    background-size: 810px;
+    height: 460px;
+    animation: scroll-anim-pc 100s linear infinite;
+  }
+  .top_main .container p {
+    font-size: 1.3rem;
+    line-height: 2rem;
+  }
+  .top_main .catch {
+    margin: 0;
+  }
+  .top_main a.btn {
+    width: 400px;
+    font-size: 1.4rem;
+  }
+  .top_main .firstview .mainvisual {
+    height: 460px;
+  }
+  .top_main .mainvisual img {
+    width: 220px;
+    position: absolute;
+    top: 20px;
+    right: 50px;
+  }
+
+
+    /*フィッシング詐欺ご注意*/
+  .fishing {
+    width: 1100px;
+    margin: 0 auto 30px auto;
+  }
+  .pc_view{
+    display: block;
+  }
+  .sp_view{
+    display: none;
+  }
+
+
+  /*自治体を探す*/
+  #top_area {
+    padding-top: 190px;
+    margin-top: -190px;
+  }
+  .top_area .area-block {
+    width: 1100px;
+    margin: 0 auto 30px auto;
+  }
+  .area-list {
+    padding: 0;
+  }
+  .area-list li {
+    width: calc((100% / 6) - 10px);
+    margin: 5px;
+  }
+  .accordion-button {
+    padding: .8rem 1rem;
+    font-size: 1.2rem;
+  }
+  .top_area .count_block, .area .count_block {
+    top: 40px;
+    right: 130px;
+  }
+
+  /*サービスのポイント*/
+  section.top_point {
+    margin-bottom: 130px;
+  }
+  .top_point .point-slider img {
+    height: 500px;
+  }
+  .top_point .point-slider h2 {
+    font-size: 1.2rem;
+  }
+  .top_point .point-slider p {
+    font-size: .9rem;
+  }
+  .slick-slide {
+    opacity: .5;
+    transition-duration: .6s;
+  }
+  .slick-active {
+    opacity: 1;
+    transform: scale(1.5, 1.5);
+  }
+  .slick-track {
+    height: 500px;
+    position: relative;
+    top: 120px;
+  }
+  .slick-prev:before,
+  .slick-next:before {
+    font-size: 40px;
+  }
+
+  /*税金・各種公共料金に対応*/
+  .top_tax .container {
+    padding: 70px 10px 0 10px;
+  }
+  .top_tax h2 {
+    width: 28rem;
+  }
+  .top_tax .tax-list li p {
+    font-size: 1.1rem;
+  }
+  .top_tax .tax-list li img {
+    height: 60px;
+  }
+
+  /* Edge(EdgeHTML) & IE11 & IE10 */
+  _:-ms-input-placeholder, :root .top_tax .tax-list li img {
+    height: auto;
+  }
+
+  /*お支払い方法*/
+  section.top_payment {
+    margin-bottom: 130px;
+  }
+  .top_payment h2 {
+    margin-bottom: 20px;
+  }
+  .top_payment .brand-list,
+  .top_payment p {
+    margin: 0 auto;
+  }
+  .top_payment .brand-list li img {
+    width: 100%;
+    height: 50px;
+  }
+  .guide.payment .brand-list li img {
+    height: 40px;
+  }
+  /* IE10 & IE11 */
+  _:-ms-input-placeholder, :root .top_payment .brand-list li img {
+    width: auto;
+  }
+  .guide.payment .brand-list.ap li img {
+    height: 30px;
+  }
+  /* IE10 & IE11 */
+  _:-ms-input-placeholder, :root .guide.payment .brand-list.ap li img.ie-disp {
+    width: 42px;
+    height: 30px;
+  }
+  .top_payment .brand-list,
+  .top_payment .payment_list,
+  .top_payment p {
+    width: 650px;
+  }
+
+  /*ご準備いただくもの*/
+  .top_preparations {
+    width: 1100px;
+    margin: -180px auto 120px auto;
+  }
+  .top_preparations .container {
+    padding: 50px 20px 10px 20px;
+  }
+  .top_preparations h2 {
+    width: 24rem;
+  }
+  .top_preparations .preparations-item,
+  .top_preparations .preparations-list {
+    float: left;
+  }
+  .top_preparations .preparations-item {
+    width: 27%;
+  }
+  .top_preparations .preparations-item img {
+    width: 80%;
+  }
+  .top_preparations .preparations-list {
+    width: 73%;
+  }
+
+  /*ニュース*/
+  .top_news .container {
+    width: 1100px;
+  }
+  .top_news .nav {
+    justify-content: space-between;
+  }
+  .top_news .nav-tabs .nav-link {
+    width: 48%;
+  }
+  .top_news dl {
+    padding: 0;
+  }
+  .top_news dl.news-list dd ul li,
+  .news dl.news-list dd ul li {
+    width: calc(20% - 10px);
+    margin: 0 0 20px 10px;
+  }
+
+  /*------------------------------
+  ▼サブページ
+  -------------------------------*/
+
+  /*自治体を探す*/
+  .area .multi-collapse {
+    padding-top: 500px;
+    margin-top: -500px;
+  }
+  .area .accordion {
+    width: 1100px;
+    margin: 0 auto 30px auto;
+  }
+
+  /*ご利用ガイド*/
+  h3.guide-title {
+    margin: 0 0 30px 0;
+    font-size: 1.8rem;
+  }
+  .guide .step span {
+    font-size: 1.4rem;
+  }
+
+  /*手続きの流れ*/
+  .guide h3#sp,
+  .guide h3#pc {
+    margin: 0;
+  }
+
+  /*よくあるご質問*/
+  .faq_list .accordion-body p {
+    margin: 0.1rem 0 0.6rem 0;
+    padding: 0 0 0 0.5rem;
+  }
+  .guide .subtitle button {
+    font-size: 1.2rem;
+  }
+  .guide .frequently_icon {
+    margin: 8px 8px 0 0;
+  }
+  .guide .faq_list .accordion-button p {
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  .guide .faq_list p {
+    font-size: 1.1rem;
+  }
+  .guide .accordion-body {
+    background-color: #f6f6f6;
+  }
+  .guide .faq_list ul li,
+  .guide .faq_list ol li {
+    margin: 0 0 10px 0;
+  }
+  .guide .faq_list ul span.indent-l,
+  .guide .faq_list ol span.indent-l {
+    width: 13rem;
+    display: inline-block;
+    position: relative;
+  }
+  .guide .faq_list ul span.indent-l:after,
+  .guide .faq_list ol span.indent-l:after,
+  .guide .faq_list ul span.indent-s:after,
+  .guide .faq_list ol span.indent-s:after {
+    width: 1rem;
+    content: "：";
+    position: absolute;
+    right: 0;
+  }
+  .guide.faq .tag,
+  .guide.faq .tag2 {
+    vertical-align: bottom;
+  }
+  #contentQA_ALL{
+    position: absolute;
+    top: 35.1875rem;
+  }
+  .container.inQA_Wrap{
+    padding: 0 6.8rem;
+    margin-bottom: 200px;
+  }
+  .guide .container-fluid .navWrapQA div.navbut{
+    padding: 0.3125rem 0.625rem;
+    font-size: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    vertical-align: middle;
+    align-items: center;
+    background-color: #fff;
+    /* border: 1px solid #aaa; */
+    border-radius: 5px;
+    max-width: 8.99rem;
+    margin-right: 1rem;
+  }
+  .guide .container-fluid .navWrapQA div.navbut :last-child{
+    margin-right: 0;
+  }
+
+  .guide .container-fluid .navWrapQA div.navbut.lta{
+    padding: 0.3125rem 0.625rem;
+    font-size: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    vertical-align: middle;
+    align-items: center;
+    background-color: #fff;
+    /* border: 1px solid #aaa; */
+    border-radius: 5px;
+    max-width: 8.99rem;
+    margin-right: 1rem;
+  }
+  .guide .container-fluid .navWrapQA div.navbut.lta :last-child{
+    margin-right: 0;
+  }
+
+  .guide .container-fluid .navWrapQA div.navbut.fre{
+    padding: 0.3125rem 0.625rem;
+    font-size: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    vertical-align: middle;
+    align-items: center;
+    background-color: #fff;
+    /* border: 1px solid #aaa; */
+    border-radius: 5px;
+    max-width: 8.99rem;
+    margin-right: 1rem;
+  }
+  .guide .container-fluid .navWrapQA div.navbut.fre :last-child{
+    margin-right: 0;
+  }
+  div#headerH {
+    z-index: 1019;
+    position: fixed;
+    width: 100%;
+    background-color: #FFF;
+    padding-top: 70px;
+    top: 158px;
+  }
+  .eLtax_icon {
+    width: 11rem!important;
+    text-align: left;
+  }
+
+  /*お支払いについて*/
+  .guide.payment h3:before,
+  .guide.payment h3:after {
+    display: none;
+  }
+  .guide.payment .brand-list li {
+    width: auto;
+    margin: 0 20px 0 0;
+  }
+  /*LTA*/
+  .top_main a.btn {
+    width: 400px;
+    font-size: 1.4rem;
+  }
+
+}
+/* @media (min-width: 1400px) END */
+
+
+
+
+
+  </style>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TVWRHNP"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!--#include virtual="/koukin/share/header.html" -->
+
+    <div class="d-block d-lg-none"><!--#include virtual="/koukin/share/navi.html" --></div>
+
+    <section class="content guide faq">
+      <div class="headerH_Wrap">
+        <div id="headerH">
+              <div class="container-fluid_SPnav">
+                <div class="container_SPnav">
+
+                  <div><!--rowトル-->
+                      <div class="col position-relative">
+                          <h2 class="font-rounded text-center mt-3">よくあるご質問</h2>
+                      </div><!--col-->
+                  </div><!--row-->
+
+                  <div class="row mb-0 navSP">
+                    <div class="col px-0">
+                      <ul class="subtitle">
+                        <li>
+                          <button class="tab-eltax active">
+                              <div class="zei_img"></div>
+                              <div class="eLtax_icon">
+                                地方税お支払サイト<br class="d-inline-block">
+                                <div class="txtLeft txtLeftSP d-flex align-items-center">
+                                  <span class="el_qr">eL-QR</span>
+                                  <span class="el_number">eL番号</span>
+                                </div>
+                              </div>
+                          </button>
+                        </li>
+                        <li>
+                          <button class="tab-tax">
+                            <div class="zei_img"></div>
+                            <div class="txtLeft txtLeftSP">各種税料金<br class="d-inline-block">オンライン<br class="pcNo bp576">都度払い</div>
+                          </button>
+                        </li>
+                        <li>
+                          <button class="tab-suido">
+                            <div class="sui_img"></div>
+                            <div class="txtLeft txtLeftSP">水道料金<br class="d-inline-block bp576">クレジットカード<br class="pcNo bp576">継続払い</div>
+                          </button>
+                        </li>
+                      </ul>
+                    </div><!--col-->
+                  </div><!--row-->
+
+                  <!-- ▼▼▼ SP時selectBox ▼▼▼ -->
+                    <div class="text-center faq-eltax">
+                      <select class="form-select form-select-sm mb-3 mt-3 tax_select pcNo" aria-label=".form-select-lg example">
+                        <option value="eltax_faq_000" selected>カテゴリーをご選択下さい。</option>
+                        <option value="eltax_faq_007">特によくあるご質問</option>
+                        <option value="eltax_faq_001">クレジットカードによる納付について</option>
+                        <option value="eltax_faq_002">納税証明書について</option>
+                        <option value="eltax_faq_003">インボイスついて</option>
+                        <option value="eltax_faq_004">クレジットカード納付の手順について</option>
+                        <option value="eltax_faq_005">システムについて</option>
+                        <option value="eltax_faq_006">困ったときは</option>
+                      </select>
+                    </div>
+                    <div class="text-center faq-tax">
+                      <select class="form-select form-select-sm mb-3 mt-3 faq_select pcNo" aria-label=".form-select-lg example">
+                        <option value="tax_faq_000" selected>カテゴリーをご選択下さい。</option>
+                        <option value="tax_faq_001">特によくあるご質問</option>
+                        <option value="tax_faq_002">サービス全般について</option>
+                        <option value="tax_faq_003">クレジットカードによる納付について</option>
+                        <option value="tax_faq_004">ペイジー（ネットバンキング）による納付について</option>
+                        <option value="tax_faq_005">納税証明書・納付証明書について</option>
+                        <option value="tax_faq_006">システムについて</option>
+                        <option value="tax_faq_007">困ったときは</option>
+                      </select>
+                    </div>
+                    <div class="text-center faq-suido">
+                      <select class="pcNo form-select form-select-sm mb-3 mt-3 sui_select pcNo" aria-label=".form-select-lg example">
+                        <option value="sui_faq_000" selected>カテゴリーをご選択下さい。</option>
+                        <option value="sui_faq_001">特によくあるご質問</option>
+                        <option value="sui_faq_002">サービス全般について</option>
+                        <option value="sui_faq_003">クレジットカードによるお支払いについて</option>
+                        <option value="sui_faq_004">Yahoo!公金支払いからF-REGI公金支払いを利用する際のご注意点について</option>
+                        <option value="sui_faq_005">システムについて</option>
+                        <option value="sui_faq_006">困ったときは</option>
+                      </select>
+                    </div>
+                  <!-- ▲▲▲ SP時selectBox ▲▲▲ -->
+
+                </div><!--container END-->
+              </div><!--container-fluid END-->
+
+
+
+          <!-- ▼▼▼ PC時navbutton コンテナfull ▼▼▼ -->
+            <div class="container-fluid nav spNo">
+              <div class="container-fluid navBg spNo">
+
+                <!-------------- 地方税共同機構 START-------------->
+                <div class="navWrapQA text-center faq-eltax">
+                  <div class="row d-flex justify-content-center">
+                    <div class="col navbut lta navB20">
+                      <a class="d-flex flex-column align-items-center" id="eltax_faq_07" href="#eltax_faq_07">
+                        <div class="txtArea">
+                          特によくある
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col navbut lta navB01">
+                      <a class="d-flex flex-column align-items-center" id="eltax_faq_01" href="#eltax_faq_01">
+                        <div class="txtArea">
+                          クレジットカード<br>による納付について
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col navbut lta navB02">
+                      <a class="d-flex flex-column align-items-center" id="eltax_faq_02" href="#eltax_faq_02">
+                        <div class="txtArea">
+                          納税証明書について
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col navbut lta navB03">
+                      <a class="d-flex flex-column align-items-center" id="eltax_faq_03" href="#eltax_faq_03">
+                        <div class="txtArea">
+                          インボイスについて
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col navbut lta navB04">
+                      <a class="d-flex flex-column align-items-center" id="eltax_faq_04" href="#eltax_faq_04">
+                        <div class="txtArea">
+                          クレジットカード納付<br>の手順について
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col navbut lta navB05">
+                      <a class="d-flex flex-column align-items-center" id="eltax_faq_05" href="#eltax_faq_05">
+                        <div class="txtArea">
+                          システムについて
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col navbut lta navB06">
+                      <a class="d-flex flex-column align-items-center" id="eltax_faq_06" href="#eltax_faq_06">
+                        <div class="txtArea">
+                          困ったときは
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-------------- 各種税料金（都度払い）START-------------->
+                <div class="navWrapQA text-center faq-tax">
+                  <div class="row d-flex justify-content-center">
+                    <div class="col navbut fre buttax01 navB07">
+                      <a class="d-flex flex-column align-items-center" id="tax_faq_01" href="#tax_faq_01">
+                        <div class="txtArea">
+                          特によくある
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col navbut fre buttax02 navB08">
+                      <a class="d-flex flex-column align-items-center" id="tax_faq_02" href="#tax_faq_02">
+                        <div class="txtArea">
+                          サービス全般について
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col navbut fre buttax03 navB09">
+                      <a class="d-flex flex-column align-items-center" id="tax_faq_03" href="#tax_faq_03">
+                        <div class="txtArea">
+                          クレジットカード<br class="md-only">による納付について
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col navbut fre buttax04 navB10">
+                      <a class="d-flex flex-column align-items-center" id="tax_faq_04" href="#tax_faq_04">
+                        <div class="txtArea">
+                          Pay-easyによる<br>納付について
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col navbut fre buttax05 navB11">
+                      <a class="d-flex flex-column align-items-center" id="tax_faq_05" href="#tax_faq_05">
+                        <div class="txtArea">
+                          納税証明書・<br class="md-only">納付証明書について
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col navbut fre buttax06 navB12">
+                      <a class="d-flex flex-column align-items-center" id="tax_faq_06" href="#tax_faq_06">
+                        <div class="txtArea">
+                          システムについて
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col navbut fre buttax07 navB13">
+                      <a class="d-flex flex-column align-items-center" id="tax_faq_07" href="#tax_faq_07">
+                        <div class="txtArea">
+                          困ったときは
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-------------- 各種税料金（都度払い）START-------------->
+                <div class="navWrapQA text-center faq-suido">
+                  <div class="row d-flex justify-content-center">
+                    <div class="col navbut sui navB14">
+                      <a class="d-flex flex-column align-items-center" id="sui_faq_01" href="#sui_faq_01">
+                        <div class="txtArea">
+                          特によくある
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col navbut sui navB15">
+                      <a class="d-flex flex-column align-items-center" id="sui_faq_02" href="#sui_faq_02">
+                        <div class="txtArea">
+                          サービス全般について
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col navbut sui navB16">
+                      <a class="d-flex flex-column align-items-center" id="sui_faq_03" href="#sui_faq_03">
+                        <div class="txtArea">
+                          クレジットカードによるお支払いについて
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col navbut sui navB17">
+                      <a class="d-flex flex-column align-items-center" id="sui_faq_04" href="#sui_faq_04">
+                        <div class="txtArea">
+                          「Yahoo!公金支払い」<br>からご利用時の注意
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col navbut sui navB18">
+                      <a class="d-flex flex-column align-items-center" id="sui_faq_05" href="#sui_faq_05">
+                        <div class="txtArea">
+                          システムについて
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col navbut sui navB19">
+                      <a class="d-flex flex-column align-items-center" id="sui_faq_06" href="#sui_faq_06">
+                        <div class="txtArea">
+                          困ったときは
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+              </div><!--container-fluid END-->
+            </div><!-- container-fluid nav END -->
+
+        </div><!--  headerH END -->
+      </div>
+    <!-- ▲▲▲ PC時navbutton コンテナfull END ▲▲▲ -->
+<!-- ▲▲▲ ナビゲーション END ▲▲▲ -->
+
+
+<!---------- ▼▼▼ コンテンツ別質問 START ▼▼▼ -------------->
+
+      <div class="container-fluid" id="contentQA_ALL">
+        <div class="container inQA_Wrap">
+  <!-------------- 地方税共同機構 START-------------->
+                <div class="row mb-5 faq-eltax faqAll">
+                  <div class="col px-0" id="faqAll_00">
+                    <!-- <h3><img class="frequently_icon" src="/koukin/img/faq/clown.svg">特によくあるご質問</h3> -->
+
+                    <div class="accordion faq_list" id="eltax_faq_007"><!--frequent 表示-->
+                      <h3 id="eltax_faq_07" class="step"><img class="frequently_icon" src="">特によくあるご質問</h3>
+                      <div class="accordion-item acc-item-el07">
+                        <h2 class="accordion-header" id="heading0-18e">
+                          <button class="accordion-button acc-butB1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse0-18e" aria-expanded="false" aria-controls="collapse1">
+                            <span class="question"></span><div><p>地方税お支払サイトでクレジットカード決済を選択し、外部サイトへ遷移したが、エラー画面が表示される。</p></div>
+                          </button>
+                        </h2>
+                        <div id="collapse0-18e" class="accordion-collapse collapse" aria-labelledby="heading0-18e">
+                          <div class="accordion-body acc-butB1_a">
+                            <span class="answer"></span><div>
+                              <p>エラー画面が表示される主な原因は下記が考えられます。</p>
+                              <ul>
+                                <li class="mb-2">既に支払が完了している。</li>
+                                <li class="mb-2">お手続可能期限切れ<br>※ 納付サイトに遷移してから10分以内に手続が完了しない場合は、タイムアウトとなります。</li>
+                                <li class="mb-2">正しくない操作が行われた<br>※ ブラウザの戻るボタンの使用、複数タブでの操作等</li>
+                                <li class="mb-2">ご利用のブラウザ設定に問題がある<br>※ スクリプトが無効になっている、Cookieを受け入れない等</li>
+                                <li class="mb-2">ご利用の操作環境で時計が大幅に進んでいる、遅れている。</li>
+                                <li class="mb-2">納付額が1円又は10,000,000円以上の場合は納付サイトをご利用いただけません。</li>
+                              </ul><br>
+                              <p>上記に該当しない場合はブラウザの設定、ご利用環境により正常に処理が行えない可能性があります。<br class="spNo">
+                                お手数ではございますが、下記をお試しいただけますでしょうか。</p>
+                                <ul>
+                                  <li class="mb-2"><a href="https://www.payment.eltax.lta.go.jp/pbuser" target="_blank">地方税お支払サイトの推奨環境</a>よりお手続き（動作環境をご確認ください）<br>※ 自治体から送付されるQRを読取したり、一部のアプリから操作した場合、正常に遷移できない事例を確認しています。</li>
+                                  <li class="mb-2">ブラウザのシークレットモード（プラベートブラウズ）よりお手続き</li>
+                                  <li class="mb-2">キャッシュの削除</li>
+                                  <li class="mb-2">ご利用端末の再起動</li>
+                                </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div><!--accordion-item-->
+                      <div class="accordion-item acc-item-el07">
+                        <h2 class="accordion-header" id="heading0-19e">
+                          <button class="accordion-button acc-butB1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse0-19e" aria-expanded="false" aria-controls="collapse1">
+                            <span class="question"></span><div><p>納付手続きが完了してるか確認してほしい</p></div>
+                          </button>
+                        </h2>
+                        <div id="collapse0-19e" class="accordion-collapse collapse" aria-labelledby="heading0-19e">
+                          <div class="accordion-body acc-butB1_a">
+                            <span class="answer"></span><div>
+                              <p>地方税お支払サイトの納付履歴照会よりご確認ください。<br>
+                                <a href="https://portal.payment.eltax.lta.go.jp/efp/xng/noufuhistorylist" target="_blank">地方税お支払サイト納付履歴照会</a>
+                              </p>
+                          </div>
+                          </div>
+                        </div>
+                      </div><!--accordion-item-->
+                      <div class="accordion-item acc-item-el07">
+                        <h2 class="accordion-header" id="heading0-20e">
+                          <button class="accordion-button acc-butB1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse0-20e" aria-expanded="false" aria-controls="collapse1">
+                            <span class="question"></span><div><p>システム利用料がいくらかかるのか事前に確認したい。</p></div>
+                          </button>
+                        </h2>
+                        <div id="collapse0-20e" class="accordion-collapse collapse" aria-labelledby="heading0-20e">
+                          <div class="accordion-body acc-butB1_a">
+                            <span class="answer"></span><div>
+                              <p>下記試算ページにてご確認ください。<br>
+                                <a href="https://eltax.f-regi.com/fc/relay/payment/calculate" target="_blank">地方税共同機構 クレジットカード納付サイト システム利用料試算ページ</a>
+                              </p>
+                        </div>
+                          </div>
+                        </div>
+                      </div><!--accordion-item-->
+                      <div class="accordion-item acc-item-el07">
+                        <h2 class="accordion-header" id="heading0-21e">
+                          <button class="accordion-button acc-butB1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse0-21e" aria-expanded="false" aria-controls="collapse1">
+                            <span class="question"></span><div><p>納付手続きを完了したが、カード名義を誤って入力したことに気が付いた。</p></div>
+                          </button>
+                        </h2>
+                        <div id="collapse0-21e" class="accordion-collapse collapse" aria-labelledby="heading0-21e">
+                          <div class="accordion-body acc-butB1_a">
+                            <span class="answer"></span><div>
+                              <p>納付手続きが完了している場合は、再度のお手続きは不要です。</p>
+                        </div>
+                          </div>
+                        </div>
+                      </div><!--accordion-item-->
+                      <div class="accordion-item acc-item-el07">
+                        <h2 class="accordion-header" id="heading0-22e">
+                          <button class="accordion-button acc-butB1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse0-22e" aria-expanded="false" aria-controls="collapse1">
+                            <span class="question"></span><div><p>分割払い/リボ払いで手続きしたが、利用明細では一括払いになっている。</p></div>
+                          </button>
+                        </h2>
+                        <div id="collapse0-22e" class="accordion-collapse collapse" aria-labelledby="heading0-22e">
+                          <div class="accordion-body acc-butB1_a">
+                            <span class="answer"></span><div>
+                              <p>解約 / 紛失 されたカードに紐づく金融機関口座より引き続きお引き落としされます。<br class="spNo">詳細についてはご利用カード会社様までご確認ください。</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div><!--accordion-item-->
+                      <div class="accordion-item acc-item-el07">
+                        <h2 class="accordion-header" id="heading0-23e">
+                          <button class="accordion-button acc-butB1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse0-23e" aria-expanded="false" aria-controls="collapse1">
+                            <span class="question"></span><div><p>分割払いで納付手続きを完了したが、その後、使用したカードを解約 / 紛失した。<br class="spNo">今後の支払いはどのようになるか。</p></div>
+                          </button>
+                        </h2>
+                        <div id="collapse0-23e" class="accordion-collapse collapse" aria-labelledby="heading0-23e">
+                          <div class="accordion-body acc-butB1_a">
+                            <span class="answer"></span><div>
+                              <p>解約 / 紛失 されたカードに紐づく金融機関口座より引き続きお引き落としされます。<br class="spNo">詳細についてはご利用カード会社様までご確認ください。</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div><!--accordion-item-->
+
+
+
+
+
+
+
+
+                    </div>
+
+                    <div class="accordion faq_list" id="eltax_faq_001"><!--frequent 表示-->
+                      <h3 id="eltax_faq_01" class="step"><span>1</span><span class="heading-text">クレジットカードによる納付について</span></h3>
+                      <div class="accordion-item acc-item-el01">
+                        <h2 class="accordion-header" id="heading0-1e">
+                          <button class="accordion-button acc-butB1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse0-1e" aria-expanded="false" aria-controls="collapse1">
+                            <span class="question"></span><div><p>クレジットカード納付対象の税金を教えてください。</p></div>
+                          </button>
+                        </h2>
+                        <div id="collapse0-1e" class="accordion-collapse collapse" aria-labelledby="heading0-1e">
+                          <div class="accordion-body acc-butB1_a">
+                            <span class="answer"></span><div>
+                              <p>eL-QR、eL番号が印字されている納付書が対象です。<br class="spNo">
+                                詳細については、納付対象の地方公共団体までご確認ください。</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div><!--accordion-item-->
+                      <div class="accordion-item acc-item-el01">
+                        <h2 class="accordion-header" id="heading0-2e">
+                          <button class="accordion-button acc-butB1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse0-2e" aria-expanded="false" aria-controls="collapse1">
+                            <span class="question"></span><div><p>クレジットカードで納付する場合、期限はありますか。</p></div>
+                          </button>
+                        </h2>
+                        <div id="collapse0-2e" class="accordion-collapse collapse" aria-labelledby="heading0-2e">
+                          <div class="accordion-body acc-butB1_a">
+                            <span class="answer"></span><div>
+                              <p>決済情報入力画面に表示されているお手続可能期限をご確認ください。</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div><!--accordion-item-->
+                      <div class="accordion-item acc-item-el01">
+                        <h2 class="accordion-header" id="heading0-3e">
+                          <button class="accordion-button acc-butB1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse0-3e" aria-expanded="false" aria-controls="collapse1">
+                            <span class="question"></span><div><p>領収証書は発行されますか。</p></div>
+                          </button>
+                        </h2>
+                        <div id="collapse0-3e" class="accordion-collapse collapse" aria-labelledby="heading0-3e">
+                          <div class="accordion-body acc-butB1_a">
+                            <span class="answer"></span><div>
+                              <p>領収証書は発行されません。</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div><!--accordion-item-->
+                      <div class="accordion-item acc-item-el01">
+                        <h2 class="accordion-header" id="heading0-4e">
+                          <button class="accordion-button acc-butB1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse0-4e" aria-expanded="false" aria-controls="collapse1">
+                            <span class="question"></span><div><p>クレジットカードで納付した場合、納付日（領収日）はいつになりますか。</p></div>
+                          </button>
+                        </h2>
+                        <div id="collapse0-4e" class="accordion-collapse collapse" aria-labelledby="heading0-4e">
+                          <div class="accordion-body acc-butB1_a">
+                            <span class="answer"></span><div>
+                              <p>納付日は、納付手続完了日（クレジットカード利用日）です。<br class="spNo">ただし、納付日の「確定」は、機構指定納付受託者から地方税共同機構へお支払いされた資金が入金された日になります。</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div><!--accordion-item-->
+                      <div class="accordion-item acc-item-el01">
+                        <h2 class="accordion-header" id="heading0-5e">
+                          <button class="accordion-button acc-butB1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse0-5e" aria-expanded="false" aria-controls="collapse1">
+                            <span class="question"></span><div><p>クレジットカードでの納付を取消すことはできますか。</p></div>
+                          </button>
+                        </h2>
+                        <div id="collapse0-5e" class="accordion-collapse collapse" aria-labelledby="heading0-5e">
+                          <div class="accordion-body acc-butB1_a">
+                            <span class="answer"></span><div>
+                              <p>お支払手続きが完了すると、いかなる理由においても取消できません。</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div><!--accordion-item-->
+                      <div class="accordion-item acc-item-el01">
+                        <h2 class="accordion-header" id="heading0-6e">
+                          <button class="accordion-button acc-butB1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse0-6e" aria-expanded="false" aria-controls="collapse1">
+                            <span class="question"></span><div><p>当サイトにおいて、お支払手続き完了後にクレジットカードの支払回数を変更することはできますか。</p></div>
+                          </button>
+                        </h2>
+                        <div id="collapse0-6e" class="accordion-collapse collapse" aria-labelledby="heading0-6e">
+                          <div class="accordion-body acc-butB1_a">
+                            <span class="answer"></span><div>
+                              <p>お支払手続きが完了すると、当サイトではいかなる理由においても支払回数の変更はできません。<br class="spNo">支払回数の変更を希望される方は、カード裏面に記載されているカード発行会社へ直接お問い合わせください。</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div><!--accordion-item-->
+                      <div class="accordion-item acc-item-el01">
+                        <h2 class="accordion-header" id="heading0-7e">
+                          <button class="accordion-button acc-butB1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse0-7e" aria-expanded="false" aria-controls="collapse1">
+                            <span class="question"></span><div><p>システム利用料とは何ですか。</p></div>
+                          </button>
+                        </h2>
+                        <div id="collapse0-7e" class="accordion-collapse collapse" aria-labelledby="heading0-7e">
+                          <div class="accordion-body acc-butB1_a">
+                            <span class="answer"></span><div>
+                              <p>クレジットカード決済をご利用の際に、納付金額に応じて必要となる費用です。<br class="spNo">システム利用料は、地方税共同機構、各地方公共団体の収入になるものではありません。</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div><!--accordion-item-->
+                      <div class="accordion-item acc-item-el01">
+                        <h2 class="accordion-header" id="heading0-8e">
+                          <button class="accordion-button acc-butB1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse0-8e" aria-expanded="false" aria-controls="collapse1">
+                            <span class="question"></span><div><p>口座振替ように、一度手続きを行えば、次回以降、自動的に引き落としされますか。</p></div>
+                          </button>
+                        </h2>
+                        <div id="collapse0-8e" class="accordion-collapse collapse" aria-labelledby="heading0-8e">
+                          <div class="accordion-body acc-butB1_a">
+                            <span class="answer"></span><div>
+                              <p>口座振替のように、一度の手続きで以後の納期分を引落しするものではありません。<br class="spNo">
+                                納付の都度、手続きが必要です。</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div><!--accordion-item-->
+                      <div class="accordion-item acc-item-el01">
+                        <h2 class="accordion-header" id="heading0-9e">
+                          <button class="accordion-button acc-butB1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse0-9e" aria-expanded="false" aria-controls="collapse1">
+                            <span class="question"></span><div><p>クレジットカードの利用明細には何と記載されますか。</p></div>
+                          </button>
+                        </h2>
+                        <div id="collapse0-9e" class="accordion-collapse collapse" aria-labelledby="heading0-9e">
+                          <div class="accordion-body acc-butB1_a">
+                            <span class="answer"></span><div>
+                              <p>クレジットカードのご利用明細には下記いずれかの名称が表示されます。<br><br>
+                                地方税共同機構（ｅＬＴＡＸ）<br>
+                                チホウゼイキョウドウキコウ（エルタックス）<br>
+                                CHIHOUZEI KYOUDOU KIKOU (eLTAX)</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div><!--accordion-item-->
+                      <div class="accordion-item acc-item-el01">
+                        <h2 class="accordion-header" id="heading0-10e">
+                          <button class="accordion-button acc-butB1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse0-10e" aria-expanded="false" aria-controls="collapse1">
+                            <span class="question"></span><div><p>複数の納付書がある場合、複数の納税を一括で納付することはできますか。</p></div>
+                          </button>
+                        </h2>
+                        <div id="collapse0-10e" class="accordion-collapse collapse" aria-labelledby="heading0-10e">
+                          <div class="accordion-body acc-butB1_a">
+                            <span class="answer"></span><div>
+                              <p>地方税お支払サイトでは複数の納付書をまとめて1回でお支払いいただけます。<br class="spNo">
+                                なお、クレジットカード決済のシステム利用料は、合計の納付金額に対して発生します。<br><br>
+                                システム利用料は、下記サイトより試算が可能です。
+                                <a href="https://eltax.f-regi.com/fc/relay/payment/calculate" target="_blank">システム利用料試算ページ</a></p>
+                            </div>
+                          </div>
+                        </div>
+                      </div><!--accordion-item-->
+                      <div class="accordion-item acc-item-el01">
+                        <h2 class="accordion-header" id="heading0-11e">
+                          <button class="accordion-button acc-butB1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse0-11e" aria-expanded="false" aria-controls="collapse1">
+                            <span class="question"></span><div><p>クレジットカード情報の入力後、手続きを進めた際にエラーメッセージが表示されて、入力内容が全て消えた。<br class="spNo">再度入力するのが手間なので入力内容を消さないでほしい。</p></div>
+                          </button>
+                        </h2>
+                        <div id="collapse0-11e" class="accordion-collapse collapse" aria-labelledby="heading0-11e">
+                          <div class="accordion-body acc-butB1_a">
+                            <span class="answer"></span><div>
+                              <p>当社セキュリティポリシーによりサイトにカード情報が保持されないように入力内容は全て削除しています。<br class="spNo">申し訳ございませんが再度のご入力をお願いします。</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div><!--accordion-item-->
+                      <div class="accordion-item acc-item-el01">
+                        <h2 class="accordion-header" id="heading0-12e">
+                          <button class="accordion-button acc-butB1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse0-12e" aria-expanded="false" aria-controls="collapse1">
+                            <span class="question"></span><div><p>納付手続きは完了しているが、自治体で納付の確認ができないと言われた。</p></div>
+                          </button>
+                        </h2>
+                        <div id="collapse0-12e" class="accordion-collapse collapse" aria-labelledby="heading0-12e">
+                          <div class="accordion-body acc-butB1_a">
+                            <span class="answer"></span><div>
+                              <p>クレジットカード決済完了後、当社から地方税お支払サイトへ速やかにデータ連携しています。<br class="spNo">「地方税お支払サイト」から各自治体様のデータ連携につきましては、通常何営業日で実施されているか、当社では詳細が分かりかねます。<br class="spNo">お手数ですが地方税お支払いサイトのヘルプデスク、もしくは自治体様までご確認をお願いいたします。</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div><!--accordion-item-->
+                      <div class="accordion-item acc-item-el01">
+                        <h2 class="accordion-header" id="heading0-13e">
+                          <button class="accordion-button acc-butB1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse0-13e" aria-expanded="false" aria-controls="collapse1">
+                            <span class="question"></span><div><p>分割払いで納付手続きを完了したが、その後、使用したカードを解約 / 紛失した。<br class="spNo">今後の支払いはどのようになるか。</p></div>
+                          </button>
+                        </h2>
+                        <div id="collapse0-13e" class="accordion-collapse collapse" aria-labelledby="heading0-13e">
+                          <div class="accordion-body acc-butB1_a">
+                            <span class="answer"></span><div>
+                              <p>解約 / 紛失 されたカードに紐づく金融機関口座より引き続きお引き落としされます。<br class="spNo">詳細についてはご利用カード会社様までご確認ください。</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div><!--accordion-item-->
+                      <div class="accordion-item acc-item-el01">
+                        <h2 class="accordion-header" id="heading0-14e">
+                          <button class="accordion-button acc-butB1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse0-14e" aria-expanded="false" aria-controls="collapse1">
+                            <span class="question"></span><div><p>株式会社エフレジは、地方税お支払サイトの運営会社か。</p></div>
+                          </button>
+                        </h2>
+                        <div id="collapse0-14e" class="accordion-collapse collapse" aria-labelledby="heading0-14e">
+                          <div class="accordion-body acc-butB1_a">
+                            <span class="answer"></span><div>
+                              <p>地方税お支払サイトは地方税共同機構様にて運営されています。<br class="spNo">当社はクレジットカード決済のみを提供していますので、地方税お支払サイトに関するご質問につきましては、当社では分かりかねます。
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div><!--accordion-item-->
+                      <div class="accordion-item acc-item-el01">
+                        <h2 class="accordion-header" id="heading0-15e">
+                          <button class="accordion-button acc-butB1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse0-15e" aria-expanded="false" aria-controls="collapse1">
+                            <span class="question"></span><div><p>納付手続きを完了したが、カード名義を誤って入力したことに気が付いた。</p></div>
+                          </button>
+                        </h2>
+                        <div id="collapse0-15e" class="accordion-collapse collapse" aria-labelledby="heading0-15e">
+                          <div class="accordion-body acc-butB1_a">
+                            <span class="answer"></span><div>
+                              <p>納付手続きが完了している場合は、再度のお手続きは不要です。</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div><!--accordion-item-->
+                      <div class="accordion-item acc-item-el01">
+                        <h2 class="accordion-header" id="heading0-16e">
+                          <button class="accordion-button acc-butB1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse0-16e" aria-expanded="false" aria-controls="collapse1">
+                            <span class="question"></span><div><p>分割払い/リボ払いで手続きしたが、利用明細では一括払いになっている。</p></div>
+                          </button>
+                        </h2>
+                        <div id="collapse0-16e" class="accordion-collapse collapse" aria-labelledby="heading0-16e">
+                          <div class="accordion-body acc-butB1_a">
+                            <span class="answer"></span><div>
+                              <p>ご利用のクレジットカード会社によっては、ご請求金額が確定するまでの間、分割払い/リボ払いが表示されずに<br class="spNo">一括払いで表示されることがあります。<br class="spNo">当社では詳細が分かりかねますので、ご利用のクレジットカード会社までご確認ください。</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div><!--accordion-item-->
+                      <div class="accordion-item acc-item-el01">
+                        <h2 class="accordion-header" id="heading0-17e">
+                          <button class="accordion-button acc-butB1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse0-17e" aria-expanded="false" aria-controls="collapse1">
+                            <span class="question"></span><div><p>クレジットカードの引落し日はいつですか</p></div>
+                          </button>
+                        </h2>
+                        <div id="collapse0-17e" class="accordion-collapse collapse" aria-labelledby="heading0-17e">
+                          <div class="accordion-body acc-butB1_a">
+                            <span class="answer"></span><div>
+                              <p>クレジットカードのご利用日はお支払手続きを完了された日です。<br class="spNo">各クレジットカード会社の一般的な締め日、引落し日につきましては下記サイトをご参照ください。<br><a href="https://www.f-regi.com/document/credit_payment.html" target="_blank">クレジットカード会社別 締め日・支払日（引き落とし日）のご案内</a><br>※当社にて調査した締め日・支払日です。詳細はご利用のカード会社様にご確認ください。</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div><!--accordion-item-->
+                    </div><!--accordion-->
+
+                    <div class="accordion faq_list" id="eltax_faq_002">
+                      <h3 id="eltax_faq_02" class="step"><span>2</span><span class="heading-text">納税証明書について</span></h3>
+                      <div class="accordion-item acc-item-el02">
+                        <h2 class="accordion-header" id="heading1-1e">
+                          <button class="accordion-button acc-butC1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1-1e" aria-expanded="false" aria-controls="collapse1">
+                            <span class="question"></span><div><p>車検用納税証明書はいつ届きますか。</p></div>
+                          </button>
+                        </h2>
+                        <div id="collapse1-1e" class="accordion-collapse collapse" aria-labelledby="heading1-1e">
+                          <div class="accordion-body acc-butC1_a">
+                            <span class="answer"></span><div>
+                              <p>当社では詳細が分かりかねますので、お手続き対象の地方公共団体にご確認ください。</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div><!--accordion-item-->
+                      <div class="accordion-item acc-item-el02">
+                        <h2 class="accordion-header" id="heading1-2e">
+                          <button class="accordion-button acc-butC1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1-2e" aria-expanded="false" aria-controls="collapse1">
+                            <span class="question"></span><div><p>一般用納税証明書が必要なのですが、どうすればいいですか。</p></div>
+                          </button>
+                        </h2>
+                        <div id="collapse1-2e" class="accordion-collapse collapse" aria-labelledby="heading1-2e">
+                          <div class="accordion-body acc-butC1_a">
+                            <span class="answer"></span><div>
+                              <p>このサイトでは発行できません。発行希望対象の地方公共団体に取得方法や発行可能日等をご確認ください。</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div><!--accordion-item-->
+                    </div><!--accordion-->
+
+                    <div class="accordion faq_list" id="eltax_faq_003">
+                      <h3 id="eltax_faq_03" class="step"><span>3</span><span class="heading-text">インボイスについて</span></h3>
+                      <div class="accordion-item acc-item-el03">
+                        <h2 class="accordion-header" id="heading2-1e">
+                          <button class="accordion-button acc-butD1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2-1e" aria-expanded="false" aria-controls="collapse1">
+                            <span class="question"></span><div><p>システム利用料は税込と表記されています、どのようにインボイスが発行されますか。</p></div>
+                          </button>
+                        </h2>
+                        <div id="collapse2-1e" class="accordion-collapse collapse" aria-labelledby="heading2-1e">
+                          <div class="accordion-body acc-butD1_a">
+                            <span class="answer"></span><div>
+                              <p>お支払い手続きが完了された際に表示される手続完了画面に、インボイスの要件を表示しておりますので、スクリーンショット等にて保存をお願い致します。<br class="spNo">スクリーンショット等の保存を行わずに完了画面を閉じられた場合は、お問い合わせフォームより下記情報をお知らせください。</p>
+                              <ul>
+                                <li>お取引の時間帯</li>
+                                <li>納付サイトに入力されたカード名義</li>
+                                <li>納付金額</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div><!--accordion-item-->
+                    </div><!--accordion-->
+
+                    <div class="accordion faq_list" id="eltax_faq_004">
+                      <h3 id="eltax_faq_04" class="step"><span>4</span><span class="heading-text">クレジットカード納付の手順について</span></h3>
+                        <div class="accordion-item acc-item-el04">
+                          <h2 class="accordion-header" id="heading3-1e">
+                            <button class="accordion-button acc-butE1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3-1e" aria-expanded="false" aria-controls="collapse1">
+                              <span class="question"></span><div><p>支払回数は選べますか。</p></div>
+                            </button>
+                          </h2>
+                          <div id="collapse3-1e" class="accordion-collapse collapse" aria-labelledby="heading3-1e">
+                            <div class="accordion-body acc-butE1_a">
+                              <span class="answer"></span><div>
+                                <p>ご利用いただけるお支払方法は一括払い・分割払い（3回・5回・6回・10回・12回）・リボ払いです。<br>
+                                  ※分割払い・リボ払いをご利用の際は、システム利用料とは別に各カード発行会社が定める手数料が発生しますので、ご利用前にご確認ください。<br>
+                                  ※ご利用いただけるお支払方法、お支払手数料は、各カード発行会社ごとに異なります。詳しくは、ご利用のカード発行会社へ直接お問い合わせください。<br>
+                                  ※システム利用料は、分割払い・リボ払いを選択された場合においても、一括払いとなります。</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div><!--accordion-item-->
+                        <div class="accordion-item acc-item-el04">
+                          <h2 class="accordion-header" id="heading3-2e">
+                            <button class="accordion-button acc-butE1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3-2e" aria-expanded="false" aria-controls="collapse1">
+                              <span class="question"></span><div><p>家族名義等の税金を私のクレジットカードで納付できますか。</p></div>
+                            </button>
+                          </h2>
+                          <div id="collapse3-2e" class="accordion-collapse collapse" aria-labelledby="heading3-2e">
+                            <div class="accordion-body acc-butE1_a">
+                              <span class="answer"></span><div>
+                                <p>カード名義人がお手続をすれば、カード名義人以外の税金でもクレジットカードで納付できます。<br class="spNo">ただし、納付手続後は取消できませんので、トラブルにならないように事前にご確認をお願い致します。</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div><!--accordion-item-->
+                        <div class="accordion-item acc-item-el04">
+                          <h2 class="accordion-header" id="heading3-3e">
+                            <button class="accordion-button acc-butE1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3-3e" aria-expanded="false" aria-controls="collapse1">
+                              <span class="question"></span><div><p>クレジットカードによる引落しはいつになりますか。</p></div>
+                            </button>
+                          </h2>
+                          <div id="collapse3-3e" class="accordion-collapse collapse" aria-labelledby="heading3-3e">
+                            <div class="accordion-body acc-butE1_a">
+                              <span class="answer"></span><div>
+                                <p>カード発行会社により引落し日は異なります。<br class="spNo">詳細は、カード発行会社が発行する利用明細でご確認いただくか、カード裏面に記載されているカード発行会社へ直接お問い合わせください。</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div><!--accordion-item-->
+                        <div class="accordion-item acc-item-el04">
+                          <h2 class="accordion-header" id="heading3-4e">
+                            <button class="accordion-button acc-butE1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3-4e" aria-expanded="false" aria-controls="collapse1">
+                              <span class="question"></span><div><p>お支払手続き完了画面を印刷することはできますか。</p></div>
+                            </button>
+                          </h2>
+                          <div id="collapse3-4e" class="accordion-collapse collapse" aria-labelledby="heading3-4e">
+                            <div class="accordion-body acc-butE1_a">
+                              <span class="answer"></span><div>
+                                <p>お使いのブラウザの印刷機能をご利用ください。</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div><!--accordion-item-->
+                        <div class="accordion-item acc-item-el04">
+                          <h2 class="accordion-header" id="heading3-5e">
+                            <button class="accordion-button acc-butE1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3-5e" aria-expanded="false" aria-controls="collapse1">
+                              <span class="question"></span><div><p>納付手続完了メールが受信できません。対処方法はありますか。</p></div>
+                            </button>
+                          </h2>
+                          <div id="collapse3-5e" class="accordion-collapse collapse" aria-labelledby="heading3-5e">
+                            <div class="accordion-body acc-butE1_a">
+                              <span class="answer"></span><div>
+                                <p>当社からメールは配信しておりません。<br class="spNo">
+                                  地方税お支払サイトのヘルプデスクまでご確認ください。</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div><!--accordion-item-->
+                        <div class="accordion-item acc-item-el04">
+                          <h2 class="accordion-header" id="heading3-6e">
+                            <button class="accordion-button acc-butE1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3-6e" aria-expanded="false" aria-controls="collapse1">
+                              <span class="question"></span><div><p>システム利用料がいくらかかるのか事前に確認したい。</p></div>
+                            </button>
+                          </h2>
+                          <div id="collapse3-6e" class="accordion-collapse collapse" aria-labelledby="heading3-6e">
+                            <div class="accordion-body acc-butE1_a">
+                              <span class="answer"></span><div>
+                                <p>下記試算ページにてご確認ください。<br>
+                                  <a href="https://eltax.f-regi.com/fc/relay/payment/calculate" target="_blank">地方税共同機構 クレジットカード納付サイト システム利用料試算ページ</a></p>
+                              </div>
+                            </div>
+                          </div>
+                        </div><!--accordion-item-->
+                        <div class="accordion-item acc-item-el04">
+                          <h2 class="accordion-header" id="heading3-7e">
+                            <button class="accordion-button acc-butE1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3-7e" aria-expanded="false" aria-controls="collapse1">
+                              <span class="question"></span><div><p>納付手続きが完了してるか確認してほしい</p></div>
+                            </button>
+                          </h2>
+                          <div id="collapse3-7e" class="accordion-collapse collapse" aria-labelledby="heading3-7e">
+                            <div class="accordion-body acc-butE1_a">
+                              <span class="answer"></span><div>
+                                <p>地方税お支払サイトの納付履歴照会よりご確認ください。<br>
+                                  <a href="https://portal.payment.eltax.lta.go.jp/efp/xng/noufuhistorylist" target="_blank">地方税お支払サイト納付履歴照会</a></p>
+                              </div>
+                            </div>
+                          </div>
+                        </div><!--accordion-item-->
+                    </div><!--accordion-->
+
+                    <div class="accordion faq_list" id="eltax_faq_005">
+                      <h3 id="eltax_faq_05" class="step"><span>5</span><span class="heading-text">システムについて</span></h3>
+                      <div class="accordion-item acc-item-el05">
+                        <h2 class="accordion-header" id="heading4-1e">
+                          <button class="accordion-button acc-butF1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4-1e" aria-expanded="false" aria-controls="collapse1">
+                            <span class="question"></span><div><p>セキュリティ面は大丈夫ですか。</p></div>
+                          </button>
+                        </h2>
+                        <div id="collapse4-1e" class="accordion-collapse collapse" aria-labelledby="heading4-1e">
+                          <div class="accordion-body acc-butF1_a">
+                            <span class="answer"></span><div>
+                              <p>当サイトでご入力いただく情報は、SSL（Secure Sockets Layer）と呼ばれる暗号化技術によって保護されています。</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div><!--accordion-item-->
+                    </div><!--accordion-->
+
+
+                    <div class="accordion faq_list" id="eltax_faq_006">
+                      <h3 id="eltax_faq_06" class="step"><span>6</span><span class="heading-text">困ったときは</span></h3>
+                      <div class="accordion-item acc-item-el06">
+                        <h2 class="accordion-header" id="heading5-1e">
+                          <button class="accordion-button acc-butG1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5-1e" aria-expanded="false" aria-controls="collapse1">
+                            <span class="question"></span><div><p>エラーメッセージが表示され、先に進むことができません。</p></div>
+                          </button>
+                        </h2>
+                        <div id="collapse5-1e" class="accordion-collapse collapse" aria-labelledby="heading5-1e">
+                          <div class="accordion-body acc-butG1_a">
+                            <span class="answer"></span><div>
+                              <p>クレジットカード情報を入力した後にエラーとなった場合、カード裏面に記載のカード発行会社にお問い合わせください。<br class="spNo">
+                                セッションエラーとなった場合、地方税お支払サイト又はPCdesk等の遷移元に戻ってやり直してください。</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div><!--accordion-item-->
+                      <div class="accordion-item acc-item-el06">
+                        <h2 class="accordion-header" id="heading5-2e">
+                          <button class="accordion-button acc-butG1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5-2e" aria-expanded="false" aria-controls="collapse1">
+                            <span class="question"></span><div><p>納付書を紛失しました。クレジットカード納付をするにはどうすればいいですか。</p></div>
+                          </button>
+                        </h2>
+                        <div id="collapse5-2e" class="accordion-collapse collapse" aria-labelledby="heading5-2e">
+                          <div class="accordion-body acc-butG1_a">
+                            <span class="answer"></span><div>
+                              <p>お手続き対象の地方公共団体に納付書の再発行を依頼してください。</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div><!--accordion-item-->
+                      <div class="accordion-item acc-item-el06">
+                        <h2 class="accordion-header" id="heading5-3e">
+                          <button class="accordion-button acc-butG1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5-3e" aria-expanded="false" aria-controls="collapse1">
+                            <span class="question"></span><div><p>正常に処理が行えないのですが。</p></div>
+                          </button>
+                        </h2>
+                        <div id="collapse5-3e" class="accordion-collapse collapse" aria-labelledby="heading5-3e">
+                          <div class="accordion-body acc-butG1_a">
+                            <span class="answer"></span><div>
+                              <p>ブラウザの設定、環境により正常に処理が行えない可能性があります。<br class="spNo">
+                                大変お手数をお掛け致しますが、別ブラウザ（Edge/Chromeなど）、別の操作環境（スマートフォン・タブレット端末など）にてお試しください。</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div><!--accordion-item-->
+                      <div class="accordion-item acc-item-el06">
+                        <h2 class="accordion-header" id="heading5-4e">
+                          <button class="accordion-button acc-butG1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5-4e" aria-expanded="false" aria-controls="collapse1">
+                            <span class="question"></span><div><p>地方税お支払サイトでクレジットカード決済を選択し、外部サイトへ遷移したが、エラー画面が表示される。</p></div>
+                          </button>
+                        </h2>
+                        <div id="collapse5-4e" class="accordion-collapse collapse" aria-labelledby="heading5-4e">
+                          <div class="accordion-body acc-butG1_a">
+                            <span class="answer"></span><div>
+                              <p>エラー画面が表示される主な原因は下記が考えられます。</p>
+                              <ul>
+                                <li>既に支払が完了している。</li>
+                                <li>お手続可能期限切れ<br>※ 納付サイトに遷移してから10分以内に手続が完了しない場合は、タイムアウトとなります。</li>
+                                <li>正しくない操作が行われた<br>※ ブラウザの戻るボタンの使用、複数タブでの操作等</li>
+                                <li>ご利用のブラウザ設定に問題がある<br>※ スクリプトが無効になっている、Cookieを受け入れない等</li>
+                                <li>ご利用の操作環境で時計が大幅に進んでいる、遅れている。</li>
+                                <li>納付額が1円又は10,000,000円以上の場合は納付サイトをご利用いただけません。</li>
+                              </ul><br><br>
+                              <p>上記に該当しない場合はブラウザの設定、ご利用環境により正常に処理が行えない可能性があります。<br class="spNo">
+                                お手数ではございますが、下記をお試しいただけますでしょうか。</p>
+                                <ul>
+                                  <li><a href="https://www.payment.eltax.lta.go.jp/pbuser" target="_blank">地方税お支払サイトの推奨環境</a>よりお手続き（動作環境をご確認ください）<br>※ 自治体から送付されるQRを読取したり、一部のアプリから操作した場合、正常に遷移できない事例を確認しています。</li>
+                                  <li>ブラウザのシークレットモード（プラベートブラウズ）よりお手続き</li>
+                                  <li>キャッシュの削除</li>
+                                  <li>ご利用端末の再起動</li>
+                                </ul><br>
+                                <p>大変お手数をお掛け致しますが、別ブラウザ（Edge/Chromeなど）、<br class="spNo">別の操作環境（スマートフォン・タブレット端末など）にてお試しください。</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div><!--accordion-item-->
+                    </div><!--accordion-->
+
+                  </div><!--col-->
+                </div><!--row-->
+  <!-------------- 地方税共同機構 END-------------->
+
+
+
+
+                <div class="row" id="conv_point">
+                  <div class="col text-center">
+                    <p>解決しなかった場合はこちら</p>
+                    <a target="_blank" type="button" class="btn bg-enter text-white btn-lg rounded-pill position-relative" href="https://www.f-regi.co.jp/contact/koukin/">お問い合わせ<i class="fas fa-angle-down  position-absolute top-50 end-0 translate-middle-y me-3"></i></a>
+                  </div><!--col-->
+                </div><!--row-->
+
+            </div><!--container-->
+        </div><!--container-fluid-->
+    </section>
+
+    <!--#include virtual="/koukin/share/footer.html" -->
+
+    <script>
+			/*Q1,A1の自動不要　カテゴリー追加時はproces_count('.class');追記必要*/
+			$(function() {
+			function proces_count(sectionClass) {
+				var i = 1;
+				var j = 1;
+
+				$(sectionClass + ' .question').each(function(){
+				$(this).prepend('<span class="question">' + "Q"+ i + '</span>');
+				i++;
+				});
+
+				$(sectionClass + '_a .answer').each(function(){
+				$(this).prepend('<span class="answer">' + "A"+ j + '</span>');
+				j++;
+				});
+			}
+			/*アルファベット+数字はeLTAX*/
+			proces_count('.acc-butA1');/*　◀よくあるご質問用に未使用　*/
+			proces_count('.acc-butB1');
+			proces_count('.acc-butC1');
+			proces_count('.acc-butD1');
+			proces_count('.acc-butE1');
+			proces_count('.acc-butF1');
+			proces_count('.acc-butG1');
+			proces_count('.acc-butH1');
+
+			/*アルファベットは税金*/
+			proces_count('.acc-butA');
+			proces_count('.acc-butB');
+			proces_count('.acc-butC');
+			proces_count('.acc-butD');
+			proces_count('.acc-butE');
+			proces_count('.acc-butF');
+			proces_count('.acc-butG');
+			proces_count('.acc-butH');
+
+			//数字は水道
+			proces_count('.acc-but1');
+			proces_count('.acc-but2');
+			proces_count('.acc-but3');
+			proces_count('.acc-but4');
+			proces_count('.acc-but5');
+			proces_count('.acc-but6');
+
+			});
+
+
+		/*　eLTAX STARAT　*/
+		// $('#eltax_faq_01').on('click',function(){ //titleをクリックしたら
+		//   $('body,html').animate({scrollTOP:100},400);
+		//   //$('.accordion-item').slideUp();
+		//   $('.acc-item-el01').slideToggle(500); // boxが0.5秒かけてスライドを表示・非表示
+		// });
+
+
+
+
+		// $('#eltax_faq_01').on('click', function(event) { 
+		//     // デフォルトのアンカーリンク動作を無効化
+		//     event.preventDefault();
+
+		//     // スクロールアニメーション
+		//     var targetPosition = $('#eltax_faq_01').offset().top - 600; // 600pxを引く
+		//     console.log('Target Position: ' + targetPosition); // デバッグ用に追加
+		//     $('body,html').animate({ scrollTop: targetPosition }, 400);
+
+		//     // 開閉のトグル機能
+		//     $('.acc-item-el01').slideToggle(500); 
+		// });
+
+
+
+		$(document).ready(function() {
+			$('a[href^="#"]').on('click', function(event) {
+				// デフォルトのアンカーリンク動作を無効化
+				event.preventDefault();
+
+				// ターゲットエリアのIDを取得
+				var targetId = $(this).attr('href');
+				
+				// ターゲットエリアの位置を取得
+				var targetPosition = $(targetId).offset().top -312; // 600pxを引く
+				console.log('Target Position: ' + targetPosition); // デバッグ用に追加
+
+				// スクロールアニメーション
+				$('html, body').animate({ scrollTop: targetPosition }, 400);
+
+				// 開閉のトグル機能
+				$(targetId).slideToggle(500); 
+			});
+		});
+
+
+
+		$('#eltax_faq_02').on('click',function(){ //titleをクリックしたら
+		$('body,html').animate({scrollTOP:100},400);
+		$('.acc-item-el02').slideToggle(500);
+		});
+		$('#eltax_faq_03').on('click',function(){
+		$('body,html').animate({scrollTOP:100},400);
+		$('.acc-item-el03').slideToggle(500);
+		});
+		$('#eltax_faq_04').on('click',function(){
+		$('body,html').animate({scrollTOP:100},400);
+		$('.acc-item-el04').slideToggle(500);
+		});
+
+		// $('#eltax_faq_04').on('click', function(event) { 
+		//   // デフォルトのアンカーリンク動作を無効化
+		//   event.preventDefault();
+
+		//   // スクロールアニメーション
+		//   var targetPosition = $('#eltax_faq_04').offset().top - 600; // 600pxを引く
+		//   $('body,html').animate({ scrollTop: targetPosition }, 400);
+
+		//   // 開閉のトグル機能
+		//   $('.acc-item-el04').slideToggle(500); 
+		// });
+
+		$('#eltax_faq_05').on('click',function(){
+		$('body,html').animate({scrollTOP:100},400);
+		$('.acc-item-el05').slideToggle(500);
+		});
+		$('#eltax_faq_06').on('click',function(){
+		$('body,html').animate({scrollTOP:100},400);
+		$('.acc-item-el06').slideToggle(500);
+		});
+		$('#eltax_faq_07').on('click',function(){
+		$('body,html').animate({scrollTOP:100},400);
+		$('.acc-item-el07').slideToggle(500);
+		});
+
+
+
+
+
+		//SP：セレクトボックス
+		$(function() {
+		// セレクトボックスの変更イベント
+		$('.tax_select').on('change', function(){
+			// 選択されたオプションのvalueを取得
+			var selectedValue = $(this).val();
+			console.log(selectedValue);
+			// valueに対応するFAQセクションを表示
+			if(selectedValue){
+				var selectedSection = $('#' + selectedValue);
+				selectedSection.show();
+				$('h3.step').removeClass('active');
+				selectedSection.find('h3').addClass('active');
+				selectedSection.find('div.accordion-item').slideDown();
+			}
+			});
+		});
+
+		$(function() {
+		// セレクトボックスの変更イベント
+		$('.faq_select').on('change', function(){
+			var selectedValue = $(this).val();
+			console.log(selectedValue);
+			if(selectedValue){
+				var selectedSection = $('#' + selectedValue);
+				selectedSection.show();
+				$('h3.step').removeClass('active');
+				selectedSection.find('h3').addClass('active');
+				selectedSection.find('div.accordion-item').slideDown();
+			}
+			});
+		});
+
+		$(function() {
+		// セレクトボックスの変更イベント
+		$('.sui_select').on('change', function(){
+			var selectedValue = $(this).val();
+			console.log(selectedValue);
+			if(selectedValue){
+				var selectedSection = $('#' + selectedValue);
+				selectedSection.show();
+				$('h3.step').removeClass('active');
+				selectedSection.find('h3').addClass('active');
+				selectedSection.find('div.accordion-item').slideDown();
+			}
+			});
+		});
+
+		/* QA開閉 */
+		$(function(){
+		$(".faq_list h3").on("click", function() {
+			$(this).nextAll().slideToggle(100);
+			$(this).toggleClass("active");
+		});
+		});
+
+		/* アンカーリンクに応じて開閉 */
+		// $(function(){
+		// var urlHash = location.hash;
+		// if(urlHash.length){
+		// 	var urlHashnum = urlHash.replace(/[^0-9^\.]/g,"");
+		// 	var i = parseInt(urlHashnum, 10);
+		// 	var x = urlHashnum - 1;
+		// 	$(".faq-tax .accordion-collapse").eq(x).slideDown();
+		// }
+		// if(urlHash.match("-s")) {
+		// 	$(".tab-suido").addClass('active');
+		// 	$(".tab-tax").removeClass('active');
+		// 	$(".faq-tax").hide();
+		// 	$(".faq-suido").show();
+		// 	var urlHashnum = urlHash.replace(/[^0-9^\.]/g,"");
+		// 	var i = parseInt(urlHashnum, 10);
+		// 	var x = urlHashnum - 1;
+		// 	$(".faq-suido .accordion-collapse").eq(x).slideDown();
+		// }
+		// if(urlHash.match("suido")) {
+		// 	$(".tab-suido").addClass('active');
+		// 	$(".tab-tax").removeClass('active');
+		// 	$(".faq-suido").show();
+		// 	$(".faq-tax").hide();
+		// }
+		// });
+
+		/* よくあるご質問 */
+
+		/* 全てに適用：タブ切り替え */
+		$(function(){
+		$(".tab-eltax").on("click", function() {
+			$(this).addClass('active');
+			$('.accordion-item').slideUp();//初期すべて閉じる
+			$(".tab-suido").removeClass('active');
+			$(".faq-suido").hide();
+			$(".tab-tax").removeClass('active');
+			$(".faq-tax").hide();
+			$(".faq-eltax").show();
+			$(".container-fluid.nav").css('background-color','#CED7F5');
+		});
+
+		$(".tab-tax").on("click", function() {
+			$(this).addClass('active');
+			$('.accordion-item').slideUp();//初期すべて閉じる
+			$(".tab-suido").removeClass('active');
+			$(".faq-suido").hide();
+			$(".tab-eltax").removeClass('active');
+			$(".faq-eltax").hide();
+			$(".faq-tax").show();
+			$(".container-fluid.nav").css('background-color','#B6E1DD');
+		});
+
+		$(".tab-suido").on("click", function() {
+			$(this).addClass('active');
+			$('.accordion-item').slideUp();//初期すべて閉じる
+			$(".tab-tax").removeClass('active');
+			$(".faq-tax").hide();
+			$(".tab-eltax").removeClass('active');
+			$(".faq-eltax").hide();
+			$(".faq-suido").show();
+			$(".container-fluid.nav").css('background-color','#DCF2FF');
+		});
+		});
+
+
+		/* eLTAX START */
+		$('.navB01').on('mouseenter', function () {
+		$('img.el_icon1_off').css('display', 'none');
+		$('img.el_icon1_on').css('display', 'block');
+		$(this).css({'background-color':'#6A90F9', color: '#FFF' , 'border':'solid 1px #6A90F9'});
+		});
+		$('.navB01').on('mouseleave', function () {
+		$('img.el_icon1_off').css('display', 'block');
+		$('img.el_icon1_on').css('display', 'none');
+		$(this).css({'background-color':'#FFF', color: '#000' , 'border':'solid 1px #9F9FCF'});
+		});
+
+		$('.navB02').on('mouseenter', function () {
+			$('img.el_icon2_off').css('display', 'none');
+			$('img.el_icon2_on').css('display', 'block');
+			$(this).css({'background-color':'#6A90F9', color: '#FFF' , 'border':'solid 1px #6A90F9'});
+		});
+			$('.navB02').on('mouseleave', function () {
+			$('img.el_icon2_off').css('display', 'block');
+			$('img.el_icon2_on').css('display', 'none');
+			$(this).css({'background-color':'#FFF', color: '#000' , 'border':'solid 1px #9F9FCF'});
+		});
+
+		$('.navB03').on('mouseenter', function () {
+			$('img.el_icon3_off').css('display', 'none');
+			$('img.el_icon3_on').css('display', 'block');
+			$(this).css({'background-color':'#6A90F9', color: '#FFF' , 'border':'solid 1px #6A90F9'});
+		});
+			$('.navB03').on('mouseleave', function () {
+			$('img.el_icon3_off').css('display', 'block');
+			$('img.el_icon3_on').css('display', 'none');
+			$(this).css({'background-color':'#FFF', color: '#000' , 'border':'solid 1px #9F9FCF'});
+		});
+
+		$('.navB04').on('mouseenter', function () {
+			$('img.el_icon4_off').css('display', 'none');
+			$('img.el_icon4_on').css('display', 'block');
+			$(this).css({'background-color':'#6A90F9', color: '#FFF' , 'border':'solid 1px #6A90F9'});
+		});
+			$('.navB04').on('mouseleave', function () {
+			$('img.el_icon4_off').css('display', 'block');
+			$('img.el_icon4_on').css('display', 'none');
+			$(this).css({'background-color':'#FFF', color: '#000' , 'border':'solid 1px #9F9FCF'});
+		});
+
+		$('.navB05').on('mouseenter', function () {
+			$('img.el_icon5_off').css('display', 'none');
+			$('img.el_icon5_on').css('display', 'block');
+			$(this).css({'background-color':'#6A90F9', color: '#FFF' , 'border':'solid 1px #6A90F9'});
+		});
+			$('.navB05').on('mouseleave', function () {
+			$('img.el_icon5_off').css('display', 'block');
+			$('img.el_icon5_on').css('display', 'none');
+			$(this).css({'background-color':'#FFF', color: '#000' , 'border':'solid 1px #9F9FCF'});
+		});
+
+		$('.navB06').on('mouseenter', function () {
+			$('img.el_icon6_off').css('display', 'none');
+			$('img.el_icon6_on').css('display', 'block');
+			$(this).css({'background-color':'#6A90F9', color: '#FFF' , 'border':'solid 1px #6A90F9'});
+		});
+			$('.navB06').on('mouseleave', function () {
+			$('img.el_icon6_off').css('display', 'block');
+			$('img.el_icon6_on').css('display', 'none');
+			$(this).css({'background-color':'#FFF', color: '#000' , 'border':'solid 1px #9F9FCF'});
+		});
+
+		$('.navB20').on('mouseenter', function () {
+			$('img.el_icon20_off').css('display', 'none');
+			$('img.el_icon20_on').css('display', 'block');
+			$(this).css({'background-color':'#6A90F9', color: '#FFF' , 'border':'solid 1px #6A90F9'});
+		});
+			$('.navB20').on('mouseleave', function () {
+			$('img.el_icon20_off').css('display', 'block');
+			$('img.el_icon20_on').css('display', 'none');
+			$(this).css({'background-color':'#FFF', color: '#000' , 'border':'solid 1px #9F9FCF'});
+		});
+
+		/* 税金START */
+		$('.navB07').on('mouseenter', function () {
+			$('img.el_icon7_off').css('display', 'none');
+			$('img.el_icon7_on').css('display', 'block');
+			$(this).css({'background-color':'#009688', color: '#FFF' , 'border':'solid 1px #9FCFCB'});
+		});
+			$('.navB07').on('mouseleave', function () {
+			$('img.el_icon7_off').css('display', 'block');
+			$('img.el_icon7_on').css('display', 'none');
+			$(this).css({'background-color':'#FFF', color: '#000' , 'border':'solid 1px #9FCFCB'});
+		});
+
+		$('.navB08').on('mouseenter', function () {
+			$('img.el_icon8_off').css('display', 'none');
+			$('img.el_icon8_on').css('display', 'block');
+			$(this).css({'background-color':'#009688', color: '#FFF' , 'border':'solid 1px #9FCFCB'});
+		});
+			$('.navB08').on('mouseleave', function () {
+			$('img.el_icon8_off').css('display', 'block');
+			$('img.el_icon8_on').css('display', 'none');
+			$(this).css({'background-color':'#FFF', color: '#000' , 'border':'solid 1px #9FCFCB'});
+		});
+
+		$('.navB09').on('mouseenter', function () {
+			$('img.el_icon9_off').css('display', 'none');
+			$('img.el_icon9_on').css('display', 'block');
+			$(this).css({'background-color':'#009688', color: '#FFF' , 'border':'solid 1px #9FCFCB'});
+		});
+			$('.navB09').on('mouseleave', function () {
+			$('img.el_icon9_off').css('display', 'block');
+			$('img.el_icon9_on').css('display', 'none');
+			$(this).css({'background-color':'#FFF', color: '#000' , 'border':'solid 1px #9FCFCB'});
+		});
+
+		$('.navB10').on('mouseenter', function () {
+			$('img.el_icon10_off').css('display', 'none');
+			$('img.el_icon10_on').css('display', 'block');
+			$(this).css({'background-color':'#009688', color: '#FFF' , 'border':'solid 1px #9FCFCB'});
+		});
+			$('.navB10').on('mouseleave', function () {
+			$('img.el_icon10_off').css('display', 'block');
+			$('img.el_icon10_on').css('display', 'none');
+			$(this).css({'background-color':'#FFF', color: '#000' , 'border':'solid 1px #9FCFCB'});
+		});
+
+		$('.navB11').on('mouseenter', function () {
+			$('img.el_icon11_off').css('display', 'none');
+			$('img.el_icon11_on').css('display', 'block');
+			$(this).css({'background-color':'#009688', color: '#FFF' , 'border':'solid 1px #9FCFCB'});
+		});
+			$('.navB11').on('mouseleave', function () {
+			$('img.el_icon11_off').css('display', 'block');
+			$('img.el_icon11_on').css('display', 'none');
+			$(this).css({'background-color':'#FFF', color: '#000' , 'border':'solid 1px #9FCFCB'});
+		});
+
+		$('.navB12').on('mouseenter', function () {
+			$('img.el_icon12_off').css('display', 'none');
+			$('img.el_icon12_on').css('display', 'block');
+			$(this).css({'background-color':'#009688', color: '#FFF' , 'border':'solid 1px #9FCFCB'});
+		});
+			$('.navB12').on('mouseleave', function () {
+			$('img.el_icon12_off').css('display', 'block');
+			$('img.el_icon12_on').css('display', 'none');
+			$(this).css({'background-color':'#FFF', color: '#000' , 'border':'solid 1px #9FCFCB'});
+		});
+
+		$('.navB13').on('mouseenter', function () {
+			$('img.el_icon13_off').css('display', 'none');
+			$('img.el_icon13_on').css('display', 'block');
+			$(this).css({'background-color':'#009688', color: '#FFF' , 'border':'solid 1px #9FCFCB'});
+		});
+			$('.navB13').on('mouseleave', function () {
+			$('img.el_icon13_off').css('display', 'block');
+			$('img.el_icon13_on').css('display', 'none');
+			$(this).css({'background-color':'#FFF', color: '#000' , 'border':'solid 1px #9FCFCB'});
+		});
+
+
+
+		/* 水道START */
+
+		$('.navB14').on('mouseenter', function () {
+		$('img.el_icon14_off').css('display', 'none');
+		$('img.el_icon14_on').css('display', 'block');
+		$(this).css({'background-color':'#51ABDF', color: '#FFF' , 'border':'solid 1px #9BD3F3'});
+		});
+		$('.navB14').on('mouseleave', function () {
+		$('img.el_icon14_off').css('display', 'block');
+		$('img.el_icon14_on').css('display', 'none');
+		$(this).css({'background-color':'#FFF', color: '#000' , 'border':'solid 1px #9BD3F3'});
+		});
+
+		$('.navB15').on('mouseenter', function () {
+		$('img.el_icon15_off').css('display', 'none');
+		$('img.el_icon15_on').css('display', 'block');
+		$(this).css({'background-color':'#51ABDF', color: '#FFF' , 'border':'solid 1px #9BD3F3'});
+		});
+		$('.navB15').on('mouseleave', function () {
+		$('img.el_icon15_off').css('display', 'block');
+		$('img.el_icon15_on').css('display', 'none');
+		$(this).css({'background-color':'#FFF', color: '#000' , 'border':'solid 1px #9BD3F3'});
+		});
+
+		$('.navB16').on('mouseenter', function () {
+		$('img.el_icon16_off').css('display', 'none');
+		$('img.el_icon16_on').css('display', 'block');
+		$(this).css({'background-color':'#51ABDF', color: '#FFF' , 'border':'solid 1px #9BD3F3'});
+		});
+		$('.navB16').on('mouseleave', function () {
+		$('img.el_icon16_off').css('display', 'block');
+		$('img.el_icon16_on').css('display', 'none');
+		$(this).css({'background-color':'#FFF', color: '#000' , 'border':'solid 1px #9BD3F3'});
+		});
+
+		$('.navB17').on('mouseenter', function () {
+		$('img.el_icon17_off').css('display', 'none');
+		$('img.el_icon17_on').css('display', 'block');
+		$(this).css({'background-color':'#51ABDF', color: '#FFF' , 'border':'solid 1px #9BD3F3'});
+		});
+		$('.navB17').on('mouseleave', function () {
+		$('img.el_icon17_off').css('display', 'block');
+		$('img.el_icon17_on').css('display', 'none');
+		$(this).css({'background-color':'#FFF', color: '#000' , 'border':'solid 1px #9BD3F3'});
+		});
+
+		$('.navB18').on('mouseenter', function () {
+		$('img.el_icon18_off').css('display', 'none');
+		$('img.el_icon18_on').css('display', 'block');
+		$(this).css({'background-color':'#51ABDF', color: '#FFF' , 'border':'solid 1px #9BD3F3'});
+		});
+		$('.navB18').on('mouseleave', function () {
+		$('img.el_icon18_off').css('display', 'block');
+		$('img.el_icon18_on').css('display', 'none');
+		$(this).css({'background-color':'#FFF', color: '#000' , 'border':'solid 1px #9BD3F3'});
+		});
+
+		$('.navB19').on('mouseenter', function () {
+		$('img.el_icon19_off').css('display', 'none');
+		$('img.el_icon19_on').css('display', 'block');
+		$(this).css({'background-color':'#51ABDF', color: '#FFF' , 'border':'solid 1px #9BD3F3'});
+		});
+		$('.navB19').on('mouseleave', function () {
+		$('img.el_icon19_off').css('display', 'block');
+		$('img.el_icon19_on').css('display', 'none');
+		$(this).css({'background-color':'#FFF', color: '#000' , 'border':'solid 1px #9BD3F3'});
+		});
+
+$(function(){
+	const header = $('#headerH');//ヘッダーを変数「header」に格納
+	$(window).on('scroll' , function(){//画面をスクロールした時に〜。スクロールイベントを取得
+		const scroll = $(window).scrollTop();//スクロール量を変数「scroll」に格納
+		let pastPos = 0;//今までのスクロール量。初期値は0
+		const start = 50;//クラスの付け外しが行われるポイント。一番上から300スクロールしたら、実行される
+		if( scroll >= pastPos && scroll >= start ){//スクロール量が現在の位置を上回ったら' 尚且つ 'スクロール量が300を超えていたら
+			header.addClass('hide');
+		}else{
+			header.removeClass('hide');//ヘッダーの「hide」というクラスを削除する
+		}
+		pastPos = scroll; //今までのスクロール量に現在のスクロール量を代入する。
+	});
+
+});
+
+</script>
+
+
+
+</body>
+</html>
