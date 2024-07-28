@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="UTF-8">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accordion with Numbers</title>
+  <link rel="/ef/css/content.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
+</head>
+
+<body>
+	<style>
+		@keyframes displayAnime{
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+
+
+/*========= レイアウトのためのCSS ===============*/
+
+body{
+	background:#eee;
+}
+
+ul{
+	list-style:none;
+}
+
+a{
+	color:#333;
+	text-decoration: none;
+}
+
+.wrapper{
+	width:100%;
+	max-width: 960px;
+	margin:30px auto;
+    background:#fefefe;
+}
+
+.area h2{
+	font-size:1.3rem;
+	margin:0 0 20px 10px;
+}
+
+.area li{
+	padding: 10px; 
+	border-bottom: 1px solid #ddd;
+}
+.tabArea{
+	display: flex;
+	flex-wrap: wrap;
+}
+.tabArea li a{
+	display: block;
+	background: #fff;
+}
+.area{
+	display: none;
+	opacity: 0;
+	background: #fff;
+	padding: 50pz 20px;
+}
+.area.is-active{
+	display: block;
+	animation-name: displayAnime;
+	animation-duration: 1s;
+	animation-fill-mode: forwards ;
+}
+@keyframes displayAnime{
+	from{
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
+	}
+}
+
+
+	</style>
+
+<div class="wrapper">
+	<ul class="tabArea">
+		<li><a href="#left">LEFT</a></li>
+		<li><a href="#right">RIGHT</a></li>
+	</ul>
+
+	<div id="left" class="area">
+		<select class="pets" id="left-select">
+			<option value="allLeft">--選びましょう--</option>
+			<option value="LEFT01">LEFT01</option>
+			<option value="LEFT02">LEFT02</option>
+			<option value="LEFT03">LEFT03</option>
+		  </select>
+
+		<h2>LEFTさま</h2>
+		<ul >
+			<li>○○○LEFT○○○○</li>
+			<li>○○○LEFT○○○○○―</li>
+			<li>○○○LEFT○○○○○</li>
+		</ul>
+		<!--/area-->
+   </div>
+	<div id="right" class="area">
+		<select class="pets" id="right-select">
+			<option value="allRight">--選びましょう--</option>
+			<option value="RIGHT01">RIGHT01</option>
+			<option value="RIGHT01">RIGHT01</option>
+			<option value="RIGHT01">RIGHT01</option>
+		  </select>
+		<h2>RIGHTさま</h2>
+		<ul>
+			<li>○○○RIGHT○○○○</li>
+			<li>○○○RIGHT○○○○○</li>
+			<li>○○○RIGHT○○○○○</li>
+		</ul>
+	<!--/area--></div>
+<!--wrapper--></div>
+
+
+<script>
+
+//GethashID関数クリックした値
+function GethashID (hashIDName){
+	if(hashIDName){
+		$('.tabArea li').find('a').each(function() { // タブのaタグ全て取得
+			var idName = $(this).attr('href'); // aタグのリンク名 tab内#の値を取得 全ての＃まるまるを取得するために、すべてのaタグを取得
+
+			if(idName == hashIDName){
+				var parentElm = $(this).parent(); //aタグのリンク名 tab内#の値を取得 その親要素(li)を取得
+				$('.tabArea li').removeClass("active"); //li にactiveがあれば削除
+				$(parentElm).addClass("active"); //li activeがなければ追加
+				$(".area").removeClass("is-active"); //選択項目と同じ方になければ削除
+				$(hashIDName).addClass("is-active"); //あれば追加
+			}
+
+		});
+	}
+}
+
+$('.tabArea a').on('click', function() { //クリックイベント
+	var idName = $(this).attr('href');
+	GethashID (idName); //GethashID関数
+	return false;
+});
+
+//初期設定　最初に表示しておきたい内容
+$(' ul .tabArea li:first-of-type').addClass("active"); 
+$('#left').addClass("is-active");
+var hashName = location.hash;
+GethashID (hashName);
+
+var select = document.getElementById(' left-select ');
+	select.onchange = function(){
+		alert( this.value );
+	}
+
+var select2 = document.getElementById(' right-select ');
+select.onchange = function(){
+	alert( this.value );
+}
+
+
+
+
+
+
+</script>
+</body>
+
+

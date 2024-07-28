@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="UTF-8">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accordion with Numbers</title>
+  <link rel="/ef/css/content.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+</head>
+<body>
+	<style>
+div.acorddionA {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  div.acorddionA .detail_all {
+    width: 485px;
+	height: 100%;
+  }
+  div.acorddionA .detail_all div.detail_innerWrap div.block_01 {
+    list-style-type: none;
+    text-align: center;
+  }
+  div.acorddionA .detail_all div.detail_innerWrap div.block_01 div.block_01_inner {
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  div.acorddionA .detail_all div.detail_innerWrap div.block_01 div.block_01_inner ul {
+    list-style-type: none;
+  }
+  div.acorddionA .detail_all div.detail_innerWrap div.block_01 div.block_01_inner ul:nth-child(1) li img {
+    width: auto;
+    height: auto;
+  }
+  div.acorddionA .detail_all div.detail_innerWrap div.block_01 div.block_01_inner ul:nth-child(2) li img {
+    width: auto;
+    height: auto;
+  }
+  div.acorddionA .detail_all div.detail_innerWrap div.hideArea_Wrap div.block_02 img {
+    width: auto;
+    height: auto;
+  }
+  div.acorddionA .detail_all div.detail_innerWrap div.hideArea_Wrap div.block_03 h5 {
+    font-size: 16px;
+    border-bottom: 1px dotted #373737;
+    font-weight: bold;
+    line-height: 1.5;
+    margin: 10px 0 10px 0;
+    padding: 0;
+    color: #1A1A1A;
+    border-left: none;
+  }
+  div.acorddionA .detail_all div.detail_innerWrap div.hideArea_Wrap div.block_03 img {
+    width: auto;
+    height: auto;
+  }
+  div.acorddionA .detail_all div.detail_innerWrap div.hideArea_Wrap div.block_03 ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  div.acorddionA .detail_all div.detail_innerWrap div.hideArea_Wrap div.block_03 ul li {
+    list-style-type: none;
+  }
+  div.acorddionA .detail_all div.detail_innerWrap div.hideArea_Wrap div.block_03 ul li span.iconSMpc {
+    width: 10px;
+    height: auto;
+  }
+
+.corddionA{
+	width: 1000px;
+	margin: 0 auto;
+}
+.detail-item{
+	width: 300px;
+	height: 50px;
+	border: 1px solid #eee;
+	background-color: aqua;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+	margin: 0 auto;	
+	background-color: aqua;
+}
+span.choiceTit_arow.detail-item_arow {
+    text-align: center;
+    /* margin: 0 auto; */
+    display: flex;
+    /* flex-direction: row; */
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.block_01{
+	background-color: antiquewhite;
+}
+.block_02{
+	background-color: aliceblue;
+}
+.acorddionA{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: start;
+}
+.hideArea_Wrap{
+	display: none;
+}
+
+
+	</style>
+
+<section id="connect" class="hp_moduleC_Title">
+	<h2>Cパターンアコーディオン</h2>
+	<p class="">〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇</p>
+  
+  
+	<!---以下テスト-->
+  <section>
+	<div class="acorddionA">
+
+	<!--wrap内の要素_Start-->
+	  <div class="detail_all">
+
+		<!-- ▼▼▼ detailすべて---->
+		<div class="detail_innerWrap el_mb30">
+		  <!-- ▼▼▼ 表示エリア block_01---->
+			<!--block_01-->
+			<div class="block_01">
+				<h3 class="txtBold">〇〇〇〇〇〇〇〇</h3>
+				<div class="block_01_inner">
+				<ul>
+					<li>
+						<img src="/ef/images/dummy_01.png">
+					</li>
+					<li>
+					<p>〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇</p>
+					<img src="/ef/images/dummy_01.png">
+				</li>
+				</ul>
+				</div>
+			</div>
+			<!-- ▼▼▼ 表示エリアEND--->
+  
+				<!-- ▼▼▼ 非表示エリア block_02---->
+				<div class="hideArea_Wrap inContents hideArea_left"><!-- ▼▼▼ アコーディオン内--->
+					<p>〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇</p>
+		
+					<!--block_02-->
+					<div class="block_02">
+						<h3 class="txtBold">〇〇〇〇〇〇〇〇</h3>
+						<div class="block_02_inner">
+						<ul>
+							<li>
+								<img src="/ef/images/dummy_01.png">
+							</li>
+							<li>
+							<p>〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇</p>
+							<img src="/ef/images/dummy_01.png">
+						</li>
+						</ul>
+						</div><!--block_02_inner-->
+					</div><!--block_02-->
+				</div><!--hideArea_Wrap-->
+		</div><!-- detailすべてEND --->
+  
+		  <!-- ▼▼▼ トリガーボタン start --->
+			<div class="detail-item detail-item-trigger-left">
+			  <span class="choiceTit_arow detail-item_arow">ボタン</span>
+			</div>
+		  <!-- ▼▼▼ トリガーボタン end --->
+
+	</div><!--detail_all end-->
+	<!--wrap内の要素_END-->
+
+  	<!--wrap内の要素_Start-->
+	  <div class="detail_all">
+
+		<!-- ▼▼▼ detailすべて---->
+		<div class="detail_innerWrap el_mb30">
+		  <!-- ▼▼▼ 表示エリア block_01---->
+			<!--block_01-->
+			<div class="block_01">
+				<h3 class="txtBold">〇〇〇〇〇〇〇〇</h3>
+				<div class="block_01_inner">
+				<ul>
+					<li>
+						<img src="/ef/images/dummy_01.png">
+					</li>
+					<li>
+					<p>〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇</p>
+					<img src="/ef/images/dummy_01.png">
+				</li>
+				</ul>
+				</div>
+			</div>
+			<!-- ▼▼▼ 表示エリアEND--->
+  
+				<!-- ▼▼▼ 非表示エリア block_02---->
+				<div class="hideArea_Wrap hideArea_right"><!-- ▼▼▼ アコーディオン内--->
+					<p>〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇</p>
+		
+					<!--block_02-->
+					<div class="block_02">
+						<h3 class="txtBold">〇〇〇〇〇〇〇〇</h3>
+						<div class="block_02_inner">
+						<ul>
+							<li>
+								<img src="/ef/images/dummy_01.png">
+							</li>
+							<li>
+							<p>〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇</p>
+						</li>
+						</ul>
+						</div><!--block_02_inner-->
+					</div><!--block_02-->
+					<div class="block_02">
+						<h3 class="txtBold">〇〇〇〇〇〇〇〇</h3>
+						<div class="block_02_inner">
+						<ul>
+							<li>
+								<img src="/ef/images/dummy_01.png">
+							</li>
+							<li>
+							<p>〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇</p>
+						</li>
+						</ul>
+						</div><!--block_02_inner-->
+					</div><!--block_02-->
+
+					<div class="block_02">
+						<h3 class="txtBold">〇〇〇〇〇〇〇〇</h3>
+						<div class="block_02_inner">
+						<ul>
+							<li>
+								<img src="/ef/images/dummy_01.png">
+							</li>
+							<li>
+							<p>〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇</p>
+						</li>
+						</ul>
+						</div><!--block_02_inner-->
+					</div><!--block_02-->
+
+				</div><!--hideArea_Wrap-->
+		</div><!-- detailすべてEND --->
+  
+		  <!-- ▼▼▼ トリガーボタン start --->
+			<div class="detail-item detail-item-trigger-right">
+			  <span class="choiceTit_arow detail-item_arow">ボタン</span>
+			</div>
+		  <!-- ▼▼▼ トリガーボタン end --->
+
+	</div><!--detail_all end-->
+	<!--wrap内の要素_END-->
+
+  
+  
+  </section>
+
+<script>
+
+$(window).on('load', function(){
+	$('.detail-item-trigger-left').on('click', function(){
+		slideToggle(".hideArea_left");
+	});
+	$('.detail-item-trigger-right').on('click', function(){
+		slideToggle(".hideArea_right");
+	});
+});
+
+function slideToggle( hidnArea ){ //hidnArea 変数
+	var findCont = $( hidnArea );//内容を取得
+    $(findCont).slideToggle();//アコーディオンの上下動作
+
+    if($(this).hasClass('close')){//タイトル要素に.closeがあれば
+      $(this).removeClass('close');//.closeを除去し
+    }else{
+      $(this).addClass('close');//.closeを付与
+    }		
+}
+
+
+
+
+
+</script>
+
+</body>
+</html>

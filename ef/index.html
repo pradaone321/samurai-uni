@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>アコーディオンタブナビゲーション</title>
+</head>
+<style>
+        label {
+                font-family: sans-serif;
+                font-size: 1rem;
+                padding-right: 10px;
+                }
+
+                select {
+                font-size: 0.9rem;
+                padding: 2px 5px;
+                }
+
+        /*tabの形状*/
+        .tab{
+                display: flex;
+                flex-wrap: wrap;
+        }
+        .tab li a{
+                display: block;
+                background:#ddd;
+                margin:0 2px;
+                padding:10px 20px;
+        }
+        /*liにactiveクラスがついた時の形状*/
+        .tab li.active a{
+                background:#fff;
+        }
+        /*エリアの表示非表示と形状*/
+        .area {
+                display: none;/*はじめは非表示*/
+                opacity: 0;/*透過0*/
+                background: #fff;
+                padding:50px 20px;
+        }
+        /*areaにis-activeというクラスがついた時の形状*/
+        .area.is-active {
+                display: block;/*表示*/
+                animation-name: displayAnime;/*ふわっと表示させるためのアニメーション*/
+                animation-duration: 2s;
+                animation-fill-mode: forwards;
+        }
+        @keyframes displayAnime{
+                from {
+                        opacity: 0;
+                }
+                to {
+                        opacity: 1;
+                }
+        }
+        /*========= レイアウトのためのCSS ===============*/
+        body{background:#eee;}
+        ul{list-style:none;}
+        a{color:#333;text-decoration: none;}
+        .wrapper{
+                width:100%;
+                max-width: 960px;
+                margin:30px auto;
+                background:#fefefe;
+        }
+
+        .area h2{
+                font-size:1.3rem;
+                margin:0 0 20px 10px;
+        }
+        .area li{
+                padding: 10px; 
+                border-bottom: 1px solid #ddd;
+        }
+
+        /*アコーディオン全体*/
+        .accordion-area{
+        list-style: none;
+        width: 96%;
+        max-width: 900px;
+        margin:0 auto;
+        }
+
+        .accordion-area li{
+        margin: 10px 0;
+        }
+
+        .accordion-area section {
+                border: 1px solid #ccc;
+        }
+
+        /*アコーディオンタイトル*/
+        .title {
+        position: relative;/*+マークの位置基準とするためrelative指定*/
+        cursor: pointer;
+        font-size:1rem;
+        font-weight: normal;
+        padding: 3% 3% 3% 50px;
+        transition: all .5s ease;
+        }
+
+        /*アイコンの＋と×*/
+        .title::before,
+        .title::after{
+        position: absolute;
+        content:'';
+        width: 15px;
+        height: 2px;
+        background-color: #333;
+        
+        }
+        .title::before{
+        top:48%;
+        left: 15px;
+        transform: rotate(0deg);
+        
+        }
+        .title::after{    
+        top:48%;
+        left: 15px;
+        transform: rotate(90deg);
+
+        }
+
+        /*　closeというクラスがついたら形状変化　*/
+
+        .title.close::before{
+                transform: rotate(45deg);
+        }
+
+        .title.close::after{
+                transform: rotate(-45deg);
+        }
+
+        /*アコーディオンで現れるエリア*/
+        .box {
+        display: none;/*はじめは非表示*/
+        background: #f3f3f3;
+                margin:0 3% 3% 3%;
+        padding: 3%;
+        }
+
+
+        /*========= レイアウトのためのCSS ===============*/
+
+        h2{
+        text-align: center;
+        margin: 30px 0;
+        font-size:1rem;
+        }
+</style>
+<body>
+        <div class="wrapper">
+                <ul class="tab">
+                        <li><a href="#jigyo">事業者さま</a></li>
+                        <li><a href="#riyou">利用者さま</a></li>
+                </ul>
+                <div id="jigyo" class="area">  
+                        <h2>事業者さま</h2>
+
+                        <label for="pet-select">Choose</label>
+
+                        <select name="pets" id="pet-select">
+                          <option value="">--Please choose an option--</option>
+                          <option value="dog">Dog</option>
+                          <option value="cat">Cat</option>
+                          <option value="hamster">Hamster</option>
+                          <option value="parrot">Parrot</option>
+                          <option value="spider">Spider</option>
+                          <option value="goldfish">Goldfish</option>
+                        </select>
+                        <ul class="accordion-area">
+                                <li>
+					<section>
+						<h3 class="title">お見積もりの目安を教えてください。</h3>
+						<div class="box">
+							<p>内容によって変化いたしますのでまずはお問い合わせフォームよりご相談ください。</p>
+						</div>
+					</section>
+                                </li>
+                                <li>
+					<section>
+						<h3 class="title">地方ですが発注は可能でしょうか</h3>
+						<div class="box">
+							<p>可能です。お気軽にご相談ください。</p>
+						</div>
+					</section>
+                                </li>
+                                <li>
+					<section>
+						<h3 class="title">セミナーやイベントの出演を依頼したいのですが</h3>
+						<div class="box ">
+							<p>お問い合わせフォームより日時や内容などをご記入いただきご相談ください。</p>
+						</div>
+					</section>
+                                </li>
+                        </ul>
+                </div>
+                <div id="riyou" class="area">
+                        <h2>利用者さま</h2>
+                        <ul>
+                                <li>○○○○○○○○○○○</li>
+                                <li>○○○○○○○○○○○―</li>
+                                <li>○○○○○○○○○○○</li>
+                        </ul>
+                </div>
+        <!--wrapper-->
+        </div>
+        <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> -->
+<script>
+
+//任意のタブにURLからリンクするための設定
+// function GethashID (hashIDName){
+//   if(hashIDName){
+//     //タブ設定
+//     $('.tab li').find('a').each(function() { //タブ内のaタグ全てを取得
+//       var idName = $(this).attr('href'); //タブ内のaタグのリンク名（例）#lunchの値を取得 
+//       if(idName == hashIDName){ //リンク元の指定されたURLのハッシュタグ（例）http://example.com/#lunch←この#の値とタブ内のリンク名（例）#lunchが同じかをチェック
+//         var parentElm = $(this).parent(); //タブ内のaタグの親要素（li）を取得
+//         $('.tab li').removeClass("active"); //タブ内のliについているactiveクラスを取り除き
+//         $(parentElm).addClass("active"); //リンク元の指定されたURLのハッシュタグとタブ内のリンク名が同じであれば、liにactiveクラスを追加
+//         //表示させるエリア設定
+//         $(".area").removeClass("is-active"); //もともとついているis-activeクラスを取り除き
+//         $(hashIDName).addClass("is-active"); //表示させたいエリアのタブリンク名をクリックしたら、表示エリアにis-activeクラスを追加 
+//       }
+//     });
+//   }
+// }
+
+function GethashID(hashIDName) {
+    if (hashIDName) {
+        // タブ設定
+        var tabLinks = document.querySelectorAll('.tab li a');
+        tabLinks.forEach(function(link) {
+            var idName = link.getAttribute('href');
+            if (idName == hashIDName) {
+                var parentElm = link.parentNode;
+                document.querySelectorAll('.tab li').forEach(function(tab) {
+                    tab.classList.remove("active");
+                });
+                parentElm.classList.add("active");
+
+                // 表示させるエリア設定
+                document.querySelectorAll(".area").forEach(function(area) {
+                    area.classList.remove("is-active");
+                });
+                document.querySelector(hashIDName).classList.add("is-active");
+            }
+        });
+    }
+}
+
+
+
+//タブをクリックしたら
+// $('.tab a').on('click', function() {
+//   var idName = $(this).attr('href'); //タブ内のリンク名を取得  
+//   GethashID (idName);//設定したタブの読み込みと
+//   return false;//aタグを無効にする
+// });
+// // 上記の動きをページが読み込まれたらすぐに動かす
+// $(window).on('load', function () {
+//     $('.tab li:first-of-type').addClass("active"); //最初のliにactiveクラスを追加
+//     $('.area:first-of-type').addClass("is-active"); //最初の.areaにis-activeクラスを追加
+//   var hashName = location.hash; //リンク元の指定されたURLのハッシュタグを取得
+//   GethashID (hashName);//設定したタブの読み込み
+// });
+
+// Function to get element by ID and show/hide tabs
+function GethashID(id) {
+    var tabs = document.querySelectorAll('.tab li');
+    var areas = document.querySelectorAll('.area');
+
+    // Remove 'active' class from all tabs
+    tabs.forEach(function(tab) {
+        tab.classList.remove('active');
+    });
+
+    // Remove 'is-active' class from all areas
+    areas.forEach(function(area) {
+        area.classList.remove('is-active');
+    });
+
+    // Add 'active' class to the clicked tab
+    document.querySelector('.tab a[href="' + id + '"]').parentNode.classList.add('active');
+
+    // Add 'is-active' class to the corresponding area
+    document.querySelector(id).classList.add('is-active');
+}
+
+// Click event for tabs
+document.querySelectorAll('.tab a').forEach(function(tabLink) {
+    tabLink.addEventListener('click', function(event) {
+        var idName = this.getAttribute('href');
+        GethashID(idName);
+        event.preventDefault(); // Prevent default behavior of the anchor link
+    });
+});
+
+// Window load event
+window.addEventListener('load', function() {
+    // Add 'active' class to the first tab
+    document.querySelector('.tab li:first-of-type').classList.add('active');
+    
+    // Add 'is-active' class to the first area
+    document.querySelector('.area:first-of-type').classList.add('is-active');
+
+    // Get hash from location and show corresponding tab
+    var hashName = window.location.hash;
+    GethashID(hashName);
+});
+
+
+
+
+
+
+
+
+//アコーディオンをクリックした時の動作
+// $('.title').on('click', function() {//タイトル要素をクリックしたら
+// 	$('.box').slideUp(500);//クラス名.boxがついたすべてのアコーディオンを閉じる
+    
+// 	var findElm = $(this).next(".box");//タイトル直後のアコーディオンを行うエリアを取得
+    
+// 	if($(this).hasClass('close')){//タイトル要素にクラス名closeがあれば
+// 		$(this).removeClass('close');//クラス名を除去    
+// 	}else{//それ以外は
+// 		$('.close').removeClass('close'); //クラス名closeを全て除去した後
+// 		$(this).addClass('close');//クリックしたタイトルにクラス名closeを付与し
+// 		$(findElm).slideDown(500);//アコーディオンを開く
+// 	}
+// });
+
+document.querySelectorAll('.title').forEach(function(title) {
+    title.addEventListener('click', function() {
+        // Slide up all elements with class 'box'
+        document.querySelectorAll('.box').forEach(function(box) {
+            box.style.display = 'none';
+        });
+
+        // Find the next element with class 'box'
+        var findElm = this.nextElementSibling;
+
+        // Toggle the 'close' class for the clicked title
+        if (this.classList.contains('close')) {
+            this.classList.remove('close');
+        } else {
+            document.querySelectorAll('.close').forEach(function(closeTitle) {
+                closeTitle.classList.remove('close');
+            });
+
+            this.classList.add('close');
+            findElm.style.display = 'block';  // Display the next element with class 'box'
+        }
+    });
+});
+
+
+
+//ページが読み込まれた際にopenクラスをつけ、openがついていたら開く動作※不必要なら下記全て削除
+// $(window).on('load', function(){
+// 	$('.accordion-area li:first-of-type section').addClass("open"); //accordion-areaのはじめのliにあるsectionにopenクラスを追加
+// 	$(".open").each(function(index, element){	//openクラスを取得
+// 		var Title =$(element).children('.title');	//openクラスの子要素のtitleクラスを取得
+// 		$(Title).addClass('close');				///タイトルにクラス名closeを付与し
+// 		var Box =$(element).children('.box');	//openクラスの子要素boxクラスを取得
+// 		$(Box).slideDown(500);					//アコーディオンを開く
+// 	});
+// });
+
+window.addEventListener('load', function() {
+    // When the window has finished loading
+
+    // Find the first section inside the first list item of the accordion area and add the "open" class
+    var firstSection = document.querySelector('.accordion-area li:first-of-type section');
+    firstSection.classList.add("open");
+
+    // For each element with the "open" class
+    var openElements = document.querySelectorAll(".open");
+    openElements.forEach(function(element) {
+        // Find the child element with the class 'title' and add the 'close' class
+        var title = element.querySelector('.title');
+        title.classList.add('close');
+
+        // Find the child element with the class 'box' and slide it down with a duration of 500 milliseconds
+        var box = element.querySelector('.box');
+        box.style.display = 'block';  // Ensure the box is initially displayed
+        box.style.height = '0';       // Set initial height to 0
+        var boxHeight = box.scrollHeight;  // Get the full height of the box
+        box.style.height = boxHeight + 'px';  // Set the height to the full height, triggering the slide down animation
+    });
+});
+
+window.onload(function(){
+        tabLinks.classList.add( "active");
+});
+
+
+
+</script>
+</body>
+</html>
+

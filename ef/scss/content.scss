@@ -1,0 +1,3309 @@
+
+@charset "utf-8";
+//各モジュールは以下にてmixedで集約
+@use "/ef/scss/base/module"  as mod;
+/**** 769px以上の場合PC タブレット含む ****/
+
+
+@media screen and (min-width: 769px) {/*******PC Start*******/
+    .iconBase {
+        fill: currentColor;//colorのプロパティー値
+      }
+
+    //余白調整
+    .main_content_02.serviceM section,
+    .main_content_02.features_page section{
+      margin-bottom: 60px;
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+
+    //h2＋関連する<p>の共通ルーツ
+    .hp_moduleA_Title , .hp_moduleB_Title , .hp_moduleC_Title{
+      h2{
+        @include mod.el_Tit($fts:24px, $bor:none, $ftw:bold, $lh:1, $ma: 0 0 20px 0, $pd: 0 0 0 10px, $co:#005648, $borL:6px solid #005648);
+      }
+      p{
+        @include mod.modu_Text ($fts:16px, $lh:1.5, $ma:0 0 20px 0, $ali:left);
+      }
+    }
+
+    //コンテンツ間のdistance
+    ul.hp_moduleA , ul.hp_moduleB , ul.hp_moduleC{
+      li{
+        @include mod.distance($mb:20px);
+        a{
+          text-decoration: none;
+          ul.el_moduleA , ul.el_moduleB , ul.el_moduleC{
+            li{
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+    ul.hp_moduleA,ul.hp_moduleB,ul.hp_moduleC,ul.hp_moduleD,ul.hp_moduleE,ul.hp_moduleF,.hp_modulePoint,.hp_modulePoint.other,.hp_modulePoint.noTran{
+      li:nth-child(2n+1):nth-last-child(-n+2),
+      li:nth-child(2n+1):nth-last-child(-n+2) ~ li {
+        margin-bottom: 0;
+      }
+    }
+    .hp_modulePoint,.hp_modulePoint.other{
+      li:nth-child(3n+1):nth-last-child(-n+3),
+      li:nth-child(3n+1):nth-last-child(-n+3) ~ li {
+        margin-bottom: 0;
+      }
+    }
+    .hp_moduleOption{
+      li:nth-child(4n+1):nth-last-child(-n+4),
+      li:nth-child(4n+1):nth-last-child(-n+4) ~ li {
+        margin-bottom: 0;
+      }
+    }
+    ul.hp_modulePoint.other{
+      li:nth-child(3){
+        margin-right: 0;
+      }
+    }
+    ul.hp_modulePoint.noTran{
+      li:nth-child(2){
+        margin-right: 0;
+      }
+    }
+
+
+    //共通ルール
+    .ele_Cont{
+      h1{
+        @include mod.el_Tit($fts:32px, $bor:1px solid #07613A, $ftw:bold, $lh:1, $ma:20px 0 20px 0, $pd:10px 0 10px 0, $co:#1A1A1A, $borL:none);
+        position: relative;
+      }
+      h2{
+        @include mod.el_Tit($fts:24px, $bor:none, $ftw:bold, $lh:1, $ma:30px 0 15px 0, $pd:0 0 0 8px, $co:#1A1A1A, $borL:6px solid #005648);
+      }
+      h3{
+        @include mod.el_Tit($fts:22px, $bor:2px solid #CCC, $ftw:bold, $lh:1, $ma:10px 0 10px 0, $pd:0 0 5px 0, $co:#1A1A1A, $borL:none);
+      }
+      h4{
+        @include mod.el_Tit($fts:20px, $bor:none, $ftw:bold, $lh:1, $ma: 10px 0 10px 0, $pd:0, $co:#1A1A1A, $borL:none);
+      }
+      h5{
+        @include mod.el_Tit($fts:18px, $bor:1px dotted #373737, $ftw:bold, $lh:1.5, $ma: 10px 0 10px 0, $pd:0, $co:#1A1A1A, $borL:none);
+      }
+      p{
+        @include mod.el_Tit($fts:16px, $bor:none, $ftw:normal, $lh:1.5, $ma:none, $pd:none, $co:#1A1A1A, $borL:none);
+      }
+    }
+
+    //arrowのみ
+    .arowOnly:after{
+      @include mod.arrow_lowR($bo:2px, $ri:8px , $boW:10px 0 10px 10px);
+    }
+
+
+    /* ▼▼▼ 使用箇所：決済手段 ▼▼▼ */
+    .hp_modu_3col.service{
+      @include mod.hp_moduRow($ma:0,$pa:0,$jus:space-between,$ali:center);
+      div{
+        @include mod.width($wi:864px/3);
+        @include mod.el_moduRow($bor:1px solid #CCCCCC, $pd:15px,$jus:space-between, $ali:center);
+        display: block;
+        margin-bottom: 20px;
+        position: relative;
+            a{
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              text-decoration: none;
+              align-items: center;
+              height: 100%;
+              h4{
+                @include mod.modu_Text($fts:16px, $lh:1.5, $ma: 10px 0 0 0, $ali:center);
+                text-decoration: none;
+                font-weight: bold;
+              }
+              h4.ft12{font-size: 12px;}
+
+              img{
+                @include mod.modu_icon($wi:auto, $co:none, $ma:0, $pa:0);
+              }
+              img.card{width: 278px; height: 29.77px;};
+              img.conveni{width: 288px; height: 27.95px;};
+              img.carrier{width: 278px; height: 33.64px;};
+
+
+              &:after{
+                @include mod.arrow_lowR($bo:0, $ri:5px , $boW:10px 0 10px 10px);
+              }
+            }
+            &:hover{
+              background-color: #f4fffe;
+              border-color: #005648;
+              color: #005648;
+            }
+          }
+      }
+    /* ▲▲▲ hp_modu_3col.service  END  ▲▲▲ */
+
+    /* ▼▼▼ 使用箇所：決済手段 ▼▼▼ */
+    .hp_modu_4col.service{
+      @include mod.hp_moduRow($ma:0,$pa:0,$jus:space-between,$ali:center);
+      div{
+        @include mod.width($wi:820px/4);
+        @include mod.el_moduRow($bor:1px solid #CCCCCC, $pd:15px,$jus:space-between, $ali:center);
+        display: block;
+        margin-bottom: 20px;
+        position: relative;
+            a{
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              text-decoration: none;
+              height: 100%;
+              h4{
+                @include mod.modu_Text($fts:16px, $lh:1.5, $ma:0, $ali:left);
+                text-decoration: none;
+                font-weight: bold;
+              }
+              h4.ft12{font-size: 12px;}
+              img{
+                @include mod.modu_icon($wi:auto, $co:none, $ma:0, $pa:0);
+              }
+              img.payEasy{width: 54px; height: 40px; padding-right: 15px};
+              img.applepay{width: 54.66px; height: 35px; padding-right: 15px};
+              img.paypay{width: 107.72px; height: 34px;};
+              img.rakutenPay{width: 80.92px; height: 35px;};
+              img.rakutenBank_S{width: 64.47px; height: 35px; padding-right: 5px};
+              img.REdy{width: 27px; height: auto; padding-right: 15px};
+              img.paypal{width: 106.77px; height: 35px; padding-right: 8px};
+              img.alipay{width: 89.52px; height: 21px; padding-right: 7px};
+              img.anchorL{width: auto; height: 25px; padding-right: 10px}
+              &:after{
+                @include mod.arrow_lowR($bo:0, $ri:5px, $boW:10px 0 10px 10px);
+              }
+            }
+            &:hover{
+              background-color: #f4fffe;
+              border-color: #005648;
+              color: #005648;
+            }
+          }
+      }
+    /* ▲▲▲ hp_modu_4col.service  END  ▲▲▲ */
+
+    /* ▼▼▼ Aパターン START ▼▼▼ */
+    ul.hp_moduleA{
+      @include mod.hp_moduRow($ma:0, $pa:0, $jus:space-between, $ali:inherit);
+      li{
+        position: relative;
+        a{
+          display: flex;
+          height: 100%;
+          ul.el_moduleA{
+            @include mod.width($wi:893px/2);
+            @include mod.el_moduRow($bor:1px solid #CCCCCC, $pd:20px,$jus:space-between, $ali:center);
+            li{
+              svg{
+                @include mod.modu_icon($wi:65px, $co:#07613A, $ma:0 20px 0 0, $pa:0);
+              }
+              h3{
+                @include mod.modu_Text($fts:20px, $lh:1.5, $ma:0 0 10px 0, $ali:left);
+              }
+              p{
+                @include mod.modu_Text($fts:16px, $lh:1.5, $ma:0, $ali:left);
+              }
+            }
+          }
+          &:after{
+            @include mod.arrow_lowR($bo:2px, $ri:8px , $boW:10px 0 10px 10px);
+          }
+        }
+      }
+    }
+    /* ▲▲▲ Aパターン END ▲▲▲ */
+
+    /* ▼▼▼ Bパターン START ▼▼▼ */
+    ul.hp_moduleB{
+      text-decoration: none;
+      list-style-type: none;
+      padding: 0;
+      @include mod.hp_moduRow($ma:0, $pa:0, $jus:space-between, $ali:inherit);
+      li{
+        position: relative;
+        a.fit{height: 100%;}
+        a{
+          text-decoration: none;
+          display: flex;
+          height: 100%;
+          ul.el_moduleB{
+            @include mod.width($wi:970px/2);
+            padding: 0;
+            border: 1px solid #CCCCCC;
+            border-radius: 5px;
+            li{
+              @include mod.hp_moduRow($ma:0 , $pa:20px 20px 0 20px , $jus:flex-start, $ali:inherit);
+              svg{
+                @include mod.modu_icon($wi:65px , $co:#07613A , $ma:0 , $pa:0);
+              }
+              img{
+                @include mod.modu_icon($wi:100px , $co:none , $ma:0 20px 0 0 , $pa:0);
+              }
+              img.service12{
+                @include mod.modu_icon($wi:69px , $co:none , $ma:0 20px 0 0 , $pa:0);
+              }
+              h3{
+                @include mod.modu_Text($fts:20px, $lh:1.5, $ma:0, $ali:left);
+                display: flex;
+                align-items: center;
+              }
+              h4{
+                @include mod.modu_Text($fts:20px, $lh:1.5, $ma:0, $ali:left);
+                display: flex;
+                align-items: center;
+              }
+              p{
+                @include mod.modu_Text($fts:16px, $lh:1.5, $ma:0, $ali:left);
+              }
+            }
+            li:nth-child(2n){
+              padding: 10px 20px 20px 20px;
+            }
+          }
+          &:hover{
+            background-color: #f4fffe;
+            border-color: #005648;
+            color: #005648;
+          }
+          &:after{
+            @include mod.arrow_lowR($bo:2px, $ri:7px, $boW:10px 0 10px 10px);
+          }
+        }
+      }
+    }
+    /* ▲▲▲ Bパターン END ▲▲▲ */
+
+    /* ▼▼▼ Bパターン _3col START ▼▼▼ */
+    ul.hp_moduleB_3col{
+      text-decoration: none;
+      list-style-type: none;
+      padding: 0;
+      @include mod.hp_moduRow($ma:0, $pa:0, $jus:space-between, $ali:inherit);
+      li{
+        position: relative;
+        a{
+          text-decoration: none;
+          display: flex;
+          height: 100%;
+            ul.el_moduleB{
+              @include mod.width($wi:970px/3);
+              padding: 0;
+              border: 1px solid #CCCCCC;
+              border-radius: 5px;
+              li{
+                @include mod.hp_moduRow($ma:0 , $pa:20px 20px 0 20px , $jus:flex-start, $ali:inherit);
+                svg{
+                  @include mod.modu_icon($wi:65px , $co:#07613A , $ma:0 , $pa:0);
+                }
+                img{
+                  @include mod.modu_icon($wi:100px , $co:none , $ma:0 20px 0 0 , $pa:0);
+                }
+                h3{
+                  @include mod.modu_Text($fts:20px, $lh:1.5, $ma:0, $ali:left);
+                  display: flex;
+                  align-items: center;
+                }
+                h4{
+                  @include mod.modu_Text($fts:20px, $lh:1.5, $ma:0, $ali:left);
+                  display: flex;
+                  align-items: center;
+                }
+                p{
+                  @include mod.modu_Text($fts:16px, $lh:1.5, $ma:0, $ali:left);
+                }
+              }
+              li:nth-child(2n){
+                padding: 10px 20px 20px 20px;
+              }
+            }
+
+            li:nth-child(2n){
+              padding: 10px 20px 20px 20px;
+            }
+            &:hover{
+              background-color: #f4fffe;
+              border-color: #005648;
+              color: #005648;
+            }
+            &:after{
+              @include mod.arrow_lowR($bo:2px, $ri:7px, $boW:10px 0 10px 10px);
+            }
+          }
+      }
+    }
+    /* ▲▲▲ Bパターン _3col END ▲▲▲ */
+
+    /* ▼▼▼ Cパターン START ▼▼▼ */
+    ul.hp_moduleC{
+      text-decoration: none;
+      list-style-type: none;
+      padding: 0;
+      @include mod.hp_moduRow($ma:0, $pa:0, $jus:space-between, $ali:inherit);
+      li{
+        position: relative;
+        a{
+          text-decoration: none;
+          display: flex;
+          height: 100%;
+          ul.el_moduleC{
+            @include mod.width($wi:970px/2);
+            padding: 0;
+            border: 1px solid #CCCCCC;
+            border-radius: 5px;
+            li{
+              @include mod.hp_moduRow($ma:0 , $pa:20px 20px 20px 20px , $jus:center, $ali:center);
+              svg{
+                @include mod.modu_icon($wi:65px , $co:#07613A , $ma:0 20px 0 0 , $pa:0);
+              }
+              h3{
+                @include mod.modu_Text($fts:20px, $lh:1.5, $ma:0, $ali:left);
+                display: flex;
+                align-items: center;
+              }
+              p{
+                @include mod.modu_Text($fts:16px, $lh:1.5, $ma:0, $ali:left);
+              }
+            }
+            li:nth-child(2n){
+              padding: 20px;
+            }
+          }
+          &:after{
+            @include mod.arrow_lowR($bo:2px, $ri:8px , $boW:10px 0 10px 10px);
+          }
+          &:hover{
+            background-color: #f4fffe;
+            border-color: #005648;
+            color: #005648;
+          }
+        }
+      }
+    }
+    /* ▲▲▲ Cパターン END ▲▲▲ */
+
+    /* ▼▼▼ C2パターン START ▼▼▼ */
+
+//------------------ hp_modulePoint ------------------
+    ul.hp_modulePoint{
+      text-decoration: none;
+      list-style-type: none;
+      padding: 0;
+      @include mod.hp_moduRow($ma:0, $pa:0, $jus:space-between, $ali:inherit);
+      li{
+        div{
+          text-decoration: none;
+          display: flex;
+          height: 100%;
+          ul.el_moduleC{
+            @include mod.width($wi:970px/3);
+            padding: 0;
+            border: 1px solid #CCC;
+            border-radius: 5px;
+            li{
+              margin: 0 auto;
+              padding: 0;
+              list-style-type: none;
+              display: flex;
+              justify-content: center;
+              flex-wrap: wrap;
+              align-content: center;
+              flex-direction: column-reverse;
+              text-align: center;
+              img{
+                margin: 20px auto 0 auto;
+              }
+              h3{
+                @include mod.modu_Text($fts:16px, $lh:1.5, $ma:0 auto 0 auto, $ali:center);
+                padding: 10px 0 10px 0;
+                // display: flex;
+                // align-items: center;
+                width: 100%;
+                background-color: #eee;
+                border-bottom: 1px solid #CCC;
+                border-radius: 5px 5px 0 0px;
+                font-weight: bold;
+              }
+              p{
+                @include mod.modu_Text($fts:16px, $lh:1.5, $ma:0, $ali:left);
+              }
+            }
+            li:nth-child(2n){
+              padding: 10px 20px 20px 20px;
+            }
+          }
+        }
+      }
+      li.coL2{
+        div{
+          text-decoration: none;
+          display: flex;
+          height: 100%;
+          ul.el_moduleC.coL2{
+            @include mod.width($wi:970px/2);
+            padding: 0;
+            border: 1px solid #CCC;
+            border-radius: 5px;
+            li{
+              margin: 0 auto;
+              padding: 0;
+              list-style-type: none;
+              display: flex;
+              justify-content: center;
+              flex-wrap: wrap;
+              align-content: center;
+              flex-direction: column-reverse;
+              text-align: center;
+                h3{
+                  @include mod.modu_Text($fts:16px, $lh:1.5, $ma:0 auto 0 auto, $ali:center);
+                  padding: 10px 0 10px 0;
+                  // display: flex;
+                  // align-items: center;
+                  width: 100%;
+                  background-color: #eee;
+                  border-bottom: 1px solid #CCC;
+                  border-radius: 5px 5px 0 0px;
+                  font-weight: bold;
+                }
+                img{
+                  width: 60px;
+                  height: auto;
+                  margin: 0 10px 0 0;
+                }
+                p{
+                  @include mod.modu_Text($fts:16px, $lh:1.5, $ma:0, $ali:left);
+                }
+              }
+              li:nth-child(2n){
+                display: flex;
+                flex-wrap: nowrap;
+                flex-direction: row;
+                padding: 10px 20px 10px 20px;
+                align-items: center;
+              }
+            ul.el_moduleC_inner{
+              li:nth-child(1),li:nth-child(2){
+                display: flex;
+                flex-direction: column;
+                padding: 0;
+                align-items: baseline;
+              }
+
+            }
+          }
+        }
+      }
+    }
+
+
+
+//---- hp_moduleOption Cパターンoption リンクありPCグレー背景 --------
+ul.hp_moduleOption_Link{
+  text-decoration: none;
+  list-style-type: none;
+  padding: 0;
+  @include mod.hp_moduRow($ma:0, $pa:0, $jus:space-between, $ali:inherit);
+  li{
+    position: relative;
+    margin-bottom: 15px;
+    a{
+      text-decoration: none;
+      display: flex;
+      height: 100%;
+        ul.el_moduleC_Link{
+          @include mod.width($wi:955px/3);
+          padding: 0;
+          border: 1px solid #CCC;
+          border-radius: 5px;
+          li{
+            margin: 0;
+            padding: 10px 10px 0 10px;
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            align-content: center;
+            text-align: center;
+            img.el_moduleC_01{
+              margin: 20px auto 20px auto;
+            }
+            h3{
+              @include mod.modu_Text($fts:16px!important, $lh:1.5, $ma:0 auto 0 auto, $ali:center);
+              padding: 10px 0 10px 0;
+              background-color: #eee;
+              // display: flex;
+              // align-items: center;
+              width: 100%;
+              border-bottom: 1px solid #CCC;
+              border-radius: 5px 5px 0 0px;
+              font-weight: bold;
+            }
+            p{
+              @include mod.modu_Text($fts:16px, $lh:1.5, $ma:0, $ali:left);
+            }
+          }
+          li:nth-child(1){padding: 0;}
+          li:nth-child(2){
+              height: 120px;
+            }
+          li:nth-child(3){padding: 10px 10px 20px 10px;}
+        }
+      &:hover{
+        background-color: #f4fffe;
+        border-color: #005648;
+        color: #005648;
+      }
+      &:after{
+        @include mod.arrow_lowR($bo:2px, $ri:7px, $boW:10px 0 10px 10px);
+      }
+    }//a
+  }//li
+}
+/* ▲▲▲ C2パターン END ▲▲▲ */
+
+//---- hp_moduleOption Cパターンoption リンクなしPCグレー背景 --------
+ul.hp_moduleOption_LinkNone{
+  text-decoration: none;
+  list-style-type: none;
+  padding: 0;
+  @include mod.hp_moduRow($ma:0, $pa:0, $jus:space-between, $ali:inherit);
+  li{
+    position: relative;
+    margin-bottom: 15px;
+    div{
+      text-decoration: none;
+      display: flex;
+      height: 100%;
+        ul.el_moduleC_LinkNone{
+          @include mod.width($wi:955px/3);
+          padding: 0;
+          border: 1px solid #CCC;
+          border-radius: 5px;
+          li{
+            margin: 0;
+            padding: 10px 10px 0 10px;
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            align-content: center;
+            text-align: center;
+            img.el_moduleC_01{
+              margin: 20px auto 20px auto;
+            }
+            // img{
+            //   width: 50vw;
+            //   height: auto;
+            //   margin: 3% auto 0 auto;
+            // }
+            h3{
+              @include mod.modu_Text($fts:16px!important, $lh:1.5, $ma:0 auto 0 auto, $ali:center);
+              padding: 10px 0 10px 0;
+              background-color: #eee;
+              // display: flex;
+              // align-items: center;
+              width: 100%;
+              border-bottom: 1px solid #CCC;
+              border-radius: 5px 5px 0 0px;
+              font-weight: bold;
+            }
+            p{
+              @include mod.modu_Text($fts:16px, $lh:1.5, $ma:0, $ali:left);
+            }
+          }
+          li:nth-child(1){padding: 0;}
+          li:nth-child(2){
+              height: 120px;
+            }
+          li:nth-child(3){padding: 10px 10px 20px 10px;}
+        }
+    }//div
+  }//li
+}
+//---- hp_moduleOption Cパターンoption リンクなしPCグレー背景 END--------
+
+
+
+//------------------ hp_modulePoint toggleArea ------------------
+
+div.hp_modulePoint.toggleArea{
+  ul.first{
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    place-items: flex-start;
+      li{
+          @include mod.border($bor:1px solid #CCC);
+          @include mod.width($wi:970px/2);
+          h3{
+            font-size: 16px;
+            line-height: 1.5;
+            margin: 0 auto 0 auto;
+            font-weight: normal;
+            text-align: center;
+            padding: 10px 0 10px 0;
+            width: 100%;
+            background-color: #eee;
+            border-bottom: 1px solid #CCC;
+            border-radius: 5px 5px 0 0px;
+            font-weight: bold;
+          }
+          div.el_module.coL2{
+            padding: 20px 20px 0 20px;
+            height: 105px;
+            ul{
+              list-style-type: none;
+              padding-left: 0;
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              align-items: center;
+              li{
+                &:first-child{
+                  border: none;
+                  img{
+                    width: 83px;
+                    height: auto;
+                    margin: 0 20px 0 0;
+                    padding: 0;
+                    border: none;
+                  }
+                }
+                &:last-child{
+                  border: none;
+                  p{
+                    width: 342px!important;
+                    width: auto;
+                    margin: 0 0 10px 0;
+                  }
+                  img.el_mod_card{
+                    width: 340px;
+                    height: auto;
+                  }
+                }
+              }
+            }
+          }//div.el_module.coL2
+
+
+          div.el_moduleC_hiddneArea{
+            padding: 0 20px 80px 20px;
+            display: none;
+              div{
+                h4{
+                  line-height: 1.5;
+                  padding-left: 27px;
+                  margin: 0 0 5px 0;
+                  border-bottom: 1px dotted #373737;
+                  color: #004335;
+                    &:before{
+                      position: absolute;
+                      content: "";
+                      top: 3px;
+                      left: 0;
+                      display: block;
+                      width: 10%;
+                      height: 20px;
+                      background-image: url(/image/svg/iconScene09.svg);
+                      background-size: contain;
+                      background-repeat: no-repeat;
+                      line-height: 3;
+                      padding-left: 10px;
+                    }
+                  }
+                  h4.secur2{
+                    line-height: 1.5;
+                    padding-left: 40px;
+                    margin: 0 0 5px 0;
+                    border-bottom: 1px dotted #373737;
+                    color: #004335;
+                      &:before{
+                        position: absolute;
+                        content: "";
+                        top: 3px;
+                        left: 0;
+                        display: block;
+                        width: 10%;
+                        height: 20px;
+                        background-image: url(/image/svg/secur2.svg);
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        line-height: 3;
+                        padding-left: 10px;
+                      }
+                  }
+                  h4.plane{
+                    line-height: 1.5;
+                    padding-left: 0;
+                    margin: 0 0 5px 0;
+                    border-bottom: 1px dotted #373737;
+                    color: #004335;
+                    &:before{
+                      display: none;
+                    }
+                  }
+                  //2項目 CSS
+                  div.f-regi_07{
+                    width: 250px;
+                    margin: 0 97.5px;
+                  }
+                  img.f-regi_07{
+                    width: 250px;
+                  }
+                  img.f-regi_08{
+                    width: 445px;
+                  }
+                  img.f-regi_09{
+                    width: 445px;
+                  }
+                  div.posiSet{
+                    margin-left: 100px;
+                    position: relative;
+                    p.icon::before{
+                      position: absolute;
+                      content: "";
+                      top: 0;
+                      left: 0;
+                      display: block;
+                      width: 10%;
+                      height: 20px;
+                      background-image: url(../image/svg/check.svg);
+                      background-size: contain;
+                      background-repeat: no-repeat;
+                      line-height: 3;
+                    }
+                    p.icon{
+                      margin-left: 30px;
+                      margin-bottom: 5px;
+                    }
+                  }
+                }
+            }
+      }//li
+
+    }//ul.first
+
+
+  }//div.hp_modulePoint.toggleArea
+
+
+
+//detail-item arrow移動の為_before
+div.detail-item{
+  width: 100%;
+  height: 50px;
+  display: block;
+  position: relative;
+    span.detail-item_arow {
+      display: block;
+      position: absolute;
+      top: 23px;
+      left: 278px;
+      z-index: 20px;
+        &::before,&::after{
+          position: absolute;
+          content: '';
+          width: 23px;
+          height: 4px;
+          background-color: #7B7B7B;
+          border-radius: 3px;
+        }
+        &::before{
+          top: 48%;
+          right: 28px;
+          transform: rotate(45deg);
+        }
+        &::after{
+          top: 48%;
+          right: 14px;
+          transform: rotate(135deg);
+        }
+      }
+  }
+  //detail-item arrow移動の為_after
+  div.choiceTit.close{
+    width: 100%;
+    height: 50px;
+    display: block;
+    position: relative;
+    top: 653px;
+      span.detail-item_arow {
+        display: block;
+        position: absolute;
+        top: 24px;
+        left: 278px;
+        z-index: 20px;
+          &::before,&::after{
+            position: absolute;
+            content: '';
+            width: 23px;
+            height: 4px;
+            background-color: #7B7B7B;
+            border-radius: 3px;
+          }
+          &::before{
+            top: 48%;
+            right: 28px;
+            transform: rotate(-45deg);
+          }
+          &::after{
+            top: 48%;
+            right: 14px;
+            transform: rotate(-135deg);
+          }
+        }
+    }
+    .choiceTit.adjacent.close {
+      width: 100%;
+      height: 50px;
+      display: block;
+      position: relative;
+      top: 551px;
+   }
+   .choiceTit.adjacent2.close {
+    width: 100%;
+    height: 50px;
+    display: block;
+    position: relative;
+    top: 400px;
+ }
+ .choiceTit.adjacent3.close {
+  width: 100%;
+  height: 50px;
+  display: block;
+  position: relative;
+  top: 486px;
+}
+.choiceTit.adjacent4.close {
+  width: 100%;
+  height: 50px;
+  display: block;
+  position: relative;
+  top: 400px;
+}
+
+
+
+
+//arrow移動の為_before
+div.choiceTit{
+  width: 100%;
+  height: 50px;
+  display: block;
+  position: relative;
+    span.choiceTit_arow {
+      display: block;
+      position: absolute;
+      top: 23px;
+      left: 278px;
+      z-index: 20px;
+        &::before,&::after{
+          position: absolute;
+          content: '';
+          width: 23px;
+          height: 4px;
+          background-color: #7B7B7B;
+          border-radius: 3px;
+        }
+        &::before{
+          top: 48%;
+          right: 28px;
+          transform: rotate(45deg);
+        }
+        &::after{
+          top: 48%;
+          right: 14px;
+          transform: rotate(135deg);
+        }
+      }
+  }
+  //arrow移動の為_after
+  div.choiceTit.close{
+    width: 100%;
+    height: 50px;
+    display: block;
+    position: relative;
+    top: 653px;
+      span.choiceTit_arow {
+        display: block;
+        position: absolute;
+        top: 24px;
+        left: 278px;
+        z-index: 20px;
+          &::before,&::after{
+            position: absolute;
+            content: '';
+            width: 23px;
+            height: 4px;
+            background-color: #7B7B7B;
+            border-radius: 3px;
+          }
+          &::before{
+            top: 48%;
+            right: 28px;
+            transform: rotate(-45deg);
+          }
+          &::after{
+            top: 48%;
+            right: 14px;
+            transform: rotate(-135deg);
+          }
+        }
+    }
+
+
+
+    div.hp_modulePoint.toggleArea ul.first li div.el_moduleC_hiddneArea p {
+      text-align: left;
+      font-weight: normal;
+  }
+
+
+//------------------ hp_modulePoint.other ------------------
+
+    ul.hp_modulePoint.other{
+      text-decoration: none;
+      list-style-type: none;
+      padding: 0;
+      @include mod.hp_moduRow($ma:0, $pa:0, $jus:flex-start, $ali:inherit);
+      li{
+        position: relative;
+        margin-right: 12px;
+        a{
+          text-decoration: none;
+          display: flex;
+          height: 100%;
+          // div{
+            // display: flex;
+            // height: 100%;
+            ul.el_moduleC{
+              @include mod.width($wi:970px/3);
+              padding: 0;
+              border: 1px solid #CCC;
+              border-radius: 5px;
+              li{
+                margin: 0;
+                padding: 0;
+                list-style-type: none;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                align-content: center;
+                flex-direction: column-reverse;
+                text-align: center;
+                img.el_moduleC_01{
+                  margin: 10px auto 10px auto;
+                  // height: 73px;
+                }
+                img.el_moduleC_01{
+                  margin: 20px auto 20px auto;
+                  height: 70px;
+                }
+                img.el_moduleC_02{
+                  margin: 10px auto 10px auto;
+                  height: 90px;
+                }
+                h3{
+                  @include mod.modu_Text($fts:16px, $lh:1.5, $ma:0 auto 0 auto, $ali:center);
+                  padding: 10px 0 10px 0;
+                  // display: flex;
+                  // align-items: center;
+                  width: 100%;
+                  background-color: initial;
+                  border-bottom: none;
+                  border-radius: 5px 5px 0 0px;
+                  font-weight: bold;
+                }
+                p{
+                  @include mod.modu_Text($fts:16px, $lh:1.5, $ma:0, $ali:left);
+                }
+              }
+              li:nth-child(2n){
+                padding: 10px 20px 20px 20px;
+              }
+            }
+          // }
+          &:hover{
+            background-color: #f4fffe;
+            border-color: #005648;
+            color: #005648;
+          }
+          &:after{
+            @include mod.arrow_lowR($bo:2px, $ri:7px, $boW:10px 0 10px 10px);
+          }
+      }
+      }
+    }
+
+
+
+
+//------------------ hp_modulePoint.noTran ------------------
+
+    ul.hp_modulePoint.noTran{
+      text-decoration: none;
+      list-style-type: none;
+      padding: 0;
+      @include mod.hp_moduRow($ma:0, $pa:0, $jus:space-between, $ali:inherit);
+      li{
+        position: relative;
+        div{
+          text-decoration: none;
+          display: flex;
+          height: 100%;
+          // div{
+            // display: flex;
+            // height: 100%;
+            ul.el_moduleC{
+              @include mod.width($wi:970px/2);
+              padding: 0;
+              border: 1px solid #CCC;
+              border-radius: 5px;
+              li{
+                margin: 0;
+                padding: 0;
+                list-style-type: none;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                align-content: center;
+                flex-direction: column-reverse;
+                text-align: center;
+                img.el_moduleC_01{
+                  margin: 20px auto 0 auto;
+                  height: 200px;
+                }
+                img.el_moduleC_02{
+                  margin: 20px auto 0 auto;
+                  height: 200px;
+                }
+                h3{
+                  @include mod.modu_Text($fts:16px, $lh:1.5, $ma:0 auto 0 auto, $ali:center);
+                  padding: 20px 0 5px 0;
+                  // display: flex;
+                  // align-items: center;
+                  width: 100%;
+                  background-color: initial;
+                  border-bottom: none;
+                  border-radius: 5px 5px 0 0px;
+                  font-weight: bold;
+                }
+                p{
+                  @include mod.modu_Text($fts:16px, $lh:1.5, $ma:0, $ali:left);
+                }
+              }
+              li:nth-child(1){
+                display: flex;
+                flex-direction: column;
+              }
+
+              li:nth-child(2){
+                padding: 10px 20px 20px 20px;
+              }
+            }
+          // }
+          // &:hover{
+          //   background-color: #f4fffe;
+          //   border-color: #005648;
+          //   color: #005648;
+          // }
+          // &:after{
+          //   @include mod.arrow_lowR($bo:2px, $ri:7px, $boW:10px 0 10px 10px);
+          // }
+      }
+      }
+    }
+
+
+//------------------ div.hp_annotation ------------------
+
+    div.hp_annotation{
+      // @include mod.width($wi:calc(970px/2));
+      height: 100%;
+      position: relative;
+      p.annotation{
+        position: absolute;
+        border: 1px solid #CCCCCC;
+        border-radius: 50px;
+        font-size: 16px;
+        top: 0;
+        left: 7px;
+        padding:5px;
+        display: flex;
+        align-items: center;
+        margin: 0;
+        background-color: #FFF;
+        span.num{
+          border-radius: 50%;
+          background-color: #7B7B7B;
+          color: #FFF;
+          width: 23px;
+          height: 23px;
+          display: inline-block;
+          text-align: center;
+          margin: 7px;
+          }
+          span.after{
+            padding-right: 10px;
+          }
+        top: -20px;
+        }
+          ul.hp_modulePoint.annotation{
+            text-decoration: none;
+            list-style-type: none;
+            @include mod.el_moduRow($bor:1px solid #CCCCCC, $pd:35px 20px 20px 20px, $jus:space-between, $ali:center);
+            li{
+              position: relative;
+              display: inline;
+              margin-right: 10px;
+                h5{
+                  padding-left: 27px;
+                  margin: 0 0 5px 0;
+                  border-bottom: 1px dotted #373737;
+                    &:before{
+                      position: absolute;
+                      content: '';
+                      top: 33;
+                      left: 0;
+                      display: block;
+                      width: 10%;
+                      height: 20px;
+                      background-image: url(/image/svg/noteicon.svg);
+                      background-size: contain;
+                      background-repeat: no-repeat;
+                      line-height: 3.0;
+                      padding-left: 10px;
+                    }
+                    span.txt {
+                      color: #C1272D;
+                    }
+                  }
+                  ul{
+                    list-style-type: none;
+                    padding-left: 0;
+                  }
+                }
+            }
+            ul.hp_modulePoint.annotation.first{
+              width: 545px;
+            }
+            ul.hp_modulePoint.annotation.second{
+              width: 350px;
+              li{
+                ul{
+                  display: flex;
+                  flex-wrap: wrap;
+                  flex-direction: row;
+                }
+              }
+            }
+      }
+
+
+
+
+//---- hp_moduleOption Cパターンoption 4col〇〇〇〇〇〇〇〇〇 --------
+    ul.hp_moduleOption{
+      text-decoration: none;
+      list-style-type: none;
+      padding: 0;
+      @include mod.hp_moduRow($ma:0, $pa:0, $jus:space-between, $ali:inherit);
+      li{
+        position: relative;
+        margin-bottom: 15px;
+        a{
+          box-shadow: 0 0.125rem 0.25rem 0.1rem rgba(0, 0, 0, 0.075) !important;
+          text-decoration: none;
+          display: flex;
+          height: 100%;
+          // div{
+            // display: flex;
+            // height: 100%;
+            ul.el_moduleC{
+              @include mod.width($wi:955px/4);
+              padding: 0;
+              border: 1px solid #CCC;
+              border-radius: 5px;
+              li{
+                margin: 0;
+                padding: 10px 10px 0 10px;
+                list-style-type: none;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                align-content: center;
+                text-align: center;
+                img.el_moduleC_01{
+                  margin: 20px auto 20px auto;
+                  height: 70px;
+                }
+                h3{
+                  @include mod.modu_Text($fts:16px, $lh:1.5, $ma:0 auto 0 auto, $ali:center);
+                  padding: 10px 0 20px 0;
+                  // display: flex;
+                  // align-items: center;
+                  width: 100%;
+                  background-color: initial;
+                  border-bottom: none;
+                  border-radius: 5px 5px 0 0px;
+                  font-weight: bold;
+                }
+                p{
+                  @include mod.modu_Text($fts:16px, $lh:1.5, $ma:0, $ali:left);
+                }
+              }
+              li:nth-child(2){
+                ul{
+                  padding: 0 0 20px 0;
+                  li{
+                    position: relative;
+                    padding: 0 0 0 6px;
+                    &::before{
+                      position: absolute;
+                      content: '';
+                      top: 5px;
+                      left:-15px;
+                      display: block;
+                      width: 10%;
+                      height: 20px;
+                      background-image: url(../image/svg/check.svg);
+                      background-size: contain;
+                      background-repeat: no-repeat;
+                      line-height: 3.0;
+                    }
+                  }
+                }
+              }
+            }
+          // }
+          &:hover{
+            background-color: #f4fffe;
+            border-color: #005648;
+            color: #005648;
+          }
+          &:after{
+            @include mod.arrow_lowR($bo:2px, $ri:7px, $boW:10px 0 10px 10px);
+          }
+      }
+      }
+    }
+    /* ▲▲▲ C2パターン END ▲▲▲ */
+
+    /* ▼▼▼ C3パターン START ▼▼▼ */
+    ul.hp_modulePoint_flow{
+      text-decoration: none;
+      list-style-type: none;
+      padding: 0;
+      border-left: 1px solid #CCC;
+      @include mod.hp_moduRow($ma:0, $pa:0, $jus:left, $ali:inherit);
+      li{
+        div{
+          text-decoration: none;
+          display: flex;
+          height: 100%;
+          ul.el_moduleC{
+            @include mod.width($wi:995px/4);
+            padding: 0;
+            border-top: 1px solid #CCC;
+            border-bottom: 1px solid #CCC;
+            border-right: 1px solid #CCC;
+            li{
+              margin: 0 auto;
+              padding: 0;
+              list-style-type: none;
+              display: flex;
+              justify-content: center;
+              flex-wrap: wrap;
+              align-content: center;
+              flex-direction: column-reverse;
+              text-align: center;
+              img{
+                margin: 20px auto 0 auto;
+              }
+              h3{
+                @include mod.modu_Text($fts:16px, $lh:1.5, $ma:0 auto 0 auto, $ali:center);
+                padding: 10px 0 10px 0;
+                // display: flex;
+                // align-items: center;
+                width: 100%;
+                background-color: #eee;
+                border-bottom: 1px solid #CCC;
+                border-radius: 5px 5px 0 0px;
+                font-weight: bold;
+              }
+              p{
+                @include mod.modu_Text($fts:16px, $lh:1.5, $ma:0, $ali:left);
+              }
+            }
+            li:nth-child(2n){
+              padding: 10px 20px 20px 20px;
+            }
+          }
+          ul.el_moduleC3col{
+            @include mod.width($wi:995px/3);
+            padding: 0;
+            border-top: 1px solid #CCC;
+            border-bottom: 1px solid #CCC;
+            border-right: 1px solid #CCC;
+            li{
+              margin: 0 auto;
+              padding: 0;
+              list-style-type: none;
+              display: flex;
+              justify-content: center;
+              flex-wrap: wrap;
+              align-content: center;
+              flex-direction: column-reverse;
+              text-align: center;
+              img{
+                margin: 25px auto 5px auto;
+                width: 300px;
+                height: auto;
+              }
+              h3{
+                @include mod.modu_Text($fts:16px, $lh:1.5, $ma:0 auto 0 auto, $ali:center);
+                padding: 10px 0 10px 0;
+                // display: flex;
+                // align-items: center;
+                width: 100%;
+                background-color: #eee;
+                border-bottom: 1px solid #CCC;
+                border-radius: 5px 5px 0 0px;
+                font-weight: bold;
+              }
+              p{
+                @include mod.modu_Text($fts:16px, $lh:1.5, $ma:0, $ali:left);
+              }
+            }
+            li:nth-child(2n){
+              padding: 10px 20px 20px 20px;
+            }
+          }
+        }
+      }
+    }
+    /* ▲▲▲ C3パターン END ▲▲▲ */
+
+    /* ▼▼▼ Dパターン START ▼▼▼ */
+    ul.hp_moduleD{
+      @include mod.hp_moduRow($ma:15px 0 15px 0, $pa:0, $jus:space-evenly, $ali:inherit);
+      li{
+        padding: 0!important;
+        div{
+          display: flex;
+          height: 100%;
+          text-decoration: none;
+          ul.el_moduleD{
+            @include mod.width($wi:840px/2);
+            @include mod.el_moduCen($pd:15px,$ali:flex-start);
+            li{
+              svg{
+                @include mod.modu_icon($wi:65px,$co:#07613A,$ma:0 20px 0 0,$pa:0);
+              }
+              h4{
+                @include mod.modu_Text($fts:20px, $lh:1.5, $ma:0 0 10px 0, $ali:center);
+                position: relative;
+                z-index: 1;
+              }
+              p{
+                @include mod.modu_Text($fts:16px, $lh:1.5, $ma:0, $ali:left);
+              }
+            }
+          }
+        }
+      }
+    }
+    /* ▲▲▲ Dパターン END ▲▲▲ */
+
+    /*Eパターン START*/
+    ul.hp_moduleE{
+      @include mod.hp_moduRow($ma:0, $pa:0, $jus:space-between, $ali:inherit);
+      li{
+        padding: 0!important;
+        a{
+          display: flex;
+          height: 100%;
+          text-decoration: none;
+          ul.el_moduleE{
+            @include mod.width($wi:810px/3);
+            @include mod.el_moduCen($pd:20px, $ali:center);
+            li{
+              svg{
+                @include mod.modu_icon($wi:65px,$co:#07613A,$ma:0 20px 0 0,$pa:0);
+              }
+              h3{
+                @include mod.modu_Text($fts:20px, $lh:1.5, $ma:0 0 10px 0, $ali:center);
+                position: relative;
+                z-index: 1;
+              }
+              p{
+                @include mod.modu_Text($fts:16px, $lh:1.5, $ma:0, $ali:left);
+              }
+            }
+          }
+        }
+      }
+    }
+    /*Eパターン END*/
+
+    /*  ▼▼▼ Fパターン START  ▼▼▼ */
+    ul.hp_moduleF{
+      text-decoration: none;
+      list-style-type: none;
+      padding: 0;
+      @include mod.hp_moduRow($ma:0, $pa:0, $jus:space-between, $ali:inherit);
+      li{
+        height: 68px;
+        margin: 0 0 20px 0;
+        position: relative;
+        a.fit{height: 100%;}
+        a{
+          text-decoration: none;
+          display: flex;
+          ul.el_moduleF{
+            @include mod.width($wi:970px/2);
+            padding: 0;
+            border: 1px solid #CCCCCC;
+            border-radius: 5px;
+            display: flex;
+            li{
+              @include mod.hp_moduRow($ma:0 , $pa:0 20px 0 20px, $jus:flex-start, $ali:inherit);
+              svg{
+                @include mod.modu_icon($wi:65px , $co:#07613A , $ma:0 , $pa:0);
+              }
+              img{
+                @include mod.modu_icon($wi:auto , $co:none , $ma:0 , $pa:0);
+              }
+              img.con_01{width: 43px; height: auto;}
+              img.con_02{width: 100px; height: auto;}
+              img.con_03{width: 103px; height: auto;}
+              img.con_04{width: 52px; height: auto;}
+              img.con_05{width: 105px; height: auto;}
+              h3{
+                @include mod.modu_Text($fts:20px, $lh:1.5, $ma:0, $ali:left);
+                display: flex;
+                align-items: center;
+              }
+              h4{
+                @include mod.modu_Text($fts:20px, $lh:1.5, $ma:0, $ali:left);
+                display: flex;
+                align-items: center;
+              }
+              p{
+                @include mod.modu_Text($fts:16px, $lh:1.5, $ma:0, $ali:left);
+              }
+            }
+          }
+          ul.el_moduleF.other{
+            @include mod.width($wi:970px/3);
+            padding: 0;
+            border: 1px solid #CCCCCC;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            li.other{
+              @include mod.hp_moduRow($ma:0 , $pa:0 3% 0 0, $jus:flex-start, $ali:inherit);
+              svg{
+                @include mod.modu_icon($wi:65px , $co:#07613A , $ma:0 , $pa:0);
+              }
+              img{
+                @include mod.modu_icon($wi:auto , $co:none , $ma:0 , $pa:0);
+              }
+              img.pay_01{width: 45px; height: auto;}
+              h4{
+                @include mod.modu_Text($fts:20px, $lh:1.5, $ma:0, $ali:left);
+                display: flex;
+                align-items: center;
+              }
+              p{
+                @include mod.modu_Text($fts:16px, $lh:1.5, $ma:0, $ali:left);
+              }
+            }
+            li:nth-child(2n){
+              padding: 0;
+            }
+          }
+          &:after{
+            @include mod.arrow_lowR($bo:2px, $ri:8px , $boW:10px 0 10px 10px);
+          }
+          &:hover{
+            background-color: #f4fffe;
+            border-color: #005648;
+            color: #005648;
+          }
+        }
+        &:last-child{margin-bottom: 0;}
+      }
+    }
+
+    ul.hp_moduleF.nexA{
+      text-decoration: none;
+      list-style-type: none;
+      padding: 0;
+      @include mod.hp_moduRow($ma:0, $pa:0, $jus:flex-end, $ali:inherit);
+      li.nexA{
+        height: 50px;
+        margin: 0 0 20px 0;
+        position: relative;
+        a{
+          text-decoration: none;
+          display: flex;
+          ul.el_moduleF.nexA{
+            @include mod.width($wi:970px/3);
+            padding: 0;
+            border: 1px solid #CCCCCC;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            li{
+              @include mod.hp_moduRow($ma:0 , $pa:0 3% 0 0, $jus:flex-start, $ali:inherit);
+              // svg{
+              //   @include mod.modu_icon($wi:65px , $co:#07613A , $ma:0 , $pa:0);
+              // }
+              // img{
+              //   @include mod.modu_icon($wi:auto , $co:none , $ma:0 , $pa:0);
+              // }
+              img.nexA{width: 30px; height: auto;}
+              h4{
+                @include mod.modu_Text($fts:16px, $lh:1.5, $ma:0, $ali:left);
+                display: flex;
+                align-items: center;
+              }
+              p{
+                @include mod.modu_Text($fts:16px, $lh:1.5, $ma:0, $ali:left);
+              }
+            }
+            li:nth-child(2n){
+              padding: 0;
+            }
+          }
+          &:after{
+            @include mod.arrow_lowR($bo:2px, $ri:8px , $boW:10px 0 10px 10px);
+          }
+          &:hover{
+            background-color: #f4fffe;
+            border-color: #005648;
+            color: #005648;
+          }
+        }
+        &:last-child{margin-bottom: 0;}
+      }
+
+    }
+    /* ▲▲▲ Fパターン START ▲▲▲ */
+
+
+
+
+
+
+    /* ▼▼▼ 遷移ボタン Start ▼▼▼ */
+    .hp_cta_btn{
+      display: flex;
+      justify-content: center;
+        div.cta_btn{
+          position: relative;
+          @include mod.calActBtn($wi:400px,$pa:10px,$fts:20px,$bra:5px);
+            a.lowR{
+              text-decoration: none;
+              &:after{
+                @include mod.arrow_lowR($bo:2px, $ri:8px , $boW:10px 0 10px 10px);
+                }
+              }
+              a.midR{
+                text-decoration: none;
+                &:after{
+                  @include mod.arrow_midR($bo:15px, $ri:15px, $boW:10px 0 10px 10px);
+                }
+              }
+              a.midR2{
+                text-decoration: none;
+                &:after{
+                  @include mod.arrow_test($ma:0 0 0 0, $fts:15px, $col:#07613A);
+                }
+              }
+              &:hover{
+                background-color: #005648;
+                a{
+                  color: #FFF;
+                }
+              }
+            }
+            div.cta_btn.official{
+              position: relative;
+              @include mod.calActBtn($wi:200px,$pa:10px,$fts:20px,$bra:5px);
+            }
+      }
+
+      .hp_next_btn_B{
+        display: flex;
+        justify-content: center;
+          div.cta_btn{
+            position: relative;
+            @include mod.calActBtn($wi:400px,$pa:10px,$fts:14px,$bra:50px);
+                a.midR{
+                  text-decoration: none;
+                  &:after{
+                    @include mod.arrow_midR2($bo:11px, $ri:15px, $boW:10px 0 10px 10px);
+                  }
+                }
+                &:hover{
+                  background-color: #f4fffe;
+                  border-color: #005648;
+                  a{
+                    color: #005648;
+                  }
+                }
+              }
+        }
+
+    //▼▼▼決済手段 公式サイトのボタン
+    .hp_cta_btn.official{
+      display: flex;
+      justify-content: left;
+        div.cta_btn{
+          position: relative;
+          @include mod.calActBtn($wi:200px,$pa:10px,$fts:20px,$bra:5px);
+        }
+      }
+
+    /* ▼▼▼ 遷移ボタン END ▼▼▼ */
+
+
+    /*↓消すかもね*/
+
+/*コストパフォーマンス表 START*/
+.kospa_img{width: 100%;}
+.kospaWrap{
+  width: 100%;
+  ul{
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    li{
+      width: 250px;
+      list-style-type: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 25px;
+    }
+  }
+}
+.kospa{
+  width: 100%;
+  list-style-type: none;
+  padding-left: 0;
+  font-size: 18px;
+  color: #004335;
+  text-align: center;
+  padding: 30px 0;
+  align-items: center;
+}
+.ul>.kospa{
+  padding-left: 0;
+  width: calc(987px/4);
+}
+.kospa li{
+  display: flex;
+}
+/*コストパフォーマンス表 END*/
+
+//テスト
+div.acorddionA{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .detail_all{
+    background-color: aliceblue;
+    width: calc(970px/2);
+    div.detail_innerWrap{
+      div.block_01{
+        list-style-type: none;
+        text-align: center;
+          div.block_01_inner{
+            list-style-type: none;
+            padding-left: 0;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+              ul{
+                list-style-type: none;
+                &:nth-child(1) li{
+                  img{
+                    width: auto;
+                    height: auto;
+                  }
+                }
+                &:nth-child(2) li{
+                  img{
+                    width: auto;
+                    height: auto;
+                  }
+                }
+              }
+          }
+      }
+      div.hideArea_Wrap{
+        div.block_02{
+          img{
+            width: auto;
+            height: auto;
+          }
+
+        }
+        div.block_03{
+          h5{
+            @include mod.el_Tit($fts:16px, $bor:1px dotted #373737, $ftw:bold, $lh:1.5, $ma: 10px 0 10px 0, $pd:0, $co:#1A1A1A, $borL:none);
+          }
+          img{
+            width: auto;
+            height: auto;
+          }
+          ul{
+            list-style-type: none;
+            padding-left: 0;
+            li{
+              list-style-type: none;
+              span.iconSMpc{
+                width: 10px;
+                height: auto;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}/*******PC END*******/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*★☆★  SP タブレット以下全てipadminiまで  ★☆★*/
+
+@media only screen and (max-width: 768px){
+
+    /*element抜きsection*/
+    .hp_Wrap{
+      h2{
+        @include mod.el_Tit($fts:5.0vw, $bor:none, $ftw:bold, $lh:1, $ma:0 0 2.6vw 0, $pd:0, $co:#333, $borL:none);
+      }
+      p{
+        @include mod.modu_Text($fts:3.7vw, $lh:1.3, $ma:0 0 4vw 0, $ali:left);
+      }
+    }
+
+    //コンテンツ間のdistance
+    .hp_moduleA_Title , .hp_moduleB_Title , .hp_moduleC_Title, .hp_modulePoint{
+      h2{
+        @include mod.el_Tit($fts:5.0vw, $bor:none, $ftw:bold, $lh:1, $ma:0 0 2.6vw 0, $pd:0, $co:#333, $borL:none);
+      }
+      p{
+        @include mod.modu_Text($fts:3.7vw, $lh:1.3, $ma:0 0 4vw 0, $ali:left);
+      }
+    }
+
+    //コンテンツ間のdistance
+    ul.hp_moduleA,ul.hp_moduleB,.hp_moduleB_3col,ul.hp_moduleC,ul.hp_modulePoint{
+      margin: 0;
+      li{
+        @include mod.distance($mb:4vw);
+        a{
+          text-decoration: none;
+          ul{
+            li{
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+    ul.hp_moduleA,ul.hp_moduleB,.hp_moduleB_3col,ul.hp_moduleC,ul.hp_moduleD,ul.hp_moduleE,ul.hp_moduleF,.hp_modulePoint,.hp_modulePoint.other,.hp_moduleOption{
+      li:nth-child(1n+1):nth-last-child(-n+1),
+      li:nth-child(1n+1):nth-last-child(-n+1) ~ li {
+        margin-bottom: 0;
+      }
+    }
+
+    //arrowのみ
+    .arowOnly:after{
+      @include mod.arrow_lowR($bo:1px, $ri:5px , $boW:8px 0 8px 8px);
+    }
+
+
+    //共通ルール
+    .ele_Cont{
+      h1{ //21px
+        @include mod.el_Tit($fts:5.8vw, $bor:1px solid #07613A, $ftw:bold, $lh:1, $ma:2.6vw 0 1.6vw 0, $pd:0 0 2.6vw 0, $co:#1A1A1A, $borL:none);
+        position: relative;
+      }
+      h2{ //18px
+        @include mod.el_Tit($fts:5.0vw, $bor:none, $ftw:bold, $lh:1, $ma:6vw 0 2.8vw 0, $pd:0 0 0 2vw, $co:#1A1A1A, $borL:6px solid #005648);
+      }
+      h3{ //18px
+        @include mod.el_Tit($fts:4.8vw, $bor:2px solid #CCC, $ftw:bold, $lh:1, $ma:2.6vw 0 2.6vw 0, $pd:0 0 2.6vw 0, $co:#1A1A1A, $borL:none);
+      }
+      h4{ //16px
+        @include mod.el_Tit($fts:4.2vw, $bor:none, $ftw:bold, $lh:1.3, $ma: 10px 0 10px 0, $pd:0, $co:#1A1A1A, $borL:none);
+      }
+      h5{ //16px
+        @include mod.el_Tit($fts:4.2vw, $bor:1px dotted #373737, $ftw:bold, $lh:1.5, $ma: 10px 0 10px 0, $pd:0, $co:#1A1A1A, $borL:none);
+      }
+      p{//14px
+        @include mod.el_Tit($fts:3.7vw, $bor:none, $ftw:normal, $lh:1.3, $ma:0, $pd:0, $co:#1A1A1A, $borL:none);
+      }
+    }
+
+    /* ▼▼▼  service 画像 ▼▼▼  */
+    img.Agent1{
+      width: 50%;
+      display: block;
+      margin: 2vw auto;
+    }
+    img.Agent3{
+      width: 9vw;
+    }
+    img.Agent4{
+      width: 14vw;
+    }
+
+
+    /* ▼▼▼ Aパターン START ▼▼▼ */
+    ul.hp_moduleA{
+      margin-bottom: 0;
+      li{
+        position: relative;
+        a{
+          display: flex;
+          height: 100%;
+          ul.el_moduleA{
+            @include mod.el_moduRow($bor:1px solid #CCCCCC, $pd:3%, $jus:space-evenly,$ali:center);
+            li{
+              margin: 0;
+              svg{
+                @include mod.modu_icon($wi:13vw, $co:#07613A, $ma:0 2.6vw 0 0, $pa:0);
+              }
+              h3{
+                @include mod.modu_Text($fts:4.2vw, $lh:1.3, $ma:0 0 3% 0, $ali:left);
+              }
+              p{
+                @include mod.modu_Text($fts:3.2vw, $lh:1.3, $ma:0, $ali:left);
+              margin-bottom: none;
+              }
+            }
+          }
+          &:after{
+            @include mod.arrow_lowR($bo:1px, $ri:5px , $boW:8px 0 8px 8px);
+          }
+        }
+      }
+    }
+    /* ▲▲▲ Aパターン END ▲▲▲ */
+
+
+    /* ▼▼▼ Bパターン START ▼▼▼ */
+    ul.hp_moduleB{
+      text-decoration: none;
+      li{
+        position: relative;
+        a{
+          text-decoration: none;
+          ul.el_moduleB{
+            @include mod.el_moduRow($bor:1px solid #CCCCCC, $pd:3%, $jus:space-evenly,$ali:center);
+            li{
+              svg{
+                @include mod.modu_icon($wi:13vw, $co:#07613A, $ma:0 2.6vw 0 0, $pa:0);
+              }
+              img{
+                @include mod.modu_icon($wi:20vw, $co:#07613A, $ma:0 2.6vw 0 0, $pa:0);
+                min-width: 75px;
+                max-width: 152px;
+              }
+              img.service12{
+                @include mod.modu_icon($wi:20vw, $co:none, $ma:0 2.6vw 0 0, $pa:3.4vw);
+                min-width: 75px;
+                max-width: 152px;
+              }
+              h3{
+                @include mod.modu_Text($fts:4.2vw, $lh:1.3, $ma:0 0 3% 0, $ali:left);
+                align-items: center;
+              }
+              h4{
+                @include mod.modu_Text($fts:4.2vw, $lh:1.3, $ma:0 0 3% 0, $ali:left);
+                align-items: center;
+              }
+              p{
+                @include mod.modu_Text($fts:3.2vw, $lh:1.3, $ma:0, $ali:left);
+              }
+            }
+          }
+          &:after{
+            @include mod.arrow_lowR($bo:2px, $ri:8px , $boW:8px 0 8px 8px);
+          }
+          &:hover{
+            background-color: #f4fffe;
+            border-color: #005648;
+            color: #005648;
+          }
+        }
+      }
+    }
+    /* ▲▲▲ Bパターン END ▲▲▲ */
+
+    /* ▼▼▼ Bパターン _3col START ▼▼▼ */
+    ul.hp_moduleB_3col{
+      text-decoration: none;
+      li{
+        position: relative;
+        a{
+          text-decoration: none;
+          ul.el_moduleB{
+            @include mod.el_moduRow($bor:1px solid #CCCCCC, $pd:3%, $jus:space-evenly,$ali:center);
+            li{
+              svg{
+                @include mod.modu_icon($wi:13vw, $co:#07613A, $ma:0 2.6vw 0 0, $pa:0);
+              }
+              img{
+                @include mod.modu_icon($wi:20vw, $co:none, $ma:0 2.6vw 0 0, $pa:0);
+                min-width: 75px;
+                max-width: 152px;
+              }
+              h3{
+                @include mod.modu_Text($fts:4.2vw, $lh:1.3, $ma:0 0 3% 0, $ali:left);
+                align-items: center;
+              }
+              h4{
+                @include mod.modu_Text($fts:4.2vw, $lh:1.3, $ma:0 0 3% 0, $ali:left);
+                align-items: center;
+              }
+              p{
+                @include mod.modu_Text($fts:3.2vw, $lh:1.3, $ma:0, $ali:left);
+              }
+            }
+          }
+          &:after{
+            @include mod.arrow_lowR($bo:2px, $ri:8px , $boW:8px 0 8px 8px);
+          }
+          &:hover{
+            background-color: #f4fffe;
+            border-color: #005648;
+            color: #005648;
+          }
+        }
+      }
+    }
+    /* ▲▲▲ Bパターン_3col END ▲▲▲ */
+
+    /* ▼▼▼ Cパターン START ▼▼▼ */
+    ul.hp_moduleC{
+      text-decoration: none;
+      li{
+        position: relative;
+        a{
+          text-decoration: none;
+          ul.el_moduleC{
+            @include mod.el_moduRow($bor:1px solid #CCCCCC, $pd:3%, $jus:space-evenly,$ali:center);
+            flex-direction: column;
+            li{
+              svg{
+                @include mod.modu_icon($wi:13vw, $co:#07613A, $ma:0 2.6vw 0 0, $pa:0);
+              }
+              h3{
+                @include mod.modu_Text($fts:4.2vw, $lh:1.3, $ma:0 0 3% 0, $ali:left);
+                align-items: center;
+              }
+              p{
+                @include mod.modu_Text($fts:3.2vw, $lh:1.3, $ma:0, $ali:left);
+              }
+              &:first-child{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                // margin-bottom: 3%;
+              }
+            }
+          }
+          &:after{
+            @include mod.arrow_lowR($bo:2px, $ri:8px , $boW:8px 0 8px 8px);
+          }
+          &:hover{
+            background-color: #f4fffe;
+            border-color: #005648;
+            color: #005648;
+          }
+        }
+      }
+    }
+    /* ▲▲▲ Cパターン_3col END ▲▲▲ */
+
+    /* ▼▼▼ C2パターン START ▼▼▼ */
+    ul.hp_modulePoint{
+      text-decoration: none;
+      list-style-type: none;
+      padding: 0;
+      li{
+        div{
+          text-decoration: none;
+          ul.el_moduleC{
+            @include mod.el_moduRow($bor:1px solid #CCC, $pd:none, $jus:space-evenly,$ali:center);
+            flex-direction: column;
+            li{
+              width: 100%;
+              margin: 0 auto;
+              padding: 0;
+              list-style-type: none;
+              display: flex;
+              justify-content: center;
+              flex-wrap: wrap;
+              align-content: center;
+              flex-direction: column-reverse;
+              text-align: center;
+                img.paypay_01{ width: 50vw; height: auto; margin: 3% auto 0 auto; }
+                img.paypay_02{width: 19vw; height: auto; margin: 3% auto 0 auto; }
+                img.paypay_03{width: 14vw; height: auto; margin: 3% auto 0 auto; }
+                img.paycard_01{ width: 66vw; height: auto; margin: 5% auto 0 auto; }
+                img.paycard_02{width: 19vw; height: auto; margin: 5% auto 0 auto; }
+                img.paycard_03{width: 14vw; height: auto; margin: 4% auto 0 auto; }
+                img{
+                  margin: 0 auto;
+                }
+                }
+                h3{
+                  @include mod.modu_Text($fts:4.2vw, $lh:1.3, $ma:0, $ali:center);
+                  width: 100%;
+                  align-items: center;
+                  background-color: #eee;
+                  border-bottom: 1px solid #CCC;
+                  border-radius: 5px 5px 0 0px;
+                  font-weight: bold;
+                  padding: 3% 0;
+                }
+                p{
+                  @include mod.modu_Text($fts:3.2vw, $lh:1.3, $ma:3%, $ali:left);
+                }
+            }
+          }
+        }
+      }
+    /* ▲▲▲ C2パターン_3col END ▲▲▲ */
+
+
+//---- hp_moduleOption Cパターンoption リンクありSP グレー背景 --------
+
+ul.hp_moduleOption_Link{
+  text-decoration: none;
+  list-style-type: none;
+  padding: 0;
+  li{
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    margin-bottom: 15px;
+    a{
+      text-decoration: none;
+      display: flex;
+      width: 100%;
+      height: 100%;
+        ul.el_moduleC_Link{
+          width: 100%;
+          padding: 0;
+          border: 1px solid #CCC;
+          border-radius: 5px;
+          li{
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+              // img.el_moduleC_01{
+              // }
+              h3{
+                @include mod.modu_Text($fts:4.2vw, $lh:1.3, $ma:0, $ali:center);
+                width: 100%;
+                align-items: center;
+                background-color: #eee;
+                border-bottom: 1px solid #CCC;
+                border-radius: 5px 5px 0 0px;
+                font-weight: bold;
+                padding: 3% 0;
+              }
+              p{
+                @include mod.modu_Text($fts:3.2vw, $lh:1.3, $ma:0 3% 3% 3%, $ali:left);
+              }
+          }
+          li:nth-child(1){padding: 0;}
+          li:nth-child(2){
+            height: 32vw;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+          }
+        }
+      &:hover{
+        background-color: #f4fffe;
+        border-color: #005648;
+        color: #005648;
+      }
+      &:after{
+        @include mod.arrow_lowR($bo:1px, $ri:5px , $boW:8px 0 8px 8px);
+      }
+  }
+  }
+}
+//---- hp_moduleOption Cパターンoption リンクありSP グレー背景END --------
+
+
+//---- hp_moduleOption Cパターンoption リンクなしSP グレー背景 --------
+ul.hp_moduleOption_LinkNone{
+  text-decoration: none;
+  list-style-type: none;
+  padding: 0;
+  li{
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    margin-bottom: 15px;
+    div{
+      text-decoration: none;
+      display: flex;
+      width: 100%;
+      height: 100%;
+        ul.el_moduleC_LinkNone{
+          width: 100%;
+          padding: 0;
+          border: 1px solid #CCC;
+          border-radius: 5px;
+          li{
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+              // img.el_moduleC_01{
+              // }
+              h3{
+                @include mod.modu_Text($fts:4.2vw, $lh:1.3, $ma:0, $ali:center);
+                width: 100%;
+                align-items: center;
+                background-color: #eee;
+                border-bottom: 1px solid #CCC;
+                border-radius: 5px 5px 0 0px;
+                font-weight: bold;
+                padding: 3% 0;
+              }
+              p{
+                @include mod.modu_Text($fts:3.2vw, $lh:1.3, $ma:0 3% 3% 3%, $ali:left);
+              }
+              img{
+                width: 50vw;
+                height: auto;
+                margin: 3% auto 0 auto;
+              }
+          }
+          li:nth-child(1){padding: 0;}
+          li:nth-child(2){
+            height: 32vw;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+          }
+        }
+    }
+  }
+}
+//---- hp_moduleOption Cパターンoption リンクなしSP グレー背景END --------
+
+
+
+
+    ul.hp_modulePoint.other{
+      text-decoration: none;
+      list-style-type: none;
+      padding: 0;
+      li{
+        position: relative;
+        a{
+          div{
+            text-decoration: none;
+            ul.el_moduleC{
+              @include mod.el_moduRow($bor:1px solid #CCC, $pd:none, $jus:space-evenly,$ali:center);
+              flex-direction: column;
+              li{
+                width: 100%;
+                margin: 0 auto;
+                padding: 0;
+                list-style-type: none;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                align-content: center;
+                flex-direction: column-reverse;
+                text-align: center;
+                  // img.paypay_01{ width: 50vw; height: auto; margin: 3% auto 0 auto; }
+                  // img.paypay_02{width: 19vw; height: auto; margin: 3% auto 0 auto; }
+                  // img.paypay_03{width: 14vw; height: auto; margin: 3% auto 0 auto; }
+                  img{
+                    margin: 0 auto;
+                    width: 24vw; height: auto; margin: 0 auto;
+                  }
+                  }
+                  h3{
+                    @include mod.modu_Text($fts:4.2vw, $lh:1.3, $ma:0, $ali:center);
+                    width: 100%;
+                    align-items: center;
+                    background-color: inherit;
+                    border-bottom: none;
+                    border-radius: 5px 5px 0 0px;
+                    font-weight: bold;
+                    padding: 3% 0;
+                  }
+                  p{
+                    @include mod.modu_Text($fts:3.2vw, $lh:1.3, $ma:3%, $ali:left);
+                  }
+              }
+            }
+            &:after{
+              @include mod.arrow_lowR($bo:2px, $ri:8px , $boW:8px 0 8px 8px);
+            }
+            &:hover{
+              background-color: #f4fffe;
+              border-color: #005648;
+              color: #005648;
+            }
+        }
+        }
+      }
+
+
+
+
+
+      ul.hp_modulePoint.noTran{
+        text-decoration: none;
+        list-style-type: none;
+        padding: 0;
+        li{
+          position: relative;
+            div{
+              text-decoration: none;
+              ul.el_moduleC{
+                @include mod.el_moduRow($bor:none, $pd:none, $jus:space-evenly,$ali:center);
+                flex-direction: column;
+                margin-bottom: 5.1vw;
+                li{
+                  width: 100%;
+                  margin: 0 auto;
+                  padding: 0;
+                  list-style-type: none;
+                  display: flex;
+                  justify-content: center;
+                  flex-wrap: wrap;
+                  align-content: center;
+                  flex-direction: column-reverse;
+                  text-align: center;
+                    img{
+                      margin: 0 auto;
+                      width: 75%;
+                      height: auto;
+                    }
+                    h3{
+                      @include mod.modu_Text($fts:4.2vw, $lh:1.3, $ma:0, $ali:center);
+                      width: 100%;
+                      align-items: center;
+                      background-color: inherit;
+                      border-bottom: none;
+                      border-radius: 5px 5px 0 0px;
+                      font-weight: bold;
+                      padding: 3% 0 0 0;
+                    }
+                    p{
+                      @include mod.modu_Text($fts:3.2vw, $lh:1.3, $ma:3%, $ali:left);
+                    }
+                  }
+                  li:first-child{
+                    display: flex;
+                    flex-direction: column;
+                  }
+                }
+              }
+              // &:after{
+              //   @include mod.arrow_lowR($bo:2px, $ri:8px , $boW:8px 0 8px 8px);
+              // }
+              // &:hover{
+              //   background-color: #f4fffe;
+              //   border-color: #005648;
+              //   color: #005648;
+              // }
+          }
+        }
+
+
+
+    /* ▼▼▼ C3パターン START ▼▼▼ */
+    ul.hp_modulePoint_flow{
+      text-decoration: none;
+      list-style-type: none;
+      padding: 0;
+      li{
+        div{
+          text-decoration: none;
+          ul.el_moduleC{
+            @include mod.el_moduRow($bor:1px solid #CCC, $pd:none, $jus:space-evenly,$ali:center);
+            border-radius: 0 !important;
+            flex-direction: column;
+            li{
+              width: 100%;
+              margin: 0 auto;
+              padding: 0;
+              list-style-type: none;
+              display: flex;
+              justify-content: center;
+              flex-wrap: wrap;
+              align-content: center;
+              flex-direction: column-reverse;
+              text-align: center;
+                img{
+                  margin: 0 auto;
+                }
+                }
+                h3{
+                  @include mod.modu_Text($fts:4.2vw, $lh:1.3, $ma:0, $ali:center);
+                  width: 100%;
+                  align-items: center;
+                  background-color: #eee;
+                  border-bottom: 1px solid #CCC;
+                  font-weight: bold;
+                  padding: 3% 0;
+                }
+                p{
+                  @include mod.modu_Text($fts:3.2vw, $lh:1.3, $ma:3%, $ali:left);
+                }
+            }
+            ul.el_moduleC3col{
+              @include mod.el_moduRow($bor:1px solid #CCC, $pd:none, $jus:space-evenly,$ali:center);
+              border-radius: 0 !important;
+              flex-direction: column;
+              li{
+                width: 100%;
+                margin: 0 auto;
+                padding: 0;
+                list-style-type: none;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                align-content: center;
+                flex-direction: column-reverse;
+                text-align: center;
+                  img{
+                    width: 80%;
+                    margin: 3% auto 0 auto;
+                  }
+                  img.flowImgCard_01,img.flowImgCard_02,img.flowImgCard_03{width: 60%;}
+                  }
+                  h3{
+                    @include mod.modu_Text($fts:4.2vw, $lh:1.3, $ma:0, $ali:center);
+                    width: 100%;
+                    align-items: center;
+                    background-color: #eee;
+                    border-bottom: 1px solid #CCC;
+                    font-weight: bold;
+                    padding: 3% 0;
+                  }
+                  p{
+                    @include mod.modu_Text($fts:3.2vw, $lh:1.3, $ma:3%, $ali:left);
+                  }
+              }
+          }
+        }
+      }
+    /* ▲▲▲ C3パターン END ▲▲▲ */
+
+//---- hp_moduleOption Cパターンoption 4col〇〇〇〇〇〇〇〇〇 --------
+
+    ul.hp_moduleOption{
+      text-decoration: none;
+      list-style-type: none;
+      padding: 0;
+      // @include mod.hp_moduRow($ma:0, $pa:0, $jus:space-betwe, $ali:inherit);
+      li{
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-content: center;
+        flex-direction: column;
+        text-align: center;
+        position: relative;
+        margin-bottom: 15px;
+        a{
+          box-shadow: 0 0.125rem 0.25rem 0.1rem rgba(0, 0, 0, 0.075) !important;
+          text-decoration: none;
+          display: flex;
+          width: 100%;
+          height: 100%;
+          // div{
+            // display: flex;
+            // height: 100%;
+            ul.el_moduleC{
+              width: 100%;
+              padding: 0;
+              border: 1px solid #CCC;
+              border-radius: 5px;
+              li{
+                margin: 0;
+                padding: 3%;
+                list-style-type: none;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-content: flex-start;
+                text-align: center;
+                img.el_moduleC_01{
+                  margin: 20px auto 20px auto;
+                  height: 120px;
+                }
+                h3{
+                  @include mod.modu_Text($fts:16px, $lh:1.5, $ma:0 auto 0 auto, $ali:center);
+                  padding: 10px 0 10px 0;
+                  // display: flex;
+                  // align-items: center;
+                  width: 100%;
+                  background-color: initial;
+                  border-bottom: none;
+                  border-radius: 5px 5px 0 0px;
+                  font-weight: bold;
+                }
+                p{
+                  @include mod.modu_Text($fts:16px, $lh:1.5, $ma:0, $ali:left);
+                }
+              }
+              li:nth-child(2){
+                ul{
+                  padding: 0 0 20px 70px;
+                  li{
+                    padding: 0;
+                    position: relative;
+                    &::before{
+                      position: absolute;
+                      content: '';
+                      top: 5px;
+                      left:-20px;
+                      display: block;
+                      width: 10%;
+                      height: 20px;
+                      background-image: url(../image/svg/check.svg);
+                      background-size: contain;
+                      background-repeat: no-repeat;
+                      line-height: 3.0;
+                    }
+                  }
+                }
+              }
+            }
+          // }
+          &:hover{
+            background-color: #f4fffe;
+            border-color: #005648;
+            color: #005648;
+          }
+          &:after{
+            @include mod.arrow_lowR($bo:2px, $ri:7px, $boW:10px 0 10px 10px);
+          }
+      }
+      }
+    }
+    /* ▲▲▲ C2パターン moduleOption END ▲▲▲ */
+
+    /*▲▲▲ C2パターンnoTran*/
+    ul.hp_modulePoint.noTran{
+      text-decoration: none;
+      list-style-type: none;
+      padding: 0;
+      li{
+        div{
+          text-decoration: none;
+          display: flex;
+          height: 100%;
+          // div{
+            // display: flex;
+            // height: 100%;
+            ul.el_moduleC{
+              padding: 0;
+              li{
+                margin: 0;
+                padding: 0;
+                list-style-type: none;
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                flex-direction: column-reverse;
+                text-align: center;
+                img.el_moduleC_01{
+                  margin: 3% auto 0 auto;
+                  width: 80%;
+                  height: fit-content;
+                }
+                p{
+                  @include mod.modu_Text($fts:3.2vw, $lh:1.3, $ma:0, $ali:left);
+                }
+              }
+              li:nth-child(1){
+                display: flex;
+                flex-direction: column;
+              }
+
+              li:nth-child(2){
+                padding: 3% 3% 0 3%
+              }
+            }
+          // }
+          // &:hover{
+          //   background-color: #f4fffe;
+          //   border-color: #005648;
+          //   color: #005648;
+          // }
+          // &:after{
+          //   @include mod.arrow_lowR($bo:2px, $ri:7px, $boW:10px 0 10px 10px);
+          // }
+          }
+        }
+      }
+
+    div.hp_annotation{
+      margin-bottom: 3vw;
+      width: 100%;
+      position: relative;
+      p.annotation{
+        position: absolute;
+        border: 1px solid #CCCCCC;
+        border-radius: 50px;
+        font-size: 3.7vw;
+        top: -5.3vw;
+        left: 1.8vw;
+        padding: 1.3vw;
+        display: flex;
+        align-items: center;
+        margin: 0;
+        background-color: #FFF;
+        span.num{
+          border-radius: 50%;
+          background-color: #7B7B7B;
+          color: #FFF;
+          width: 4.5vw;
+          height: 4.5vw;
+          display: inline-block;
+          text-align: center;
+          margin: 1vw 1vw 1vw 2vw;
+          }
+          span.after{
+            padding-right: 3vw;
+          }
+
+        }
+        ul.hp_modulePoint.annotation{
+          text-decoration: none;
+          list-style-type: none;
+          @include mod.el_moduRow($bor:1px solid #CCCCCC, $pd:4% 3% 3% 3%, $jus:space-between, $ali:center);
+          li{
+            width: 100%;
+            position: relative;
+              h5{
+                padding: 0 0 0 6vw;
+                margin: 0 0 5px 0;
+                border-bottom: 1px dotted #373737;
+                font-size: 4.2vw;
+                  &:before{
+                    position: absolute;
+                    content: '';
+                    top: 1.3vw;
+                    left: 1vw;
+                    display: block;
+                    width: 4vw;
+                    height: 4vw;
+                    background-image: url(/image/svg/noteicon.svg);
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    line-height: 3.0;
+                    padding-left: 10px;
+                  }
+                }
+                h5 span.txt {
+                  color: #C1272D;
+                }
+                ul{
+                  list-style-type: none;
+                  padding-left: 0;
+                  padding: 2% 2% 0 2%;
+                  font-size: 3.4vw;
+                  li{
+                    margin-bottom: 2%;
+                    display: inline;
+                    margin-right: 3%;
+                  }
+                }
+              }
+
+          }
+      }
+
+
+
+
+
+
+    /* ▼▼▼ Dパターン START ▼▼▼ */
+    ul.hp_moduleD{
+      margin-bottom: 0;
+      h3{
+        @include mod.el_Tit($fts:4.8vw, $bor:none, $ftw:bold, $lh:1, $ma:0, $pd:0, $co:#005648, $borL:none);
+        text-align: center;
+          span.merit {
+            display: inline;
+            border-bottom: 3px solid #005648 !important;
+          }
+        }
+      li
+        div{
+          display: flex;
+          height: 100%;
+          text-decoration: none;
+          ul.el_moduleD{
+            @include mod.el_moduRow($bor:none, $pd:3%, $jus:space-evenly,$ali:center);
+            li{
+              // img{
+              //   top: 22%;
+              //   left: 29%;
+              //   width: 10vw;
+              // }
+              p{
+                @include mod.modu_Text($fts:3.2vw, $lh:1.3, $ma:0, $ali:left);
+              }
+              &:first-child{
+                content: "";
+                background-color: #F4FBFA;
+                padding: 23px;
+                border-radius: 100%;
+                width: 23vw;
+                height: 23vw;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              }
+              &:last-child{
+                width: 70%;
+                h4{
+                  @include mod.el_Tit($fts:3.8vw, $bor:none, $ftw:bold, $lh:1, $ma: 10px 0 10px 0, $pd:0, $co:#005648, $borL:none);
+                }
+                margin-left: 2.6vw;
+              }
+            }
+          }
+        }
+      }
+    /* ▼▼▼ Dパターン END ▼▼▼ */
+
+    /*  ▼▼▼ Eパターン START  ▼▼▼ */
+    ul.hp_moduleE{
+      margin-bottom: 0;
+      li{
+        a{
+          display: flex;
+          height: 100%;
+          text-decoration: none;
+          ul.el_moduleE{
+            @include mod.el_moduRow($bor:none, $pd:3%, $jus:space-evenly,$ali:center);
+            li{
+              margin: 0;
+              svg{
+                @include mod.modu_icon($wi:13vw, $co:#07613A, $ma:0 2.6vw 0 0, $pa:0);
+              }
+              h3{
+                @include mod.modu_Text($fts:4.2vw, $lh:1.3, $ma:0 0 3% 0, $ali:left);
+              }
+              p{
+                @include mod.modu_Text($fts:3.2vw, $lh:1.3, $ma:0, $ali:left);
+              margin-bottom: none;
+              }
+            }
+          }
+        }
+      }
+    }
+    /* ▲▲▲ Eパターン START ▲▲▲ */
+
+    /*  ▼▼▼ Fパターン START  ▼▼▼ */
+    ul.hp_moduleF{
+      width: 100%;
+      li{
+        min-height: 60px;
+        position: relative;
+        height: 16vw;
+        display: flex;
+        align-items: center;
+        margin-bottom: 3%;
+        a{
+          display: flex;
+          width: 100%;
+          height: 100%;
+          text-decoration: none;
+          ul.el_moduleF{
+            @include mod.width($wi:100%);
+            @include mod.el_moduRow($bor:1px solid #CCC, $pd:3%, $jus:first-child,$ali:center);
+            li{
+                svg{
+                  @include mod.modu_icon($wi:13vw, $co:#07613A, $ma:0 2.6vw 0 0, $pa:0);
+                }
+                img{
+                  @include mod.modu_icon($wi:auto , $co:none , $ma:0 , $pa:0);
+                }
+                img.con_01{
+                  width: 10.6vw; height: auto;
+                  min-width: 39.75px;
+                  max-width: 45.58px;
+                }
+                img.con_02{
+                  width: 21vw; height: auto;
+                  min-width: 78.75px;
+                  max-width: 90.3px;
+                }
+                img.con_03{
+                  width: 21vw; height: auto;
+                  min-width: 78.75px;
+                  max-width: 90.3px;
+                }
+                img.con_04{
+                  width: 13vw; height: auto;
+                  min-width: 48.75px;
+                  max-width: 55.89px;
+                }
+                img.con_05{
+                  width: 23vw; height: auto;
+                  min-width: 86.25px;
+                  max-width: 98.89px;
+                }
+                h4{
+                  @include mod.modu_Text($fts:4.2vw, $lh:1.3, $ma:0 0 0 10px, $ali:left);
+                }
+                // p{
+                //   @include mod.modu_Text($fts:3.2vw, $lh:1.3, $ma:0, $ali:left);
+                // margin-bottom: none;
+                // }
+                &:first-child{
+                  // width: 13vw;
+                  // height: 13vw;
+                  // img{
+                  //   max-width: 13vw;
+                  //   height: auto;
+                  // }
+                  margin-bottom: 0;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                }
+              }
+            }
+            ul.el_moduleF.other{
+              padding: 0;
+              border: 1px solid #CCCCCC;
+              border-radius: 5px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 100%;
+              li.other{
+                @include mod.hp_moduRow($ma:0 , $pa:0, $jus:flex-start, $ali:inherit);
+                svg{
+                  @include mod.modu_icon($wi:65px , $co:#07613A , $ma:0 , $pa:0);
+                }
+                img{
+                  @include mod.modu_icon($wi:auto , $co:none , $ma:0 , $pa:0);
+                }
+                img.pay_01{width: 12.2vw; height: auto;}
+                img.price_01{width: 8vw; height: auto;}
+                h4{
+                  @include mod.modu_Text($fts:20px, $lh:1.5, $ma:0, $ali:left);
+                  display: flex;
+                  align-items: center;
+                }
+                p{
+                  @include mod.modu_Text($fts:16px, $lh:1.5, $ma:0, $ali:left);
+                }
+              }
+              li:nth-child(2n){
+                padding: 0;
+              }
+            }
+              &:after{
+                @include mod.arrow_lowR($bo:2px, $ri:8px , $boW:8px 0 8px 8px);
+            }
+              &:hover{
+              background-color: #f4fffe;
+              border-color: #005648;
+              color: #005648;
+            }
+          }
+          &:last-child{margin-bottom: 0;}
+        }
+      }
+    /* ▲▲▲ Fパターン START ▲▲▲ */
+
+
+    ul.hp_moduleF.nexA{
+      text-decoration: none;
+      list-style-type: none;
+      padding: 0;
+      li.nexA{
+        height: auto;
+        margin: 0 0 3% 0;
+        position: relative;
+        a{
+          text-decoration: none;
+          width: 100%;
+          display: block;
+          display: flex;
+          ul.el_moduleF.nexA{
+            padding: 0;
+            border: 1px solid #CCCCCC;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            li{
+              @include mod.hp_moduRow($ma:0 , $pa:0 3% 0 0, $jus:flex-start, $ali:inherit);
+              // svg{
+              //   @include mod.modu_icon($wi:65px , $co:#07613A , $ma:0 , $pa:0);
+              // }
+              // img{
+              //   @include mod.modu_icon($wi:auto , $co:none , $ma:0 , $pa:0);
+              // }
+              img.nexA{width: 8vw; height: auto;}
+              h4{
+                @include mod.modu_Text($fts:4.2vw, $lh:1.5, $ma:0, $ali:left);
+                display: flex;
+                align-items: center;
+              }
+              p{
+                @include mod.modu_Text($fts:4.2vw, $lh:1.5, $ma:0, $ali:left);
+              }
+            }
+            li:nth-child(2n){
+              padding: 0;
+            }
+          }
+          &:after{
+            @include mod.arrow_lowR($bo:2px, $ri:8px , $boW:10px 0 10px 10px);
+          }
+          &:hover{
+            background-color: #f4fffe;
+            border-color: #005648;
+            color: #005648;
+          }
+        }
+        &:last-child{margin-bottom: 0;}
+      }
+    }
+
+
+//------------------ hp_modulePoint toggleArea ------------------
+
+div.hp_modulePoint.toggleArea{
+  ul.first{
+    list-style-type: none;
+    padding-left: 0;
+      li{
+          @include mod.border($bor:1px solid #CCC);
+          h3{
+            font-size: 16px;
+            line-height: 1.5;
+            margin: 0 auto 0 auto;
+            font-weight: normal;
+            text-align: center;
+            padding: 10px 0 10px 0;
+            width: 100%;
+            background-color: #eee;
+            border-bottom: 1px solid #CCC;
+            border-radius: 5px 5px 0 0px;
+            font-weight: bold;
+          }
+          div.el_module.coL2{
+            padding: 5% 3% 0 3%;
+            ul{
+              list-style-type: none;
+              padding-left: 0;
+              display: flex;
+              flex-direction: row;
+              justify-content: flex-start;
+              align-items: flex-start;
+              li{
+                &:first-child{
+                  border: none;
+                  img{
+                    height: auto;
+                    margin: 0 20px 0 0;
+                    padding: 0;
+                    border: none;
+                    width: 12vw;
+                  }
+                  width: 20%;
+                }
+                &:last-child{
+                  border: none;
+                  p{
+                    width: auto;
+                    margin: 0 0 3% 0;
+                  }
+                  img.el_mod_card{
+                    width: 52vw;
+                    height: auto;
+                  }
+                }
+              }
+            }
+          }//div.el_module.coL2
+
+
+          div.choiceTit{
+            width: 100%;
+            position: relative;
+            span.choiceTit_arow{
+              &::before {
+                top: 48%;
+                left: 40%;
+                transform: rotate(45deg);
+              }
+            &::before {
+              top: 48%;
+              left: 50%;
+              transform: rotate(45deg);
+              }
+
+
+            }
+          }
+
+
+
+          div.el_moduleC_hiddneArea{
+            padding: 4% 3% 8% 3%;
+            display: none;
+              div{
+                h4{
+                  border-bottom: 1px dotted #373737;
+                  padding-left: 27px;
+                    &:before{
+                      position: absolute;
+                      content: "";
+                      top: 33;
+                      left: 0;
+                      display: block;
+                      width: 10%;
+                      height: 20px;
+                      background-image: url(/image/svg/iconScene09.svg);
+                      background-size: contain;
+                      background-repeat: no-repeat;
+                      line-height: 3;
+                      padding-left: 10px;
+                    }
+                  }
+                  img{
+                    width: 100%;
+                  }
+
+
+
+
+
+                }
+            }
+
+
+
+      }//li
+
+    }//ul.first
+
+
+  }//div.hp_modulePoint.toggleArea
+
+
+
+    /*遷移ボタン Start*/
+    .hp_cta_btn{
+      display: flex;
+      justify-content: center;
+        div.cta_btn{
+          position: relative;
+          @include mod.calActBtn($wi:80%,$pa:15px,$fts:16px,$bra:5px);
+            a.lowR{
+              text-decoration: none;
+              &:after{
+                @include mod.arrow_lowR($bo:2px, $ri:8px , $boW:8px 0 8px 8px);
+                }
+              }
+              a.arrowR{
+                text-decoration: none;
+                background-color: #fff;
+                background-position: right 5px center;
+                background-repeat: no-repeat;
+                background-size: 15px 15px;
+                overflow-wrap: break-word;
+                &.fav {
+                  background-image: url("../image/svg/arrow_midR.svg");
+                }
+              }
+              &:hover,&action{
+                background-color: #005648;
+                a{
+                  color: #FFF;
+                  background-color: #005648;
+                }
+              }
+            }
+            div.cta_btn.circle {
+              @include mod.calActBtn($wi:80%,$pa:15px,$fts:16px,$bra:50px);
+            }
+      }
+
+      .hp_next_btn_B{
+        display: flex;
+        justify-content: center;
+          div.cta_btn{
+            position: relative;
+            @include mod.calActBtn($wi:100%,$pa:4vw 2.6vw,$fts:3.7vw,$bra:50px);
+                a.midR{
+                  text-decoration: none;
+                  &:after{
+                    @include mod.arrow_midR2($bo:15px, $ri:15px, $boW:10px 0 10px 10px);
+                  }
+                }
+                a.arrowR{
+                  text-decoration: none;
+                  background-color: #fff;
+                  background-position: right 5px center;
+                  background-repeat: no-repeat;
+                  background-size: 15px 15px;
+                  overflow-wrap: break-word;
+                  &.fav {
+                    background-image: url("../image/svg/arrow_midR_G.svg");
+                  }
+                }
+                &:hover{
+                  background-color: #f4fffe;
+                  border-color: #005648;
+                  a{
+                    color: #005648;
+                    background-color: #f4fffe;
+                  }
+                }
+              }
+        }
+
+
+
+    /* ▼▼▼ 使用箇所：決済手段 ▼▼▼ */
+    .hp_modu_3col.service{
+      @include mod.hp_moduRow($ma:0,$pa:0,$jus:space-between,$ali:center);
+      div{
+        @include mod.width($wi:100%/1);
+        @include mod.el_moduRow($bor:1px solid #CCCCCC, $pd:3%,$jus:space-between, $ali:center);
+        display: block;
+        margin-bottom: 3%;
+        position: relative;
+            a{
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              text-decoration: none;
+              align-items: center;
+              height: 100%;
+              h4{
+                @include mod.modu_Text($fts:3.7vw, $lh:1.3, $ma: 2.5vw 0 0 0, $ali:center);
+                text-decoration: none;
+                font-weight: bold;
+              }
+              img{
+                @include mod.modu_icon($wi:auto, $co:none, $ma:0, $pa:0);
+              }
+              img.card{width: 85%; height: auto;};
+              img.conveni{width: 85%; height: auto;};
+              img.carrier{width: 85%; height: auto;};
+              &:after{
+                @include mod.arrow_lowR($bo:1px, $ri:5px , $boW:8px 0 8px 8px);
+              }
+            }
+            &:hover{
+              background-color: #f4fffe;
+              border-color: #005648;
+              color: #005648;
+            }
+          }
+      }
+
+    .hp_modu_4col.service{
+      @include mod.hp_moduRow($ma:0,$pa:0,$jus:space-between,$ali:center);
+      div{
+        @include mod.width($wi:97%/2);
+        @include mod.el_moduRow($bor:1px solid #CCCCCC, $pd:3%, $jus:space-between, $ali:center);
+        display: block;
+        margin-bottom: 3%;
+        position: relative;
+            a{
+              display: flex;
+              justify-content: space-evenly;
+              align-items: center;
+              text-decoration: none;
+              flex-direction: column-reverse;
+              height: 100%;
+              h4{
+                @include mod.modu_Text($fts:3.2vw, $lh:1.5, $ma:3% 0 0 0, $ali:left);
+                text-decoration: none;
+                font-weight: bold;
+              }
+              img{
+                @include mod.modu_icon($wi:auto, $co:none, $ma:0, $pa:0);
+              }
+              img.payEasy{width: 12.5vw; height: 9.3vw;};
+              img.applepay{width: 14.5vw; height: 9.3vw;};
+              img.paypay{width: 29.3vw; height: 9.3vw;};
+              img.rakutenPay{width: 21.4vw; height: 9.3vw;};
+              img.rakutenBank_L{width: 100%; height: 100%;};
+              img.REdy{width: 6.5vw; height: 10.3vw;};
+              img.paypal{width: 28.2vw; height: 9.3vw;};
+              img.alipay{width: 22.5vw; height: 5.3vw;};
+              &:after{
+                @include mod.arrow_lowR($bo:1px, $ri:5px , $boW:8px 0 8px 8px);
+              }
+            }
+            &:hover{
+              background-color: #f4fffe;
+              border-color: #005648;
+              color: #005648;
+            }
+          }
+      }
+
+/* ▲▲▲ 使用箇所：決済手段 ▲▲▲ */
+
+    /*↓消すかもね*/
+
+/*コストパフォーマンス表 START*/
+.kospaWrap{
+  width: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    li{
+      width: calc(100%/2);
+      list-style-type: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3.2vw;
+      background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(231,242,240,1) 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 18.3vw;
+      border-top: 2px solid #005648;
+      border-right: 1px solid #CCCCCC;
+      p{line-height: 1.5;}
+      h4{
+        line-height: 1.5;
+        margin: 0;
+      }
+    }
+    li:nth-child(3),li:nth-child(4){
+      border-bottom: 2px solid #005648;
+    }
+}
+.kospa{
+  width: 100%;
+  list-style-type: none;
+  padding-left: 0;
+  font-size: 18px;
+  color: #004335;
+  text-align: center;
+  padding: 30px 0;
+  align-items: center;
+}
+.ul>.kospa{
+  padding-left: 0;
+  width: calc(987px/4);
+}
+.kospa li{
+  display: flex;
+}
+
+/*コストパフォーマンス表 END*/
+
+
+
+
+
+
+}/* max-width:768px SP  END */
