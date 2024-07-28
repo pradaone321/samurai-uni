@@ -12,88 +12,89 @@
 <body>
 	<style>
 		@keyframes displayAnime{
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
-}
-
-
+			from {
+				opacity: 0;
+			}
+			to {
+				opacity: 1;
+			}
+		}
 
 /*========= レイアウトのためのCSS ===============*/
+		body{
+			background:#eee;
+		}
+		ul{
+			list-style:none;
+		}
+		a{
+			color:#333;
+			text-decoration: none;
+		}
+		.left a{
+			color: blueviolet;
+			width: 80px;
+		}
+		.right a{
+			color: greenyellow;
+			width: 80px;
+		}
+		.sizeImg{width: 450px; height: auto;}
+		.wrapper{
+			width:100%;
+			max-width: 960px;
+			margin:30px auto;
+			background:#fefefe;
+		}
+		.area h2{
+			font-size:1.3rem;
+			margin:0 0 20px 10px;
+		}
+		.area li{
+			padding: 10px; 
+			border-bottom: 1px solid #ddd;
+		}
+		.tabArea{
+			display: flex;
+			flex-wrap: wrap;
+		}
+		.tabArea li a{
+			display: block;
+			background: #fff;
+		}
+		.area{
+			display: none;
+			opacity: 0;
+			background: #fff;
+			padding: 50pz 20px;
+		}
+		.area.is-active{
+			display: block;
+			animation-name: displayAnime;
+			animation-duration: 1s;
+			animation-fill-mode: forwards ;
+		}
 
-body{
-	background:#eee;
-}
+		@keyframes displayAnime{
+			from{
+				opacity: 0;
+			}
+			to{
+				opacity: 1;
+			}
+		}
 
-ul{
-	list-style:none;
-}
-
-a{
-	color:#333;
-	text-decoration: none;
-}
-
-.wrapper{
-	width:100%;
-	max-width: 960px;
-	margin:30px auto;
-    background:#fefefe;
-}
-
-.area h2{
-	font-size:1.3rem;
-	margin:0 0 20px 10px;
-}
-
-.area li{
-	padding: 10px; 
-	border-bottom: 1px solid #ddd;
-}
-.tabArea{
-	display: flex;
-	flex-wrap: wrap;
-}
-.tabArea li a{
-	display: block;
-	background: #fff;
-}
-.area{
-	display: none;
-	opacity: 0;
-	background: #fff;
-	padding: 50pz 20px;
-}
-.area.is-active{
-	display: block;
-	animation-name: displayAnime;
-	animation-duration: 1s;
-	animation-fill-mode: forwards ;
-}
-@keyframes displayAnime{
-	from{
-		opacity: 0;
-	}
-	to{
-		opacity: 1;
-	}
-}
-
-
-	</style>
+</style>
 
 <div class="wrapper">
 	<ul class="tabArea">
-		<li><a href="#left">LEFT</a></li>
-		<li><a href="#right">RIGHT</a></li>
+		<li class="left"><a href="#left">LEFT</a></li>
+		<li class="right"><a href="#right">RIGHT</a></li>
 	</ul>
 
-	<div id="left" class="area">
-		<select class="pets" id="left-select">
-			<option value="allLeft">--選びましょう--</option>
+	<div id="left" class="area select-wrap">
+		<select class="selectNav" id="left-select">
+			<option id="show_leftAll" value="allLeft">--選びましょう--</option>
 			<option value="LEFT01">LEFT01</option>
 			<option value="LEFT02">LEFT02</option>
 			<option value="LEFT03">LEFT03</option>
@@ -101,23 +102,39 @@ a{
 
 		<h2>LEFTさま</h2>
 		<ul >
-			<li>○○○LEFT○○○○</li>
-			<li>○○○LEFT○○○○○―</li>
+			<li>
+				○○○LEFT○○○○
+				<div><img class="sizeImg" src="/images/damy001.jpg"></div>
+				<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+			</li>
+			<li>
+				○○○LEFT○○○○○
+				<div><img class="sizeImg" src="/images/damy004.jpg"></div>
+				<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+			</li>
 			<li>○○○LEFT○○○○○</li>
 		</ul>
 		<!--/area-->
    </div>
-	<div id="right" class="area">
-		<select class="pets" id="right-select">
+	<div id="right" class="area select-wrap">
+		<select class="" id="right-select">
 			<option value="allRight">--選びましょう--</option>
 			<option value="RIGHT01">RIGHT01</option>
-			<option value="RIGHT01">RIGHT01</option>
-			<option value="RIGHT01">RIGHT01</option>
+			<option value="RIGHT02">RIGHT01</option>
+			<option value="RIGHT03">RIGHT01</option>
 		  </select>
 		<h2>RIGHTさま</h2>
 		<ul>
-			<li>○○○RIGHT○○○○</li>
-			<li>○○○RIGHT○○○○○</li>
+			<li>
+				○○○RIGHT○○○○
+				<div><img class="sizeImg" src="/images/damy002.jpg"></div>
+				<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+			</li>
+			<li>
+				○○○RIGHT○○○○○
+				<div><img class="sizeImg" src="/images/damy003.jpg"></div>
+				<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+			</li>
 			<li>○○○RIGHT○○○○○</li>
 		</ul>
 	<!--/area--></div>
@@ -166,9 +183,109 @@ select.onchange = function(){
 	alert( this.value );
 }
 
+//以下サイトから０５１９
 
+/*select value Leftの値*/
+$('#left-select').on('change', function() {
+  var selectedValue = $(this).val();  // 選択された値を取得
 
+  /* ▼▼ コンテンツ idの値*/
+  $('#allLeft div.cardWrap').each(function() {
+    var liId = $(this).attr('id');  // liIdにid属性の値を設定
+    /* ▼▼ valueの値 === allLeft(全て) */
+    if (selectedValue === 'allLeft') {
+      $(this).show();
+            /* ▼▼ idの値 === valueの値 */
+    } else if (liId === selectedValue) {
+      $(this).show();
+    } else {
+      // それ以外非表示
+      $(this).hide();
+    }
+  });
+});
 
+/*select value Rightの値*/
+$('#right-select').on('change', function() {
+  var selectedValue = $(this).val();  // 選択された値を取得
+  // li要素をループして非表示にする
+  $('#allRight div.cardWrap').each(function() {
+    var liId = $(this).attr('id');  // liIdにid属性の値を設定
+    if (selectedValue === 'allRight') {
+      $(this).show();
+      // $(this).addClass("show");
+    } else if (liId === selectedValue) {
+      $(this).show();
+    }else{
+        $(this).hide();
+    }
+  });
+});
+
+//Left:tabを押すとselectboxが全て表示に切り替わる
+$(".tab_Left a").on('click', function(){
+  var idLink = $(this).attr('href');
+  console.log(idLink);
+  $('#allLeft div.cardWrap').each(function() {
+    var liId = $(this).attr('id');
+    if (idLink != 'allLeft') {
+      $(this).show();
+      $('select').val('allLeft');
+    }else{
+      $(this).hide();
+    }
+  });
+});
+
+//Right：tabを押すとselectboxが全て表示に切り替わる
+$(".tab_Right a").on('click', function(){
+  var idLink = $(this).attr('href');
+  console.log(idLink);
+  $('#allRight div.cardWrap').each(function() {
+    var liId = $(this).attr('id');
+    if (idLink != 'allLeft') {
+      $(this).show();
+      $('select').val('allRight');
+    }else{
+      $(this).hide();
+    }
+  });
+});
+
+//表示サイズによる制御
+$(function(){
+    $(window).on('load resize',function(){
+      /*1項目目 ページ内リンクの表示位置  START*/
+      var winw = $(window).width();
+      //以下PCの場合
+      $('a[href^="#"]').click(function(){
+      if( winw >= 769 ){
+          var addjust = 450; //追加分
+          var speed = 400;
+          var href = $(this).attr('href'); //リンク先を取得
+          var target = $(href == "#" || href == "" ? 'html' : href); //移動先のidを取得
+          var position = target.offset().top - addjust;
+          $('body,html').animate({scrollTop:position} , speed, 'swing');
+          return false; //リンクは無効化
+      }else{
+        return false;
+      }
+    });
+      /*1項目目 ページ内リンクの表示位置  END*/
+
+      /*2項目目 tab切り替え  START*/
+      console.log('Resize'); //リサイズの度に関数が追加されている
+      //javascriptのメディアクエリ
+      if(window.matchMedia('(max-width: 768px)').matches) {
+        $('#allLeft div').offset();
+      } else if (window.matchMedia('(min-width:769px)').matches) {
+        $('#allLeft div').offset();
+        $('#allLeft div').show();
+      }
+      /*2項目目 tab切り替え  END*/
+    });/*resize END*/
+  window.onresize = resizeWindow;
+});
 
 
 </script>

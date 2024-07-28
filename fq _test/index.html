@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+	<link href="/fq _test/css/fq.css">
+	<script href="/fq _test/js/fq.js"></script>s
+	
+
+
+</head>
+<body>
+
+
+    <section class="content guide faq">
+
+
+      <div id="headerH">
+        <div class="container-fluid">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col position-relative">
+                        <h2 class="font-rounded text-center">よくあるご質問</h2>
+                    </div><!--col-->
+                </div><!--row-->
+
+                <div class="row mb-0">
+                  <div class="col px-0">
+                    <ul class="subtitle">
+                      <li>
+                        <button class="tab-eltax">
+                            <div class="zei_img me-3"></div>
+                            <div>
+                              tabuカテゴリ01<br class="d-inline-block">
+                              <div class="txtLeft">
+                                <span class="el_qr me-4">◯◯◯◯</span>
+                                <span class="el_number me-4">◯◯◯◯</span>
+                              </div>
+                            </div>
+                        </button>
+                      </li>
+                      <li>
+                        <button class="tab-tax active">
+                          <div class="zei_img me-3"></div>
+                          <div class="txtLeft">tabuカテゴリ02<br class="d-inline-block">◯◯◯◯◯◯◯◯◯</div>
+                        </button>
+                      </li>
+                      <li>
+                        <button class="tab-suido">
+                          <div class="sui_img me-3"></div>
+                          <div class="txtLeft">tabuカテゴリ03<br class="d-inline-block">◯◯◯◯◯◯◯◯◯</div>
+                        </button>
+                      </li>
+                    </ul>
+                  </div><!--col-->
+                </div><!--row-->
+
+                <!-- ▼▼▼ SP時selectBox ▼▼▼ -->
+                  <div class="text-center faq-eltax">
+                    <select class="form-select form-select-sm mb-3 tax_select pcNo">
+                      <option value="eltax_faq_01">質問内容その１</option>
+                      <option value="eltax_faq_02">質問内容その２</option>
+                      <option value="eltax_faq_03">質問内容その３</option>
+                      <option value="eltax_faq_04">質問内容その４</option>
+                      <option value="eltax_faq_05">質問内容その５</option>
+                      <option value="eltax_faq_06">質問内容その６</option>
+                    </select>
+                  </div>
+                  <div class="text-center faq-tax">
+                    <select class="form-select form-select-sm mb-3 faq_select pcNo" aria-label=".form-select-lg example">
+                      <option value="tax_faq_01">質問内容その１</option>
+                      <option value="tax_faq_02">質問内容その２</option>
+                      <option value="tax_faq_03">質問内容その３</option>
+                      <option value="tax_faq_04">質問内容その４</option>
+                      <option value="tax_faq_05">質問内容その５</option>
+                    </select>
+                  </div>
+                  <div class="text-center faq-suido">
+                    <select class="pcNo form-select form-select-sm mb-3 sui_select pcNo" aria-label=".form-select-lg example">
+                      <!-- <option value="sui_faq_01">特によくある</option> -->
+                      <option value="sui_faq_02">質問内容その１</option>
+                      <option value="sui_faq_03">質問内容その２</option>
+                      <option value="sui_faq_04">質問内容その３</option>
+                      <option value="sui_faq_05">質問内容その４</option>
+                      <option value="sui_faq_06">質問内容その５</option>
+                    </select>
+                  </div>
+                <!-- ▲▲▲ SP時selectBox ▲▲▲ -->
+
+              </div><!--container END-->
+            </div><!--container-fluid END-->
+
+
+
+          <!-- ▼▼▼ PC時navbutton コンテナfull▼▼▼ -->
+          <div class="container-fluid nav">
+            <div class="container-fluid navBg spNo">
+
+              <div class="navWrapQA text-center faq-eltax">
+                <div class="row">
+                  <div class="col navbut lta ms-3 me-3 navB01">
+						<a class="d-flex flex-column align-items-center" href="#eltax_faq_01">
+						ナビゲーション１
+						</a>
+                  </div>
+                  <div class="col navbut lta me-3 navB02">
+                    <a class="d-flex flex-column align-items-center" href="#eltax_faq_02">
+						ナビゲーション2
+                    </a>
+                  </div>
+                  <div class="col navbut lta me-3 navB03">
+                    <a class="d-flex flex-column align-items-center" href="#eltax_faq_03">
+                      ナビゲーション3
+                    </a>
+                  </div>
+                  <div class="col navbut lta me-3">
+                    <a class="d-flex flex-column align-items-center" href="#eltax_faq_04">
+                      ナビゲーション４
+                    </a>
+                  </div>
+                  <div class="col navbut lta me-3">
+                    <a class="d-flex flex-column align-items-center" href="#eltax_faq_05">
+                      ナビゲーション5
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="navWrapQA text-center faq-tax">
+                <div class="row">
+                  <div class="col navbut fre ms-3 me-3 buttax01">
+                    <a class="d-flex flex-column align-items-center" href="#tax_faq_01">
+                      ナビゲーション１
+                    </a>
+                  </div>
+                  <div class="col navbut fre me-3 buttax02">
+                    <a class="d-flex flex-column align-items-center" href="#tax_faq_02">
+                    	ナビゲーション2
+                    </a>
+                  </div>
+                  <div class="col navbut fre me-3 buttax03">
+                    <a class="d-flex flex-column align-items-center" href="#tax_faq_03">
+                    <img src="../../img/faq/icon.png" alt="ダミー">
+                    ナビゲーション3
+                    </a>
+                  </div>
+                  <div class="col navbut fre me-3 buttax04">
+                    <a class="d-flex flex-column align-items-center" href="#tax_faq_04">
+                    <img src="../../img/faq/icon.png" alt="ダミー">
+                    ナビゲーション４
+                    </a>
+                  </div>
+                  <div class="col navbut fre me-3 buttax05">
+                    <a class="d-flex flex-column align-items-center" href="#tax_faq_05">
+                    <img src="../../img/faq/icon.png" alt="ダミー">
+                    ナビゲーション5
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="navWrapQA text-center faq-suido">
+                <div class="row">
+                  <div class="col navbut sui ms-3 me-3">
+                    <a class="d-flex flex-column align-items-center" href="#sui_faq_01">
+                    ナビゲーション１
+                    </a>
+                  </div>
+                  <div class="col navbut sui me-3">
+                    <a class="d-flex flex-column align-items-center" href="#sui_faq_02">
+                    ナビゲーション2
+                    </a>
+                  </div>
+                  <div class="col navbut sui me-3">
+                    <a class="d-flex flex-column align-items-center" href="#sui_faq_03">
+                    ナビゲーション3
+                    </a>
+                  </div>
+                  <div class="col navbut sui me-3">
+                    <a class="d-flex flex-column align-items-center" href="#sui_faq_04">
+                    ナビゲーション４
+                    </a>
+                  </div>
+                  <div class="col navbut sui me-3">
+                    <a class="d-flex flex-column align-items-center" href="#sui_faq_05">
+                    ナビゲーション5
+                    </a>
+                  </div>
+                  <div class="col navbut sui me-3">
+                    <a class="d-flex flex-column align-items-center" href="#sui_faq_06">
+                    困ったときは
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+            </div><!--container-fluid END-->
+          </div><!-- container-fluid nav END -->
+
+      </div><!--  headerH END -->
+    <!-- ▲▲▲ PC時navbutton コンテナfull END ▲▲▲ -->
+<!-- ▲▲▲ ナビゲーション END ▲▲▲ -->
+
+
+<!---------- ▼▼▼ コンテンツ別質問 START ▼▼▼ -------------->
+
+      <div class="container-fluid" id="contentQA_ALL">
+        <div class="container">
+  <!-------------- 地方税共同機構 START-------------->
+                <div class="row mb-4 faq-eltax faqAll">
+                  <div class="col px-0">
+					accordion
+
+
+
+                    <div class="accordion faq_list frequent" id="eltax_faq_02">
+                      <h3 class="step"><span>１</span><span class="heading-text">質問カテゴリー◯◯◯◯◯◯</span></h3>
+
+                      <div class="accordion-item" id="eltax_faq_01">s
+                        <h2 class="accordion-header" id="heading0-1e">
+                          <button class="accordion-button acc-butB1 collapsed">
+                            <span class="question"></span><div><p>質問タイトル◯◯◯◯◯◯</p></div>
+                          </button>
+                        </h2>
+                        <div id="collapse0-1e" class="accordion-collapse collapse">
+                          <div class="accordion-body acc-butB1_a">
+                            <span class="answer"></span><div>
+                              <p>答え◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div><!--accordion-item-->
+
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading0-2e">
+                          <button class="accordion-button acc-butB1 collapsed">
+                            <span class="question"></span><div><p>質問タイトル◯◯◯◯◯◯</p></div>
+                          </button>
+                        </h2>
+                        <div id="collapse0-2e" class="accordion-collapse collapse">
+                          <div class="accordion-body acc-butB_a">
+                            <span class="answer"></span><div>
+                              <p>答え◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div><!--accordion-item-->
+					  
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading0-3e">
+                          <button class="accordion-button acc-butB collapsed">
+                            <span class="question"></span><div><p>質問タイトル◯◯◯◯◯◯</p></div>
+                          </button>
+                        </h2>
+                        <div id="collapse0-3e" class="accordion-collapse collapse">
+                          <div class="accordion-body acc-butB_a">
+                            <span class="answer"></span><div>
+                              <p>答え◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div><!--accordion-item-->
+
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading0-4e">
+                          <button class="accordion-button acc-butB collapsed">
+                            <span class="question"></span><div><p>質問タイトル◯◯◯◯◯◯</p></div>
+                          </button>
+                        </h2>
+                        <div id="collapse0-4e" class="accordion-collapse collapse">
+                          <div class="accordion-body acc-butB_a">
+                            <span class="answer"></span><div>
+                              <p>答え◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div><!--accordion-item-->
+
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading0-5e">
+                          <button class="accordion-button acc-butB collapsed">
+                            <span class="question"></span><div><p>質問タイトル◯◯◯◯◯◯</p></div>
+                          </button>
+                        </h2>
+                        <div id="collapse0-5e" class="accordion-collapse collapse">
+                          <div class="accordion-body acc-butB1_a">
+                            <span class="answer"></span><div>
+                              <p>答え◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div><!--accordion-item-->
+
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading0-6e">
+                          <button class="accordion-button acc-butB1 collapsed">
+                            <span class="question"></span><div><p>質問タイトル◯◯◯◯◯◯</p></div>
+                          </button>
+                        </h2>
+                        <div id="collapse0-6e" class="accordion-collapse collapse">
+                          <div class="accordion-body acc-butB1_a">
+                            <span class="answer"></span><div>
+                              <p>答え◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div><!--accordion-item-->
+                    </div><!--accordion-->
+
+                    <div class="accordion faq_list" id="eltax_faq_03">
+                      <h3 class="step"><span>2</span><span class="heading-text">質問カテゴリー◯◯◯◯◯◯</span></h3>
+
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading1-1e">
+                          <button class="accordion-button acc-butC1 collapsed">
+                            <span class="question"></span><div><p>質問タイトル◯◯◯◯◯◯</p></div>
+                          </button>
+                        </h2>
+                        <div id="collapse1-1e" class="accordion-collapse collapse" aria-labelledby="heading1-1e">
+                          <div class="accordion-body acc-butC1_a">
+                            <span class="answer"></span><div>
+                              <p>答え◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div><!--accordion-item-->
+
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading1-2e">
+                          <button class="accordion-button acc-butC1 collapsed">
+                            <span class="question"></span><div><p>質問タイトル◯◯◯◯◯◯</p></div>
+                          </button>
+                        </h2>
+                        <div id="collapse1-2e" class="accordion-collapse collapse" aria-labelledby="heading1-2e">
+                          <div class="accordion-body acc-butC1_a">
+                            <span class="answer"></span><div>
+                              <p>答え◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div><!--accordion-item-->
+
+                    </div><!--accordion-->
+
+                    <div class="accordion faq_list" id="eltax_faq_04">
+                      <h3 class="step"><span>3</span><span class="heading-text">質問カテゴリー◯◯◯◯◯◯</span></h3>
+
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading2-1e">
+                          <button class="accordion-button acc-butD1 collapsed">
+                            <span class="question"></span><div><p>質問タイトル◯◯◯◯◯◯</p></div>
+                          </button>
+                        </h2>
+                        <div id="collapse2-1e" class="accordion-collapse collapse" aria-labelledby="heading2-1e">
+                          <div class="accordion-body acc-butD1_a">
+                            <span class="answer"></span><div>
+                              <p>答え◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div><!--accordion-item-->
+
+                    </div><!--accordion-->
+
+                  </div><!--col-->
+                </div><!--row-->
+  <!-------------- 地方税共同機構 END-------------->
+
+
+
+  <!-------------- 各種税料金（都度払い）START-------------->
+
+                <div class="row mb-4 faq-tax faqAll">
+                  <div class="col px-0">
+                    <div class="accordion faq_list frequent" id="tax_faq_01">
+                      <h3><img class="frequently_icon" src="/koukin/img/faq/clown.svg">質問カテゴリー◯◯◯◯◯◯</h3>
+
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading0-1">
+                          <button class="accordion-button acc-butA collapsed">
+                            <span class="question"></span><div><p>質問タイトル◯◯◯◯◯◯</p></div>
+                          </button>
+                        </h2>
+                        <div id="collapse0-1" class="accordion-collapse collapse" aria-labelledby="heading0-1">
+                          <div class="accordion-body acc-butA_a">
+                            <span class="answer"></span><div><p>答え◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯</p></div>
+                          </div>
+                        </div>
+                      </div><!--accordion-item-->
+
+                    </div><!--accordion-->
+
+                    <div class="accordion faq_list" id="tax_faq_02">
+                      <h3 class="step"><span>1</span><span class="heading-text">質問カテゴリー◯◯◯◯◯◯</span></h3>
+
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading1-1">
+                          <button class="accordion-button acc-butB collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1-1" aria-expanded="false" aria-controls="collapse1">
+                            <span class="question"></span><div><p>質問タイトル◯◯◯◯◯◯</p></div>
+                          </button>
+                        </h2>
+                        <div id="collapse1-1" class="accordion-collapse collapse" aria-labelledby="heading1-1">
+                          <div class="accordion-body acc-butB_a">
+                            <span class="answer"></span><div><p>答え◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div><!--accordion-item-->
+
+                    </div><!--accordion-->
+
+                  </div><!--col-->
+                </div><!--row-->
+  <!-------------- 各種税料金（都度払い）END -------------->
+
+
+  <!-------------- 水道料金（継続払い）START -------------->
+                <div class="row mb-4 faq-suido">
+                  <div class="col px-0">
+                    <div class="accordion faq_list frequent" id="sui_faq_01">
+                      <h3><img class="frequently_icon" src="/koukin/img/faq/clown.svg">質問カテゴリー◯◯◯◯◯◯</h3>
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading0-1s">
+                          <button class="accordion-button acc-but1 collapsed">
+                            <a id="Q1-s"></a><span class="question"></span><div><p>質問タイトル◯◯◯◯◯◯</p></div>
+                          </button>
+                        </h2>
+                        <div id="collapse0-1s" class="accordion-collapse collapse" aria-labelledby="heading0-1s">
+                          <div class="accordion-body acc-but1_a">
+                            <span class="answer"></span><div><p>答え◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div><!--accordion-item-->
+
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading0-2s">
+                          <button class="accordion-button acc-but1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse0-2s" aria-expanded="false" aria-controls="collapse1">
+                            <a id="Q2-s"></a><span class="question"></span><div><p>質問タイトル◯◯◯◯◯◯</p></div>
+                          </button>
+                        </h2>
+                        <div id="collapse0-2s" class="accordion-collapse collapse" aria-labelledby="heading0-2s">
+                          <div class="accordion-body acc-but1_a">
+                            <span class="answer"></span>
+                            <div><p>答え◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯</p></div>
+                          </div>
+                        </div>
+                      </div><!--accordion-item-->
+
+                    </div><!--accordion-->
+
+
+
+                  </div><!--col-->
+                </div><!--row-->
+<!-------------- 水道料金（継続払い）END -------------->
+
+
+            </div><!--container-->
+        </div><!--container-fluid-->
+    </section>
+
+    <!--#include virtual="/koukin/share/footer.html" -->
+
+    <script src="/koukin/js/common.js"></script>
+    <script src="/koukin/js/faq.js"></script>
+    <script>
+      /*Q1,A1の自動不要　カテゴリー追加時はproces_count('.class');追記必要*/
+    $(function() {
+      function proces_count(sectionClass) {
+        var i = 1;
+        var j = 1;
+
+        $(sectionClass + ' .question').each(function(){
+          $(this).prepend('<span class="question">' + "Q"+ i + '</span>');
+          i++;
+        });
+
+        $(sectionClass + '_a .answer').each(function(){
+          $(this).prepend('<span class="answer">' + "A"+ j + '</span>');
+          j++;
+        });
+      }
+      /*アルファベット+数字はeLTAX*/
+      proces_count('.acc-butA1');
+      proces_count('.acc-butB1');
+      proces_count('.acc-butC1');
+      proces_count('.acc-butD1');
+      proces_count('.acc-butE1');
+      proces_count('.acc-butF1');
+      proces_count('.acc-butG1');
+      proces_count('.acc-butH1');
+
+      /*アルファベットは税金*/
+      proces_count('.acc-butA');
+      proces_count('.acc-butB');
+      proces_count('.acc-butC');
+      proces_count('.acc-butD');
+      proces_count('.acc-butE');
+      proces_count('.acc-butF');
+      proces_count('.acc-butG');
+
+      //数字は水道
+      proces_count('.acc-but1');
+      proces_count('.acc-but2');
+      proces_count('.acc-but3');
+      proces_count('.acc-but4');
+      proces_count('.acc-but5');
+      proces_count('.acc-but6');
+
+    });
+
+    //ページを読み込んだら一つ目のaccordionにfrequentを付与する
+
+    //クリックする
+    //frequentが付与される　acordion開く 最初からクラスつけとく
+    //accordion faq_list を非表示にする
+    //.accordion.faq_list { display: none;}
+    //.accordion.faq_list.frequent {display: block;}
+// $(function(){
+//   function proces_Click(sectionClass){
+//     var on = showClick;
+//     var no = hideClick;
+
+//     $(sectionClass).on("click",function(){
+//       $('')
+//     });
+
+//   }
+
+// });
+
+
+
+
+  // $(window).on('load', function(){
+  // })
+
+
+  //ボタンと関数に入れる
+  // proces_Click('.buttax01');
+  // proces_Click('.buttax02');
+
+
+    </script>
+
+</body>
+</html>

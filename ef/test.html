@@ -1,0 +1,219 @@
+
+Hiroki Tsubakihara
+16:09
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>FAQ Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function() {
+            // リンクのクリックイベント
+            $('.navWrap a').on('click', function(e){
+                e.preventDefault(); // デフォルトの動作を防ぐ
+
+                var targetId = $(this).attr('href');
+$('.faq_list').hide(); // 全てのFAQセクションを非表示にする
+                $(targetId).show(); // クリックされたリンクのhrefに対応するFAQセクションを表示する
+            });
+        });
+    </script>
+    <style>
+        .faq_list { display: none; } /* 初期状態でFAQセクションを非表示にする */
+    </style>
+</head>
+<body>
+<div class="navWrap">
+        <a href="#faq_ac_01">テキストテキスト1</a>
+        <a href="#faq_ac_02">テキストテキスト2</a>
+        <a href="#faq_ac_03">テキストテキスト3</a>
+    </div>
+    <div id="faq_ac_01" class="faq_list">
+        <p>FAQセクション1の内容</p>
+    </div>
+    <div id="faq_ac_02" class="faq_list">
+        <p>FAQセクション2の内容</p>
+    </div>
+<div id="faq_ac_03" class="faq_list">
+        <p>FAQセクション3の内容</p>
+    </div>
+</body>
+</html>
+あなた
+16:18
+<div class="navWrap text-center faq-tax">
+                <div class="row">
+                  <div class="col navbut ms-3 me-3 buttax01">
+                    <a href="#faq_ac_01">
+                      <img src="../../img/faq/icon.png" alt="ダミー">
+                      特によくある
+                    </a>
+                  </div>
+                  <div class="col navbut me-3 buttax02">
+                    <a href="#faq_ac_02">
+                    <img src="../../img/faq/icon.png" alt="ダミ
+メッセージにカーソルを合わせて固定します
+keep
+あなた
+16:26
+$(function() {
+	//セレクトボックスの変更イベント
+	$('.faq_select').on('change', function(){
+		//$('div.accordion.faq_list').removeClass('frequent'); 
+		//全てのFAQのセクションを非表示
+		$('.faq_list').hide();
+		//選択されたオプションのvalueを取得
+		var selectedValue = $(this).val();
+		console.log(selectedValue);
+		//valueに対応するFAQセクションを表示
+		if(selectedValue){
+			$('#' + selectedValue).show();
+			$('h3.step').addClass('active'); 
+			$('div.accordion-item').css('display','block'); 
+		}
+	});
+
+
+  // タブのクリックイベント
+  $('button.tab-tax')
+Hiroki Tsubakihara
+16:31
+$(function() {
+    // セレクトボックスの変更イベント
+    $('.faq_select').on('change', function(){
+        // 全てのFAQのセクションを非表示
+        $('.faq_list').hide();
+        
+        // 選択されたオプションのvalueを取得
+        var selectedValue = $(this).val();
+        console.log(selectedValue);
+        
+        // valueに対応するFAQセクションの表示
+        if(selectedValue){
+            var selectedSection = $('#' + selectedValue);
+            selectedSection.show();
+            selectedSection.find('h3').show(); // h3だけを表示
+selectedSection.find('div').hide(); // h3以外を非表示
+        }
+    });
+
+    // タブのクリックイベント
+    $('button.tab-tax').on('click', function(){
+        // タブのクリックイベントの処理をここに記述
+    });
+});
+あなた
+16:37
+$(function() {
+	//セレクトボックスの変更イベント
+	$('.faq_select').on('change', function(){
+		//$('div.accordion.faq_list').removeClass('frequent'); 
+		//全てのFAQのセクションを非表示
+		$('.faq_list').hide();
+		//選択されたオプションのvalueを取得
+		var selectedValue = $(this).val();
+		console.log(selectedValue);
+		//valueに対応するFAQセクションを表示
+		if(selectedValue){
+			$('#' + selectedValue).show();
+			$('h3.step').addClass('active'); 
+			$('div.accordion-item').css('display','block'); 
+			var selectedSection = $('#' + selectedValue);	
+			selec
+あなた
+16:39
+$(function() {
+	//セレクトボックスの変更イベント
+	$('.faq_select').on('change', function(){
+		//$('div.accordion.faq_list').removeClass('frequent'); 
+		//全てのFAQのセクションを非表示
+		$('.faq_list').hide();
+		//選択されたオプションのvalueを取得
+		var selectedValue = $(this).val();
+		console.log(selectedValue);
+		//valueに対応するFAQセクションを表示
+		if(selectedValue){
+			$('#' + selectedValue).show();
+			$('h3.step').addClass('active'); 
+			$('div.accordion-item').css('display','block'); 
+			var selectedSection = $('#' + selectedValue);	
+			selec
+if(selectedValue){
+			$('#' + selectedValue).show();
+			$('h3.step').addClass('active'); 
+			$('div.accordion-item').css('display','block'); 
+			var selectedSection = $('#' + selectedValue);	
+			selectedSection.show();	
+			selectedSection.find('h3').show(); // h3だけを表示	$('h3.step').addClass('active');
+			selectedSection.find('div').hide(); // h3以外を非表示
+		}
+	});
+// タブのクリックイベント
+  $('button.tab-tax').on('click', function(){
+    // 全てを初期状態に戻す
+    $('.faq_list').show(); // FAQセクションを非表示
+    $('h3.step').removeClass('active'); // 'active' クラスを削除
+    $('.accordion.faq_list h3').css('display', 'block'); // アコーディオンアイテを非表示
+	$('.accordion.faq_list:first-child').css('display', 'block'); // 一つ目アコーディオンアイテム表示
+    //$('.faq_select').val(''); // セレクトボックスを初期状態に戻す
+  });
+
+
+});
+
+
+
+
+Hiroki Tsubakihara
+16:45
+$(function() {
+    // セレクトボックスの変更イベント
+    $('.faq_select').on('change', function(){
+        // 全てのFAQのセクションを非表示
+        $('.faq_list').hide();
+
+        // 選択されたオプションのvalueを取得
+        var selectedValue = $(this).val();
+        console.log(selectedValue);
+// valueに対応するFAQセクションを表示
+        if(selectedValue){
+            var selectedSection = $('#' + selectedValue);	
+            selectedSection.show();	
+            selectedSection.find('h3').show(); // h3だけを表示	
+            selectedSection.find('div').hide(); // h3以外を非表示
+
+            // アクティブなh3にクラスを追加
+            selectedSection.find('h3').addClass('active'); 
+        }
+    });
+// タブのクリックイベント
+    $('button.tab-tax').on('click', function(){
+        // 全てのFAQセクションを表示し、h3だけを表示
+        $('.faq_list').show(); // FAQセクションを表示
+        $('.faq_list h3').show(); // 全てのh3を表示
+        $('.faq_list div').hide(); // h3の下のコンテンツを非表示
+
+        // 全てのh3からアクティブクラスを削除
+        $('h3.step').removeClass('active');
+    });
+});
+
+
+
+
+
+
+
+//元
+
+
+// タブのクリックイベント
+  $('button.tab-tax').on('click', function(){
+    // 全てを初期状態に戻す
+    $('.faq_list').show(); // FAQセクションを非表示
+    $('h3.step').removeClass('active'); // 'active' クラスを削除
+    $('.accordion.faq_list h3').css('display', 'block'); // アコーディオンアイテを非表示
+	$('.accordion.faq_list:first-child').css('display', 'block'); // 一つ目アコーディオンアイテム表示
+    //$('.faq_select').val(''); // セレクトボックスを初期状態に戻す
+  });
